@@ -9,10 +9,9 @@ class Questions
 {
 private:
 
-
 public:
     Questions();
-    QString* questions = new QString[29];
+    QString questions[30];
 };
 
 #endif // QUESTIONS_H

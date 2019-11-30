@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include "mainwindow2.h"
-#include "mainwindow3.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,6 +22,5 @@ private slots:
 private:
     Ui::MainWindow *ui;
     MainWindow2 *ui2;
-    MainWindow3 *ui3;
 };
 #endif // MAINWINDOW_H

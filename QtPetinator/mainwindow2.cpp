@@ -7,7 +7,7 @@ MainWindow2::MainWindow2(QWidget *parent) :
     ui(new Ui::MainWindow2)
 {
     ui->setupUi(this);
-    //ui->label->setText(quest.questions[0]);
+    ui->label->setText(quest.questions[0]);
 
 }
 
@@ -22,7 +22,7 @@ MainWindow2::~MainWindow2()
 //Обработчик "да"
 void MainWindow2::on_pushButton_2_clicked()
 {
-    //ui->label->setText(quest.questions[++countOfQuestion]);
+    ui->label->setText(quest.questions[++countOfQuestion]);
 
     //Обработчик на десятом, двадцатом и последнем вопросе.
     if (countOfQuestion == 10) {
@@ -77,7 +77,7 @@ void MainWindow2::on_pushButton_2_clicked()
 //Обработчик "нет"
 void MainWindow2::on_pushButton_clicked()
 {
-    //ui->label->setText(quest.questions[++countOfQuestion]);
+    ui->label->setText(quest.questions[++countOfQuestion]);
 
     //Обработчик на десятом, двадцатом и последнем вопросе.
     if (countOfQuestion == 10) {

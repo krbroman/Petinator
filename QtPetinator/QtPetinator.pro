@@ -20,20 +20,17 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     mainwindow2.cpp \
-    mainwindow3.cpp \
     questions.cpp
 
 HEADERS += \
     answers.h \
     mainwindow.h \
     mainwindow2.h \
-    mainwindow3.h \
     questions.h
 
 FORMS += \
     mainwindow.ui \
-    mainwindow2.ui \
-    mainwindow3.ui
+    mainwindow2.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

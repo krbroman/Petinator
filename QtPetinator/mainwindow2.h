@@ -26,7 +26,7 @@ private slots:
 
 private:
     Ui::MainWindow2 *ui;
-    //Questions quest;
+    Questions quest;
 };
 
 #endif // MAINWINDOW2_H
