@@ -12,3 +12,15 @@ Guess::~Guess()
 {
     delete ui;
 }
+
+void Guess::on_pushButton_No_clicked()
+{
+    this->close();
+}
+
+void Guess::on_pushButton_Yes_clicked()
+{
+    this->close();
+    winning = new Winning();
+    winning->show();
+}

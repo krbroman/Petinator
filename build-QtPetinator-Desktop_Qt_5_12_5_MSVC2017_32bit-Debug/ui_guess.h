@@ -20,8 +20,8 @@ QT_BEGIN_NAMESPACE
 class Ui_Guess
 {
 public:
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *pushButton_Yes;
+    QPushButton *pushButton_No;
     QLabel *label;
     QLabel *label_2;
 
@@ -30,16 +30,16 @@ public:
         if (Guess->objectName().isEmpty())
             Guess->setObjectName(QString::fromUtf8("Guess"));
         Guess->resize(800, 600);
-        pushButton = new QPushButton(Guess);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(50, 440, 201, 121));
+        pushButton_Yes = new QPushButton(Guess);
+        pushButton_Yes->setObjectName(QString::fromUtf8("pushButton_Yes"));
+        pushButton_Yes->setGeometry(QRect(50, 440, 201, 121));
         QFont font;
         font.setPointSize(20);
-        pushButton->setFont(font);
-        pushButton_2 = new QPushButton(Guess);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(250, 440, 201, 121));
-        pushButton_2->setFont(font);
+        pushButton_Yes->setFont(font);
+        pushButton_No = new QPushButton(Guess);
+        pushButton_No->setObjectName(QString::fromUtf8("pushButton_No"));
+        pushButton_No->setGeometry(QRect(250, 440, 201, 121));
+        pushButton_No->setFont(font);
         label = new QLabel(Guess);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(550, 290, 161, 91));
@@ -57,8 +57,8 @@ public:
     void retranslateUi(QDialog *Guess)
     {
         Guess->setWindowTitle(QApplication::translate("Guess", "Dialog", nullptr));
-        pushButton->setText(QApplication::translate("Guess", "\320\224\320\260", nullptr));
-        pushButton_2->setText(QApplication::translate("Guess", "\320\235\320\265\321\202", nullptr));
+        pushButton_Yes->setText(QApplication::translate("Guess", "\320\224\320\260", nullptr));
+        pushButton_No->setText(QApplication::translate("Guess", "\320\235\320\265\321\202", nullptr));
         label->setText(QApplication::translate("Guess", "\320\257 \320\264\321\203\320\274\320\260\321\216, \n"
 "\321\207\321\202\320\276 \321\215\321\202\320\276...", nullptr));
         label_2->setText(QApplication::translate("Guess", "/*\320\237\321\200\320\265\320\264\320\277\320\276\320\273\320\260\320\263\320\260\320\265\320\274\320\276\320\265 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265*/", nullptr));

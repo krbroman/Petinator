@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include "questions.h"
+#include "guess.h"
 
 namespace Ui {
 class MainWindow2;
@@ -27,6 +28,7 @@ private slots:
 private:
     Ui::MainWindow2 *ui;
     Questions quest;
+    Guess* guess;
 };
 
 #endif // MAINWINDOW2_H

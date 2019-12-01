@@ -2,6 +2,8 @@
 #define CHECKANIMAL_H
 
 #include <QDialog>
+#include "animalexists.h"
+#include "addnewanimal.h"
 
 namespace Ui {
 class CheckAnimal;
@@ -17,6 +19,8 @@ public:
 
 private:
     Ui::CheckAnimal *ui;
+    AnimalExists* anemalExists;
+    AddNewAnimal* addNewAnimal;
 };
 
 #endif // CHECKANIMAL_H

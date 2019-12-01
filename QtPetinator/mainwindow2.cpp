@@ -30,7 +30,7 @@ void MainWindow2::on_pushButton_2_clicked()
 
     //Обработчик на десятом, двадцатом и последнем вопросе.
     if (countOfQuestionAfterButton == 10) {
-        QMessageBox::StandardButton reply =
+        /*QMessageBox::StandardButton reply =
                 QMessageBox::question(this, "Предположение", "Это собака?", QMessageBox::Yes | QMessageBox::No);
 
         if (reply == QMessageBox::Yes) {
@@ -42,11 +42,11 @@ void MainWindow2::on_pushButton_2_clicked()
                 //countOfQuestionAfterButton = -1;
             } else {
                 this->close();
-            }
-        }
-
+            }*/
+        guess = new Guess();
+        guess->show();
     } else if (countOfQuestionAfterButton == 20) {
-        QMessageBox::StandardButton reply =
+        /*QMessageBox::StandardButton reply =
                 QMessageBox::question(this, "Предположение", "Это кошка?", QMessageBox::Yes | QMessageBox::No);
 
         if (reply == QMessageBox::Yes) {
@@ -59,9 +59,11 @@ void MainWindow2::on_pushButton_2_clicked()
             } else {
                 this->close();
             }
-        }
+        }*/
+        guess = new Guess();
+        guess->show();
     } else if (countOfQuestionAfterButton == 29) {
-        QMessageBox::StandardButton reply =
+        /*QMessageBox::StandardButton reply =
                 QMessageBox::question(this, "Последний шанс", "Это капибара?", QMessageBox::Yes | QMessageBox::No);
 
         if (reply == QMessageBox::Yes) {
@@ -76,7 +78,10 @@ void MainWindow2::on_pushButton_2_clicked()
             }
         } else if (reply == QMessageBox::No) {
             ui->label->setText(quest.theLastQuestion);
-        }
+        }*/
+        this->close();
+        guess = new Guess();
+        guess->show();
     }
 }
 
@@ -91,7 +96,7 @@ void MainWindow2::on_pushButton_clicked()
 
     //Обработчик на десятом, двадцатом и последнем вопросе.
     if (countOfQuestionAfterButton == 10) {
-        QMessageBox::StandardButton reply =
+        /*QMessageBox::StandardButton reply =
                 QMessageBox::question(this, "Предположение", "Это собака?", QMessageBox::Yes | QMessageBox::No);
 
         if (reply == QMessageBox::Yes) {
@@ -120,9 +125,11 @@ void MainWindow2::on_pushButton_clicked()
             } else {
                 this->close();
             }
-        }
+        }*/
+        guess = new Guess();
+        guess->show();
     } else if (countOfQuestionAfterButton == 29) {
-        QMessageBox::StandardButton reply =
+        /*QMessageBox::StandardButton reply =
                 QMessageBox::question(this, "Последний шанс", "Это капибара?", QMessageBox::Yes | QMessageBox::No);
 
         if (reply == QMessageBox::Yes) {
@@ -143,7 +150,10 @@ void MainWindow2::on_pushButton_clicked()
             }
         } else if (reply == QMessageBox::No) {
             ui->label->setText(quest.theLastQuestion);
-        }
+        }*/
+        this->close();
+        guess = new Guess();
+        guess->show();
     }
 }
 

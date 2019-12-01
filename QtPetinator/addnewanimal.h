@@ -2,6 +2,7 @@
 #define ADDNEWANIMAL_H
 
 #include <QDialog>
+#include "losing.h"
 
 namespace Ui {
 class AddNewAnimal;
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::AddNewAnimal *ui;
+    Losing* losing;
 };
 
 #endif // ADDNEWANIMAL_H

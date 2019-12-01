@@ -2,6 +2,7 @@
 #define ANIMALEXISTS_H
 
 #include <QDialog>
+#include "losing.h"
 
 namespace Ui {
 class AnimalExists;
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::AnimalExists *ui;
+    Losing* losing;
 };
 
 #endif // ANIMALEXISTS_H
