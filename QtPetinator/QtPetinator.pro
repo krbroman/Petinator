@@ -16,21 +16,42 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addnewanimal.cpp \
+    animalexists.cpp \
     answers.cpp \
+    checkanimal.cpp \
+    guess.cpp \
+    losing.cpp \
     main.cpp \
     mainwindow.cpp \
     mainwindow2.cpp \
-    questions.cpp
+    questions.cpp \
+    secondslide.cpp \
+    winning.cpp
 
 HEADERS += \
+    addnewanimal.h \
+    animalexists.h \
     answers.h \
+    checkanimal.h \
+    guess.h \
+    losing.h \
     mainwindow.h \
     mainwindow2.h \
-    questions.h
+    questions.h \
+    secondslide.h \
+    winning.h
 
 FORMS += \
+    addnewanimal.ui \
+    animalexists.ui \
+    checkanimal.ui \
+    guess.ui \
+    losing.ui \
     mainwindow.ui \
-    mainwindow2.ui
+    mainwindow2.ui \
+    secondslide.ui \
+    winning.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(showAgain()));
 }
 
 MainWindow::~MainWindow()
@@ -18,12 +20,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QMessageBox::StandardButton reply =
-            QMessageBox::question(this, "Заголовок", "Загадали животное?", QMessageBox::Yes | QMessageBox::No);
-
-    if (reply == QMessageBox::Yes) {
-        this->close();
-        ui2 = new MainWindow2(this);
-        ui2->show();
-    }
+    secondSlide = new SecondSlide;
+    secondSlide->show();
 }
