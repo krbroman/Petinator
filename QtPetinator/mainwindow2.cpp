@@ -7,11 +7,11 @@ MainWindow2::MainWindow2(QWidget *parent) :
     ui(new Ui::MainWindow2)
 {
     ui->setupUi(this);
-    ui->label->setText(quest.questions[0]);
+    ui->label->setText("Добро пожаловать в игру!");
 
 }
 
-int MainWindow2::countOfQuestion = 0;
+int MainWindow2::countOfQuestionAfterButton = 0;
 
 MainWindow2::~MainWindow2()
 {
@@ -22,10 +22,14 @@ MainWindow2::~MainWindow2()
 //Обработчик "да"
 void MainWindow2::on_pushButton_2_clicked()
 {
-    ui->label->setText(quest.questions[++countOfQuestion]);
+    countOfQuestionAfterButton++;
+    if (countOfQuestionAfterButton == 30) {
+        this->close();
+    }
+    ui->label->setText(quest.questions[quest.numOfTheNextQuestion()]);
 
     //Обработчик на десятом, двадцатом и последнем вопросе.
-    if (countOfQuestion == 10) {
+    if (countOfQuestionAfterButton == 10) {
         QMessageBox::StandardButton reply =
                 QMessageBox::question(this, "Предположение", "Это собака?", QMessageBox::Yes | QMessageBox::No);
 
@@ -35,13 +39,13 @@ void MainWindow2::on_pushButton_2_clicked()
 
             if (reply2 == QMessageBox::Yes) {
                 //тогда чистим счетчик, удаляем второе окно и открываем первое
-                countOfQuestion = -1;
+                //countOfQuestionAfterButton = -1;
             } else {
                 this->close();
             }
         }
 
-    } else if (countOfQuestion == 20) {
+    } else if (countOfQuestionAfterButton == 20) {
         QMessageBox::StandardButton reply =
                 QMessageBox::question(this, "Предположение", "Это кошка?", QMessageBox::Yes | QMessageBox::No);
 
@@ -56,7 +60,7 @@ void MainWindow2::on_pushButton_2_clicked()
                 this->close();
             }
         }
-    } else if (countOfQuestion == 29) {
+    } else if (countOfQuestionAfterButton == 29) {
         QMessageBox::StandardButton reply =
                 QMessageBox::question(this, "Последний шанс", "Это капибара?", QMessageBox::Yes | QMessageBox::No);
 
@@ -70,6 +74,8 @@ void MainWindow2::on_pushButton_2_clicked()
             } else {
                 this->close();
             }
+        } else if (reply == QMessageBox::No) {
+            ui->label->setText(quest.theLastQuestion);
         }
     }
 }
@@ -77,10 +83,14 @@ void MainWindow2::on_pushButton_2_clicked()
 //Обработчик "нет"
 void MainWindow2::on_pushButton_clicked()
 {
-    ui->label->setText(quest.questions[++countOfQuestion]);
+    countOfQuestionAfterButton++;
+    if (countOfQuestionAfterButton == 30) {
+        this->close();
+    }
+    ui->label->setText(quest.questions[quest.numOfTheNextQuestion()]);
 
     //Обработчик на десятом, двадцатом и последнем вопросе.
-    if (countOfQuestion == 10) {
+    if (countOfQuestionAfterButton == 10) {
         QMessageBox::StandardButton reply =
                 QMessageBox::question(this, "Предположение", "Это собака?", QMessageBox::Yes | QMessageBox::No);
 
@@ -90,13 +100,13 @@ void MainWindow2::on_pushButton_clicked()
 
              if (reply2 == QMessageBox::Yes) {
                  //тогда чистим счетчик, удаляем второе окно и открываем первое
-                 countOfQuestion = -1;
+                 //countOfQuestionAfterButton = -1;
              } else {
                  this->close();
              }
         }
 
-    } else if (countOfQuestion == 20) {
+    } else if (countOfQuestionAfterButton == 20) {
         QMessageBox::StandardButton reply =
                 QMessageBox::question(this, "Предположение", "Это кошка?", QMessageBox::Yes | QMessageBox::No);
 
@@ -111,7 +121,7 @@ void MainWindow2::on_pushButton_clicked()
                 this->close();
             }
         }
-    } else if (countOfQuestion == 29) {
+    } else if (countOfQuestionAfterButton == 29) {
         QMessageBox::StandardButton reply =
                 QMessageBox::question(this, "Последний шанс", "Это капибара?", QMessageBox::Yes | QMessageBox::No);
 
@@ -119,16 +129,21 @@ void MainWindow2::on_pushButton_clicked()
             QMessageBox::StandardButton reply2 =
                     QMessageBox::question(this, "Ура!", "Вы выиграли! Не хотите попробовать еще раз?", QMessageBox::Yes | QMessageBox::No);
 
-            if (reply2 == QMessageBox::Yes) {
+            if (reply2 == QMessageBox::Yes)
+            {
                 //тогда чистим счетчик, удаляем второе окно и открываем первое
                 //this->close();
                 //countOfQuestion = -1;
                 //ui2 = new MainWindow(this);
                 //ui2->show();
-
-            } else {
+            }
+            else
+            {
                 this->close();
             }
+        } else if (reply == QMessageBox::No) {
+            ui->label->setText(quest.theLastQuestion);
         }
     }
 }
+

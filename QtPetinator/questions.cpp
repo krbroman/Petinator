@@ -31,5 +31,16 @@ Questions::Questions()
     questions[26] = "У меня есть хвост?";
     questions[27] = "Я могу жить в пустыне?";
     questions[28] = "У меня есть скелет?";
-    questions[29] = "Вопросы закончились :3";
+}
+
+int Questions::numOfTheNextQuestion() {
+    srand(time(NULL));
+    while (true) {
+        currenQuestion = rand() % countOfQuestion;
+        if (maskOfUsedQuestions[currenQuestion] == 0) {
+            maskOfUsedQuestions[currenQuestion] = 1;
+            break;
+        }
+    }
+    return currenQuestion;
 }

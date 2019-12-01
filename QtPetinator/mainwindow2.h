@@ -17,7 +17,7 @@ public:
     explicit MainWindow2(QWidget *parent = nullptr);
     ~MainWindow2();
 
-    static int countOfQuestion;
+    static int countOfQuestionAfterButton;
 
 private slots:
     void on_pushButton_2_clicked();
