@@ -28,7 +28,6 @@ private:
     Ui::Guess *ui;
     Winning* winning;
     CheckAnimal* checkAnimal;
-    Questions quest;
 };
 
 #endif // GUESS_H
