@@ -23,7 +23,7 @@ public:
     QPushButton *pushButton_Yes;
     QPushButton *pushButton_No;
     QLabel *label;
-    QLabel *label_2;
+    QLabel *Suggestion;
 
     void setupUi(QDialog *Guess)
     {
@@ -44,10 +44,10 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(550, 290, 161, 91));
         label->setFont(font);
-        label_2 = new QLabel(Guess);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(40, 80, 591, 131));
-        label_2->setFont(font);
+        Suggestion = new QLabel(Guess);
+        Suggestion->setObjectName(QString::fromUtf8("Suggestion"));
+        Suggestion->setGeometry(QRect(40, 80, 591, 131));
+        Suggestion->setFont(font);
 
         retranslateUi(Guess);
 
@@ -61,7 +61,7 @@ public:
         pushButton_No->setText(QApplication::translate("Guess", "\320\235\320\265\321\202", nullptr));
         label->setText(QApplication::translate("Guess", "\320\257 \320\264\321\203\320\274\320\260\321\216, \n"
 "\321\207\321\202\320\276 \321\215\321\202\320\276...", nullptr));
-        label_2->setText(QApplication::translate("Guess", "/*\320\237\321\200\320\265\320\264\320\277\320\276\320\273\320\260\320\263\320\260\320\265\320\274\320\276\320\265 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265*/", nullptr));
+        Suggestion->setText(QApplication::translate("Guess", "/*\320\237\321\200\320\265\320\264\320\277\320\276\320\273\320\260\320\263\320\260\320\265\320\274\320\276\320\265 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265*/", nullptr));
     } // retranslateUi
 
 };

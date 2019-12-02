@@ -68,7 +68,7 @@
 что это...</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="Suggestion">
    <property name="geometry">
     <rect>
      <x>40</x>

@@ -26,4 +26,5 @@ private:
     Ui::MainWindow *ui;
     SecondSlide* secondSlide;
 };
+
 #endif // MAINWINDOW_H
