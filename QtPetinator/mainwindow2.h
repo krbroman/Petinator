@@ -18,8 +18,6 @@ public:
     explicit MainWindow2(QWidget *parent = nullptr);
     ~MainWindow2();
 
-    static int countOfQuestionAfterButton;
-
 private slots:
     void on_pushButton_2_clicked();
 
@@ -33,6 +31,8 @@ private:
     Guess* guess;
 
     int numberOfQuestion;
+
+    int countOfQuestionAfterButton;
 };
 
 #endif // MAINWINDOW2_H

@@ -38,14 +38,14 @@ Guess::~Guess()
 
 void Guess::on_pushButton_No_clicked()
 {
-
     this->close();
+    //checkAnimal = new CheckAnimal();
+    //checkAnimal->show();
 }
 
 void Guess::on_pushButton_Yes_clicked()
 {
-
     this->close();
-    winning = new Winning();
-    winning->show();
+    //winning = new Winning();
+    //winning->show();
 }
