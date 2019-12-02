@@ -74,3 +74,9 @@ void MainWindow2::on_pushButton_clicked()
     }
 }
 
+
+void MainWindow2::on_pushButton_Now_clicked()
+{
+    guess = new Guess(quest);
+    guess->show();
+}

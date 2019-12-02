@@ -25,6 +25,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButton_Now_clicked();
+
 private:
     Ui::MainWindow2 *ui;
     Questions quest;

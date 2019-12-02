@@ -58,6 +58,20 @@
      <string>Да</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_Now">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>250</y>
+      <width>220</width>
+      <height>110</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Показать животное
+сейчас</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
