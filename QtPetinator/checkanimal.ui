@@ -30,7 +30,7 @@
    <property name="text">
     <string>Мы не нашли ваше животное.
 Введите его название 
-для дальнейшего анализа</string>
+для дальнейшего анализа.</string>
    </property>
   </widget>
   <widget class="QTextBrowser" name="textBrowser">
