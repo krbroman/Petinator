@@ -29,6 +29,8 @@ private:
     Ui::MainWindow2 *ui;
     Questions quest;
     Guess* guess;
+
+    int numberOfQuestion;
 };
 
 #endif // MAINWINDOW2_H

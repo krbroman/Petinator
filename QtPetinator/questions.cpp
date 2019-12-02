@@ -1158,3 +1158,11 @@ int Questions::numOfTheNextQuestion() {
     }
     return currenQuestion;
 }
+
+int Questions::getCountOfQuestion() {
+    return countOfQuestion;
+}
+
+int Questions::getCountOfAnimals() {
+    return countOfAnimals;
+}

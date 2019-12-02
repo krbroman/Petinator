@@ -19,17 +19,19 @@ public:
     Questions();
     QString questions[countOfQuestion];
     QString animals[countOfAnimals];
-    //int** answersForAnimals;
+    QString theLastQuestion = "Вопросы закончились :3";
+
     int answersForAnimals[countOfAnimals][countOfQuestion];
 
-    QString theLastQuestion = "Вопросы закончились :3";
+    int* answersFromUsers = new int[countOfQuestion] {2};
+
+    int countOfСoincidence[countOfAnimals] {0};
 
     //Метод, который выдает номер очередного нового вопроса.
     int numOfTheNextQuestion();
 
     static int getCountOfQuestion();
-
-    int* answersFromUsers = new int[countOfQuestion] {2};
+    static int getCountOfAnimals();
 };
 
 #endif // QUESTIONS_H

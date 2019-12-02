@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "winning.h"
 #include "checkanimal.h"
+#include "questions.h"
 
 namespace Ui {
 class Guess;
@@ -15,6 +16,7 @@ class Guess : public QDialog
 
 public:
     explicit Guess(QWidget *parent = nullptr);
+    Guess(Questions&);
     ~Guess();
 
 private slots:
@@ -26,6 +28,7 @@ private:
     Ui::Guess *ui;
     Winning* winning;
     CheckAnimal* checkAnimal;
+    Questions quest;
 };
 
 #endif // GUESS_H
