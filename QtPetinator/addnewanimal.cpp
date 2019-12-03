@@ -8,6 +8,13 @@ AddNewAnimal::AddNewAnimal(QWidget *parent) :
     ui->setupUi(this);
 }
 
+AddNewAnimal::AddNewAnimal(Questions& quest, QString animal) :
+    ui(new Ui::AddNewAnimal)
+{
+    ui->setupUi(this);
+    /*Работа с базой данных*/
+}
+
 AddNewAnimal::~AddNewAnimal()
 {
     delete ui;

@@ -15,10 +15,6 @@ CheckAnimal::CheckAnimal(Questions& quest) :
     this->thisQuest = &quest;
 
     check = false;
-
-    /*for (int i = 0; i < Questions::getCountOfAnimals(); i++)
-        if (ui->usersAnimal->text() == quest.animals[i])
-            check = true;*/
 }
 
 
@@ -29,6 +25,7 @@ CheckAnimal::~CheckAnimal()
 
 void CheckAnimal::on_pushButton_clicked()
 {
+    usersAnimal = ui->usersAnimal->text();
     for (int i = 0; i < Questions::getCountOfAnimals(); i++)
         if (ui->usersAnimal->text() == thisQuest->animals[i])
             check = true;
@@ -38,7 +35,7 @@ void CheckAnimal::on_pushButton_clicked()
         animalExists->show();
     } else {
         this->close();
-        addNewAnimal = new AddNewAnimal();
+        addNewAnimal = new AddNewAnimal(*thisQuest, usersAnimal);
         addNewAnimal->show();
     }
 }

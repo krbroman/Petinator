@@ -17,8 +17,9 @@ Guess::Guess(Questions &quest) :
 
     for(int i = 0; i < Questions::getCountOfAnimals(); i++)
         for(int j = 0; j < Questions::getCountOfQuestion(); j++)
-            if (quest.answersFromUsers[j] == quest.answersForAnimals[i][j])
-                quest.countOfСoincidence[i]++;
+            if(quest.answersFromUsers[j] != 2)
+                if (quest.answersFromUsers[j] == quest.answersForAnimals[i][j])
+                    quest.countOfСoincidence[i]++;
 
     int max = -1;
     expectedAnimal = -1;
@@ -47,6 +48,6 @@ void Guess::on_pushButton_No_clicked()
 void Guess::on_pushButton_Yes_clicked()
 {
     this->close();
-    winning = new Winning(*thisQuest, expectedAnimal);
+    winning = new Winning(expectedAnimal);
     winning->show();
 }
