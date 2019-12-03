@@ -17,15 +17,23 @@ private:
 
 public:
     Questions();
+    //Все вопросы, где иттератор - ID
     QString questions[countOfQuestion];
-    QString animals[countOfAnimals];
-    QString theLastQuestion = "Вопросы закончились :3";
 
+    //Все животные, где иттератор - ID
+    QString animals[countOfAnimals];
+
+    //Матрица из в стоблик животных и в строчку ответов на них
     int answersForAnimals[countOfAnimals][countOfQuestion];
 
+    //Массив пользовательских ответов
     int* answersFromUsers = new int[countOfQuestion] {2};
 
+    //Массив совпадений
     int countOfСoincidence[countOfAnimals] {0};
+
+    //Массив частоты выбора
+    int frequencyOfChoise[countOfAnimals] {1};
 
     //Метод, который выдает номер очередного нового вопроса.
     int numOfTheNextQuestion();

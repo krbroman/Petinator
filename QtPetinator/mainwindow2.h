@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include "questions.h"
 #include "guess.h"
+#include "guesslast.h"
 
 namespace Ui {
 class MainWindow2;
@@ -29,6 +30,7 @@ private:
     Ui::MainWindow2 *ui;
     Questions quest;
     Guess* guess;
+    GuessLast* guessLast;
 
     int numberOfQuestion;
 

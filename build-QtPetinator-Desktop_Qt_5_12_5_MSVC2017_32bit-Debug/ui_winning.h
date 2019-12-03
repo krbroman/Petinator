@@ -21,8 +21,8 @@ class Ui_Winning
 {
 public:
     QLabel *label;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *pushButton_Exit;
+    QPushButton *pushButton_Play;
 
     void setupUi(QDialog *Winning)
     {
@@ -35,16 +35,16 @@ public:
         QFont font;
         font.setPointSize(40);
         label->setFont(font);
-        pushButton = new QPushButton(Winning);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(410, 470, 181, 81));
+        pushButton_Exit = new QPushButton(Winning);
+        pushButton_Exit->setObjectName(QString::fromUtf8("pushButton_Exit"));
+        pushButton_Exit->setGeometry(QRect(410, 470, 181, 81));
         QFont font1;
         font1.setPointSize(16);
-        pushButton->setFont(font1);
-        pushButton_2 = new QPushButton(Winning);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(120, 470, 291, 81));
-        pushButton_2->setFont(font1);
+        pushButton_Exit->setFont(font1);
+        pushButton_Play = new QPushButton(Winning);
+        pushButton_Play->setObjectName(QString::fromUtf8("pushButton_Play"));
+        pushButton_Play->setGeometry(QRect(120, 470, 291, 81));
+        pushButton_Play->setFont(font1);
 
         retranslateUi(Winning);
 
@@ -55,8 +55,8 @@ public:
     {
         Winning->setWindowTitle(QApplication::translate("Winning", "Dialog", nullptr));
         label->setText(QApplication::translate("Winning", "\320\257 \321\203\320\263\320\260\320\264\320\260\320\273!", nullptr));
-        pushButton->setText(QApplication::translate("Winning", "\320\222\321\213\320\271\321\202\320\270", nullptr));
-        pushButton_2->setText(QApplication::translate("Winning", "\320\230\320\263\321\200\320\260\321\202\321\214 \320\265\321\211\320\265 \321\200\320\260\320\267", nullptr));
+        pushButton_Exit->setText(QApplication::translate("Winning", "\320\222\321\213\320\271\321\202\320\270", nullptr));
+        pushButton_Play->setText(QApplication::translate("Winning", "\320\230\320\263\321\200\320\260\321\202\321\214 \320\265\321\211\320\265 \321\200\320\260\320\267", nullptr));
     } // retranslateUi
 
 };

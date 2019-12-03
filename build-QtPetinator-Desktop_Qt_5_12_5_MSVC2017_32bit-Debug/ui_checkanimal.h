@@ -13,8 +13,8 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QTextBrowser>
 
 QT_BEGIN_NAMESPACE
 
@@ -22,8 +22,8 @@ class Ui_CheckAnimal
 {
 public:
     QLabel *label;
-    QTextBrowser *textBrowser;
     QPushButton *pushButton;
+    QLineEdit *lineEdit;
 
     void setupUi(QDialog *CheckAnimal)
     {
@@ -32,19 +32,19 @@ public:
         CheckAnimal->resize(800, 600);
         label = new QLabel(CheckAnimal);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(230, 130, 421, 141));
+        label->setGeometry(QRect(200, 130, 421, 141));
         QFont font;
         font.setPointSize(16);
         label->setFont(font);
-        textBrowser = new QTextBrowser(CheckAnimal);
-        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-        textBrowser->setGeometry(QRect(230, 340, 401, 41));
         pushButton = new QPushButton(CheckAnimal);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(250, 460, 361, 61));
+        pushButton->setGeometry(QRect(200, 460, 361, 61));
         QFont font1;
         font1.setPointSize(20);
         pushButton->setFont(font1);
+        lineEdit = new QLineEdit(CheckAnimal);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setGeometry(QRect(210, 340, 351, 41));
 
         retranslateUi(CheckAnimal);
 

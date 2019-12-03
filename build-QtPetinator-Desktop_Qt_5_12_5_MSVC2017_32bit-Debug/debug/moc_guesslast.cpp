@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'winning.h'
+** Meta object code from reading C++ file 'guesslast.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.5)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../QtPetinator/winning.h"
+#include "../../QtPetinator/guesslast.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'winning.h' doesn't include <QObject>."
+#error "The header file 'guesslast.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.12.5. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -20,29 +20,29 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_Winning_t {
+struct qt_meta_stringdata_GuessLast_t {
     QByteArrayData data[4];
-    char stringdata0[63];
+    char stringdata0[62];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Winning_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_GuessLast_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_Winning_t qt_meta_stringdata_Winning = {
+static const qt_meta_stringdata_GuessLast_t qt_meta_stringdata_GuessLast = {
     {
-QT_MOC_LITERAL(0, 0, 7), // "Winning"
-QT_MOC_LITERAL(1, 8, 26), // "on_pushButton_Exit_clicked"
-QT_MOC_LITERAL(2, 35, 0), // ""
-QT_MOC_LITERAL(3, 36, 26) // "on_pushButton_Play_clicked"
+QT_MOC_LITERAL(0, 0, 9), // "GuessLast"
+QT_MOC_LITERAL(1, 10, 25), // "on_pushButton_Yes_clicked"
+QT_MOC_LITERAL(2, 36, 0), // ""
+QT_MOC_LITERAL(3, 37, 24) // "on_pushButton_No_clicked"
 
     },
-    "Winning\0on_pushButton_Exit_clicked\0\0"
-    "on_pushButton_Play_clicked"
+    "GuessLast\0on_pushButton_Yes_clicked\0"
+    "\0on_pushButton_No_clicked"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_Winning[] = {
+static const uint qt_meta_data_GuessLast[] = {
 
  // content:
        8,       // revision
@@ -66,44 +66,44 @@ static const uint qt_meta_data_Winning[] = {
        0        // eod
 };
 
-void Winning::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void GuessLast::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<Winning *>(_o);
+        auto *_t = static_cast<GuessLast *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_pushButton_Exit_clicked(); break;
-        case 1: _t->on_pushButton_Play_clicked(); break;
+        case 0: _t->on_pushButton_Yes_clicked(); break;
+        case 1: _t->on_pushButton_No_clicked(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject Winning::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject GuessLast::staticMetaObject = { {
     &QDialog::staticMetaObject,
-    qt_meta_stringdata_Winning.data,
-    qt_meta_data_Winning,
+    qt_meta_stringdata_GuessLast.data,
+    qt_meta_data_GuessLast,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *Winning::metaObject() const
+const QMetaObject *GuessLast::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *Winning::qt_metacast(const char *_clname)
+void *GuessLast::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_Winning.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_GuessLast.stringdata0))
         return static_cast<void*>(this);
     return QDialog::qt_metacast(_clname);
 }
 
-int Winning::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int GuessLast::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)

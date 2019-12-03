@@ -40,7 +40,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(130, 110, 561, 91));
+        label->setGeometry(QRect(110, 110, 611, 91));
         QFont font;
         font.setPointSize(20);
         label->setFont(font);

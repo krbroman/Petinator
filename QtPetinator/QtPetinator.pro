@@ -21,6 +21,7 @@ SOURCES += \
     answers.cpp \
     checkanimal.cpp \
     guess.cpp \
+    guesslast.cpp \
     losing.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -35,6 +36,7 @@ HEADERS += \
     answers.h \
     checkanimal.h \
     guess.h \
+    guesslast.h \
     losing.h \
     mainwindow.h \
     mainwindow2.h \
@@ -47,6 +49,7 @@ FORMS += \
     animalexists.ui \
     checkanimal.ui \
     guess.ui \
+    guesslast.ui \
     losing.ui \
     mainwindow.ui \
     mainwindow2.ui \

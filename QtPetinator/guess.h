@@ -3,7 +3,6 @@
 
 #include <QDialog>
 #include "winning.h"
-#include "checkanimal.h"
 #include "questions.h"
 
 namespace Ui {
@@ -27,7 +26,11 @@ private slots:
 private:
     Ui::Guess *ui;
     Winning* winning;
-    CheckAnimal* checkAnimal;
+
+    Questions* thisQuest;
+
+    //Выбранное животное
+    int expectedAnimal;
 };
 
 #endif // GUESS_H

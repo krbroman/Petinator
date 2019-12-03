@@ -42,8 +42,8 @@ void MainWindow2::on_pushButton_2_clicked()
         guess->show();
     } else if (countOfQuestionAfterButton == Questions::getCountOfQuestion() - 1) {
         this->close();
-        guess = new Guess(quest);
-        guess->show();
+        guessLast = new GuessLast(quest);
+        guessLast->show();
     }
 }
 
@@ -69,8 +69,8 @@ void MainWindow2::on_pushButton_clicked()
         guess->show();
     } else if (countOfQuestionAfterButton == Questions::getCountOfQuestion() - 1) {
         this->close();
-        guess = new Guess(quest);
-        guess->show();
+        guessLast = new GuessLast(quest);
+        guessLast->show();
     }
 }
 

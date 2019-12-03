@@ -1,15 +1,15 @@
-#include "guess.h"
-#include "ui_guess.h"
+#include "guesslast.h"
+#include "ui_guesslast.h"
 
-Guess::Guess(QWidget *parent) :
+GuessLast::GuessLast(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Guess)
+    ui(new Ui::GuessLast)
 {
     ui->setupUi(this);
 }
 
-Guess::Guess(Questions &quest) :
-    ui(new Ui::Guess)
+GuessLast::GuessLast(Questions &quest) :
+    ui(new Ui::GuessLast)
 {
     ui->setupUi(this);
 
@@ -34,19 +34,21 @@ Guess::Guess(Questions &quest) :
         quest.countOfСoincidence[i] = 0;
 }
 
-Guess::~Guess()
+GuessLast::~GuessLast()
 {
     delete ui;
 }
 
-void Guess::on_pushButton_No_clicked()
-{
-    this->close();
-}
-
-void Guess::on_pushButton_Yes_clicked()
+void GuessLast::on_pushButton_Yes_clicked()
 {
     this->close();
     winning = new Winning();
     winning->show();
+}
+
+void GuessLast::on_pushButton_No_clicked()
+{
+    this->close();
+    checkAnimal = new CheckAnimal();
+    checkAnimal->show();
 }
