@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1280</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>130</y>
+     <x>220</x>
+     <y>50</y>
      <width>351</width>
      <height>161</height>
     </rect>
@@ -28,21 +28,21 @@
     </font>
    </property>
    <property name="text">
-    <string>Я угадал!</string>
+    <string>&lt;p align=&quot;center&quot;&gt;Я угадал!&lt;/p&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Exit">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>470</y>
-     <width>181</width>
-     <height>81</height>
+     <x>600</x>
+     <y>540</y>
+     <width>280</width>
+     <height>100</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>16</pointsize>
+     <pointsize>20</pointsize>
     </font>
    </property>
    <property name="text">
@@ -52,15 +52,15 @@
   <widget class="QPushButton" name="pushButton_Play">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>470</y>
-     <width>291</width>
-     <height>81</height>
+     <x>210</x>
+     <y>540</y>
+     <width>280</width>
+     <height>100</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>16</pointsize>
+     <pointsize>20</pointsize>
     </font>
    </property>
    <property name="text">

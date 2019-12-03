@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1280</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>110</y>
-      <width>611</width>
-      <height>91</height>
+      <x>480</x>
+      <y>230</y>
+      <width>641</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="font">
@@ -29,17 +29,22 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>360</y>
-      <width>220</width>
-      <height>110</height>
+      <x>640</x>
+      <y>500</y>
+      <width>280</width>
+      <height>100</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Нет</string>
@@ -48,11 +53,16 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>360</y>
-      <width>220</width>
-      <height>110</height>
+      <x>270</x>
+      <y>500</y>
+      <width>280</width>
+      <height>100</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Да</string>
@@ -61,14 +71,19 @@
    <widget class="QPushButton" name="pushButton_Now">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>250</y>
-      <width>220</width>
-      <height>110</height>
+      <x>460</x>
+      <y>630</y>
+      <width>280</width>
+      <height>100</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>Показать животное
+     <string>Показать животное 
 сейчас</string>
     </property>
    </widget>
@@ -78,7 +93,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1280</width>
      <height>26</height>
     </rect>
    </property>

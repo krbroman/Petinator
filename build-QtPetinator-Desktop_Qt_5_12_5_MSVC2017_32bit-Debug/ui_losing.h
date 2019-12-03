@@ -28,20 +28,20 @@ public:
     {
         if (Losing->objectName().isEmpty())
             Losing->setObjectName(QString::fromUtf8("Losing"));
-        Losing->resize(800, 600);
+        Losing->resize(1280, 800);
         pushButton_Play = new QPushButton(Losing);
         pushButton_Play->setObjectName(QString::fromUtf8("pushButton_Play"));
-        pushButton_Play->setGeometry(QRect(80, 460, 291, 81));
+        pushButton_Play->setGeometry(QRect(600, 540, 280, 100));
         QFont font;
         font.setPointSize(16);
         pushButton_Play->setFont(font);
         pushButton_Exit = new QPushButton(Losing);
         pushButton_Exit->setObjectName(QString::fromUtf8("pushButton_Exit"));
-        pushButton_Exit->setGeometry(QRect(370, 460, 181, 81));
+        pushButton_Exit->setGeometry(QRect(210, 540, 280, 100));
         pushButton_Exit->setFont(font);
         label = new QLabel(Losing);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(170, 170, 451, 161));
+        label->setGeometry(QRect(220, 50, 451, 161));
         QFont font1;
         font1.setPointSize(40);
         label->setFont(font1);

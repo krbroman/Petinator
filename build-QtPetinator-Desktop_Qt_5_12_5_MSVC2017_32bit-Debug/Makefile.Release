@@ -559,6 +559,8 @@ release\moc_checkanimal.cpp: ..\QtPetinator\checkanimal.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
 		..\QtPetinator\animalexists.h \
 		..\QtPetinator\losing.h \
 		..\QtPetinator\addnewanimal.h \
@@ -672,10 +674,6 @@ release\moc_guess.cpp: ..\QtPetinator\guess.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
 		..\QtPetinator\winning.h \
-		..\QtPetinator\checkanimal.h \
-		..\QtPetinator\animalexists.h \
-		..\QtPetinator\losing.h \
-		..\QtPetinator\addnewanimal.h \
 		..\QtPetinator\questions.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
 		release\moc_predefs.h \
@@ -787,6 +785,13 @@ release\moc_guesslast.cpp: ..\QtPetinator\guesslast.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
+		..\QtPetinator\winning.h \
+		..\QtPetinator\checkanimal.h \
+		..\QtPetinator\animalexists.h \
+		..\QtPetinator\losing.h \
+		..\QtPetinator\addnewanimal.h \
 		release\moc_predefs.h \
 		..\..\Qt\5.12.5\msvc2017\bin\moc.exe
 	E:\Qt\5.12.5\msvc2017\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/Petinator/build-QtPetinator-Desktop_Qt_5_12_5_MSVC2017_32bit-Debug/release/moc_predefs.h -IE:/Qt/5.12.5/msvc2017/mkspecs/win32-msvc -IE:/Petinator/QtPetinator -IE:/Qt/5.12.5/msvc2017/include -IE:/Qt/5.12.5/msvc2017/include/QtWidgets -IE:/Qt/5.12.5/msvc2017/include/QtGui -IE:/Qt/5.12.5/msvc2017/include/QtANGLE -IE:/Qt/5.12.5/msvc2017/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt" ..\QtPetinator\guesslast.h -o release\moc_guesslast.cpp
@@ -1016,6 +1021,7 @@ release\moc_mainwindow.cpp: ..\QtPetinator\mainwindow.h \
 		..\QtPetinator\guess.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
 		..\QtPetinator\winning.h \
+		..\QtPetinator\guesslast.h \
 		..\QtPetinator\checkanimal.h \
 		..\QtPetinator\animalexists.h \
 		..\QtPetinator\losing.h \
@@ -1140,6 +1146,7 @@ release\moc_mainwindow2.cpp: ..\QtPetinator\mainwindow2.h \
 		..\QtPetinator\guess.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
 		..\QtPetinator\winning.h \
+		..\QtPetinator\guesslast.h \
 		..\QtPetinator\checkanimal.h \
 		..\QtPetinator\animalexists.h \
 		..\QtPetinator\losing.h \
@@ -1264,6 +1271,7 @@ release\moc_secondslide.cpp: ..\QtPetinator\secondslide.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
 		..\QtPetinator\guess.h \
 		..\QtPetinator\winning.h \
+		..\QtPetinator\guesslast.h \
 		..\QtPetinator\checkanimal.h \
 		..\QtPetinator\animalexists.h \
 		..\QtPetinator\losing.h \
@@ -1377,6 +1385,8 @@ release\moc_winning.cpp: ..\QtPetinator\winning.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
 		release\moc_predefs.h \
 		..\..\Qt\5.12.5\msvc2017\bin\moc.exe
 	E:\Qt\5.12.5\msvc2017\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/Petinator/build-QtPetinator-Desktop_Qt_5_12_5_MSVC2017_32bit-Debug/release/moc_predefs.h -IE:/Qt/5.12.5/msvc2017/mkspecs/win32-msvc -IE:/Petinator/QtPetinator -IE:/Qt/5.12.5/msvc2017/include -IE:/Qt/5.12.5/msvc2017/include/QtWidgets -IE:/Qt/5.12.5/msvc2017/include/QtGui -IE:/Qt/5.12.5/msvc2017/include/QtANGLE -IE:/Qt/5.12.5/msvc2017/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt" ..\QtPetinator\winning.h -o release\moc_winning.cpp
@@ -1793,6 +1803,8 @@ release\checkanimal.obj: ..\QtPetinator\checkanimal.cpp ..\QtPetinator\checkanim
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
 		..\QtPetinator\animalexists.h \
 		..\QtPetinator\losing.h \
 		..\QtPetinator\addnewanimal.h \
@@ -1808,19 +1820,16 @@ release\checkanimal.obj: ..\QtPetinator\checkanimal.cpp ..\QtPetinator\checkanim
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qpen.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QTextBrowser \
-		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qtextbrowser.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qtextedit.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractscrollarea.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtextdocument.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
 
 release\guess.obj: ..\QtPetinator\guess.cpp ..\QtPetinator\guess.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
@@ -1928,10 +1937,6 @@ release\guess.obj: ..\QtPetinator\guess.cpp ..\QtPetinator\guess.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
 		..\QtPetinator\winning.h \
-		..\QtPetinator\checkanimal.h \
-		..\QtPetinator\animalexists.h \
-		..\QtPetinator\losing.h \
-		..\QtPetinator\addnewanimal.h \
 		..\QtPetinator\questions.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
 		ui_guess.h \
@@ -2056,7 +2061,29 @@ release\guesslast.obj: ..\QtPetinator\guesslast.cpp ..\QtPetinator\guesslast.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
-		ui_guesslast.h
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
+		..\QtPetinator\winning.h \
+		..\QtPetinator\checkanimal.h \
+		..\QtPetinator\animalexists.h \
+		..\QtPetinator\losing.h \
+		..\QtPetinator\addnewanimal.h \
+		ui_guesslast.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QVariant \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
 
 release\losing.obj: ..\QtPetinator\losing.cpp ..\QtPetinator\losing.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
@@ -2296,6 +2323,7 @@ release\main.obj: ..\QtPetinator\main.cpp ..\QtPetinator\mainwindow.h \
 		..\QtPetinator\guess.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
 		..\QtPetinator\winning.h \
+		..\QtPetinator\guesslast.h \
 		..\QtPetinator\checkanimal.h \
 		..\QtPetinator\animalexists.h \
 		..\QtPetinator\losing.h \
@@ -2425,6 +2453,7 @@ release\mainwindow.obj: ..\QtPetinator\mainwindow.cpp ..\QtPetinator\mainwindow.
 		..\QtPetinator\guess.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
 		..\QtPetinator\winning.h \
+		..\QtPetinator\guesslast.h \
 		..\QtPetinator\checkanimal.h \
 		..\QtPetinator\animalexists.h \
 		..\QtPetinator\losing.h \
@@ -2569,6 +2598,7 @@ release\mainwindow2.obj: ..\QtPetinator\mainwindow2.cpp ..\QtPetinator\mainwindo
 		..\QtPetinator\guess.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
 		..\QtPetinator\winning.h \
+		..\QtPetinator\guesslast.h \
 		..\QtPetinator\checkanimal.h \
 		..\QtPetinator\animalexists.h \
 		..\QtPetinator\losing.h \
@@ -2747,6 +2777,7 @@ release\secondslide.obj: ..\QtPetinator\secondslide.cpp ..\QtPetinator\secondsli
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
 		..\QtPetinator\guess.h \
 		..\QtPetinator\winning.h \
+		..\QtPetinator\guesslast.h \
 		..\QtPetinator\checkanimal.h \
 		..\QtPetinator\animalexists.h \
 		..\QtPetinator\losing.h \
@@ -2872,6 +2903,8 @@ release\winning.obj: ..\QtPetinator\winning.cpp ..\QtPetinator\winning.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
 		ui_winning.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\QVariant \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication \

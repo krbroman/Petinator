@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1280</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QPushButton" name="pushButton_Yes">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>470</y>
-     <width>191</width>
-     <height>91</height>
+     <x>220</x>
+     <y>570</y>
+     <width>280</width>
+     <height>100</height>
     </rect>
    </property>
    <property name="font">
@@ -34,31 +34,28 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>120</y>
-     <width>461</width>
-     <height>161</height>
+     <x>40</x>
+     <y>170</y>
+     <width>601</width>
+     <height>171</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>16</pointsize>
+     <pointsize>30</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Мы не нашли ваше животное
-в базе данных.
-Вы уверены в ответах на него 
-и хотите добавить в базу данных?</string>
+    <string>&lt;p align=&quot;center&quot;&gt;Животное не найдено &lt;br/&gt;в базе данных&lt;/p&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_No">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>470</y>
-     <width>191</width>
-     <height>91</height>
+     <x>510</x>
+     <y>570</y>
+     <width>280</width>
+     <height>100</height>
     </rect>
    </property>
    <property name="font">
@@ -68,6 +65,24 @@
    </property>
    <property name="text">
     <string>Нет</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>250</y>
+     <width>521</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>30</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;p align = &quot;center&quot;&gt;Хотите его туда &lt;br/&gt;добавить?&lt;/p&gt;</string>
    </property>
   </widget>
  </widget>

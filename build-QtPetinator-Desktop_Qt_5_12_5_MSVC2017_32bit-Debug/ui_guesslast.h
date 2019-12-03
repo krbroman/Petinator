@@ -29,7 +29,7 @@ public:
     {
         if (GuessLast->objectName().isEmpty())
             GuessLast->setObjectName(QString::fromUtf8("GuessLast"));
-        GuessLast->resize(800, 600);
+        GuessLast->resize(1280, 800);
         label = new QLabel(GuessLast);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(580, 260, 161, 91));

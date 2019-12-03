@@ -33,22 +33,25 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(1280, 800);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(290, 400, 191, 71));
+        pushButton->setGeometry(QRect(500, 550, 280, 100));
+        QFont font;
+        font.setPointSize(24);
+        pushButton->setFont(font);
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(270, 130, 221, 61));
-        QFont font;
-        font.setPointSize(30);
-        label->setFont(font);
+        label->setGeometry(QRect(400, 70, 431, 231));
+        QFont font1;
+        font1.setPointSize(40);
+        label->setFont(font1);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
+        menubar->setGeometry(QRect(0, 0, 1280, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -63,7 +66,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Petinator", nullptr));
         pushButton->setText(QApplication::translate("MainWindow", "\320\235\320\260\321\207\320\260\321\202\321\214 \320\270\320\263\321\200\321\203!", nullptr));
-        label->setText(QApplication::translate("MainWindow", "Petinator!", nullptr));
+        label->setText(QApplication::translate("MainWindow", "<p align=\"center\">Petinator!</p>", nullptr));
     } // retranslateUi
 
 };

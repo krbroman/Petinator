@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1280</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,30 +16,41 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>130</y>
-     <width>421</width>
-     <height>141</height>
+     <x>360</x>
+     <y>120</y>
+     <width>511</width>
+     <height>191</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>16</pointsize>
+     <pointsize>20</pointsize>
     </font>
    </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
    <property name="text">
-    <string>Мы не нашли ваше животное.
-Введите его название 
-для дальнейшего анализа.</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Мы не нашли ваше животное.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Введите его название &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;для дальнейшего анализа.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="usersAnimal">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>350</y>
+     <width>461</width>
+     <height>41</height>
+    </rect>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>460</y>
-     <width>361</width>
-     <height>61</height>
+     <x>440</x>
+     <y>430</y>
+     <width>381</width>
+     <height>100</height>
     </rect>
    </property>
    <property name="font">
@@ -49,16 +60,6 @@
    </property>
    <property name="text">
     <string>Проверить животное</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="usersAnimal">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>340</y>
-     <width>351</width>
-     <height>41</height>
-    </rect>
    </property>
   </widget>
  </widget>
