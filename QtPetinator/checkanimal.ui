@@ -51,7 +51,7 @@
     <string>Проверить животное</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="usersAnimal">
    <property name="geometry">
     <rect>
      <x>210</x>

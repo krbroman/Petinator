@@ -23,7 +23,7 @@ class Ui_CheckAnimal
 public:
     QLabel *label;
     QPushButton *pushButton;
-    QLineEdit *lineEdit;
+    QLineEdit *usersAnimal;
 
     void setupUi(QDialog *CheckAnimal)
     {
@@ -42,9 +42,9 @@ public:
         QFont font1;
         font1.setPointSize(20);
         pushButton->setFont(font1);
-        lineEdit = new QLineEdit(CheckAnimal);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(210, 340, 351, 41));
+        usersAnimal = new QLineEdit(CheckAnimal);
+        usersAnimal->setObjectName(QString::fromUtf8("usersAnimal"));
+        usersAnimal->setGeometry(QRect(210, 340, 351, 41));
 
         retranslateUi(CheckAnimal);
 

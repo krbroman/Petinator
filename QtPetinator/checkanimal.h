@@ -2,6 +2,7 @@
 #define CHECKANIMAL_H
 
 #include <QDialog>
+#include "questions.h"
 #include "animalexists.h"
 #include "addnewanimal.h"
 
@@ -15,12 +16,22 @@ class CheckAnimal : public QDialog
 
 public:
     explicit CheckAnimal(QWidget *parent = nullptr);
+    CheckAnimal(Questions&);
     ~CheckAnimal();
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::CheckAnimal *ui;
-    AnimalExists* anemalExists;
+    AnimalExists* animalExists;
     AddNewAnimal* addNewAnimal;
+
+    Questions* thisQuest;
+
+    bool check;
+
+    QString usersAnimal;
 };
 
 #endif // CHECKANIMAL_H

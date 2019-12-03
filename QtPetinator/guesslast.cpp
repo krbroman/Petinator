@@ -42,13 +42,13 @@ GuessLast::~GuessLast()
 void GuessLast::on_pushButton_Yes_clicked()
 {
     this->close();
-    winning = new Winning();
+    winning = new Winning(*thisQuest, expectedAnimal);
     winning->show();
 }
 
 void GuessLast::on_pushButton_No_clicked()
 {
     this->close();
-    checkAnimal = new CheckAnimal();
+    checkAnimal = new CheckAnimal(*thisQuest);
     checkAnimal->show();
 }

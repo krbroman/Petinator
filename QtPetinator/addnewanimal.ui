@@ -13,13 +13,13 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_Yes">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>490</y>
-     <width>151</width>
-     <height>61</height>
+     <x>180</x>
+     <y>470</y>
+     <width>191</width>
+     <height>91</height>
     </rect>
    </property>
    <property name="font">
@@ -52,13 +52,13 @@
 и хотите добавить в базу данных?</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButton_No">
    <property name="geometry">
     <rect>
      <x>400</x>
-     <y>490</y>
-     <width>151</width>
-     <height>61</height>
+     <y>470</y>
+     <width>191</width>
+     <height>91</height>
     </rect>
    </property>
    <property name="font">

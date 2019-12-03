@@ -12,3 +12,18 @@ AddNewAnimal::~AddNewAnimal()
 {
     delete ui;
 }
+
+void AddNewAnimal::on_pushButton_Yes_clicked()
+{
+    this->close();
+    /*перезаписать в базу животное*/
+    losing = new Losing();
+    losing->show();
+}
+
+void AddNewAnimal::on_pushButton_No_clicked()
+{
+    this->close();
+    losing = new Losing();
+    losing->show();
+}

@@ -19,7 +19,7 @@
      <x>130</x>
      <y>130</y>
      <width>601</width>
-     <height>181</height>
+     <height>191</height>
     </rect>
    </property>
    <property name="font">
@@ -29,11 +29,10 @@
    </property>
    <property name="text">
     <string>Животное в нашей базе данных существует. 
-Видимо, вы неправильно отвечали на 
-предложенные вопросы.</string>
+Добавить его не получится</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_Ok">
    <property name="geometry">
     <rect>
      <x>300</x>

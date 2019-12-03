@@ -12,7 +12,9 @@ Winning::Winning(Questions& quest, int animal) :
     ui(new Ui::Winning)
 {
     ui->setupUi(this);
-    //quest.
+
+    //Добавляем совпадение. Осталось выгрузить в Result.
+    quest.frequencyOfChoise[animal]++;
 }
 
 Winning::~Winning()

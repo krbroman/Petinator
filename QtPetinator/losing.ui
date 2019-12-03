@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="pushButton_Play">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -31,7 +31,7 @@
     <string>Играть еще раз</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_Exit">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -54,7 +54,7 @@
     <rect>
      <x>170</x>
      <y>170</y>
-     <width>351</width>
+     <width>451</width>
      <height>161</height>
     </rect>
    </property>
@@ -64,7 +64,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Я угадал!</string>
+    <string>Я проиграл :(</string>
    </property>
   </widget>
  </widget>

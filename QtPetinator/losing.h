@@ -15,6 +15,11 @@ public:
     explicit Losing(QWidget *parent = nullptr);
     ~Losing();
 
+private slots:
+    void on_pushButton_Play_clicked();
+
+    void on_pushButton_Exit_clicked();
+
 private:
     Ui::Losing *ui;
 };

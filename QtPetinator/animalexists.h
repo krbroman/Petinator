@@ -16,6 +16,9 @@ public:
     explicit AnimalExists(QWidget *parent = nullptr);
     ~AnimalExists();
 
+private slots:
+    void on_pushButton_Ok_clicked();
+
 private:
     Ui::AnimalExists *ui;
     Losing* losing;
