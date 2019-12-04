@@ -27,7 +27,11 @@ Guess::Guess(Questions &quest) :
         if (quest.countOfСoincidence[i] > max) {
             max = quest.countOfСoincidence[i];
             expectedAnimal = i;
-        }
+        } else if (quest.countOfСoincidence[i] == max)
+            if (quest.frequencyOfChoise[i] > quest.frequencyOfChoise[expectedAnimal]) {
+                max = quest.countOfСoincidence[i];
+                expectedAnimal = i;
+            }
 
     ui->Suggestion->setText(quest.animals[expectedAnimal]);
 

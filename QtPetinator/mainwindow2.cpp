@@ -23,15 +23,21 @@ MainWindow2::~MainWindow2()
 //Обработчик "да"
 void MainWindow2::on_pushButton_2_clicked()
 {
+    /*if (countOfQuestionAfterButton == Questions::getCountOfQuestion()) {
+
+    }*/
     //Увеличиваем счетчик
     countOfQuestionAfterButton++;
 
     //Реакция вообще на ту или иную кнопку
     quest.answersFromUsers[numberOfQuestion] = 1;
 
-    //Следующий вопрос на экране
-    numberOfQuestion = quest.numOfTheNextQuestion();
-    ui->label->setText(quest.questions[numberOfQuestion]);
+    //Необходимое условие для обработки ВСЕХ вопросов без вылета
+    if (countOfQuestionAfterButton < Questions::getCountOfQuestion()) {
+        //Следующий вопрос на экране
+        numberOfQuestion = quest.numOfTheNextQuestion();
+        ui->label->setText(quest.questions[numberOfQuestion]);
+    }
 
     //Обработчик на десятом, двадцатом и последнем вопросе.
     if (countOfQuestionAfterButton == 10) {
@@ -40,7 +46,7 @@ void MainWindow2::on_pushButton_2_clicked()
     } else if (countOfQuestionAfterButton == 20) {
         guess = new Guess(quest);
         guess->show();
-    } else if (countOfQuestionAfterButton == Questions::getCountOfQuestion() - 1) {
+    } else if (countOfQuestionAfterButton == Questions::getCountOfQuestion()) {
         this->close();
         guessLast = new GuessLast(quest);
         guessLast->show();
@@ -56,9 +62,12 @@ void MainWindow2::on_pushButton_clicked()
     //Реакция вообще на ту или иную кнопку
     quest.answersFromUsers[numberOfQuestion] = 0;
 
-    //Следующий вопрос на экране
-    numberOfQuestion = quest.numOfTheNextQuestion();
-    ui->label->setText(quest.questions[numberOfQuestion]);
+    //Необходимое условие для обработки ВСЕХ вопросов без вылета
+    if (countOfQuestionAfterButton < Questions::getCountOfQuestion()) {
+        //Следующий вопрос на экране
+        numberOfQuestion = quest.numOfTheNextQuestion();
+        ui->label->setText(quest.questions[numberOfQuestion]);
+    }
 
     //Обработчик на десятом, двадцатом и последнем вопросе.
     if (countOfQuestionAfterButton == 10) {
@@ -67,7 +76,7 @@ void MainWindow2::on_pushButton_clicked()
     } else if (countOfQuestionAfterButton == 20) {
         guess = new Guess(quest);
         guess->show();
-    } else if (countOfQuestionAfterButton == Questions::getCountOfQuestion() - 1) {
+    } else if (countOfQuestionAfterButton == Questions::getCountOfQuestion()) {
         this->close();
         guessLast = new GuessLast(quest);
         guessLast->show();
