@@ -64,7 +64,9 @@ SOURCES       = ../QtPetinator/addnewanimal.cpp \
 		../QtPetinator/mainwindow2.cpp \
 		../QtPetinator/questions.cpp \
 		../QtPetinator/secondslide.cpp \
-		../QtPetinator/winning.cpp moc_addnewanimal.cpp \
+		../QtPetinator/winning.cpp qrc_resources.cpp \
+		qrc_resoures2.cpp \
+		moc_addnewanimal.cpp \
 		moc_animalexists.cpp \
 		moc_checkanimal.cpp \
 		moc_guess.cpp \
@@ -87,6 +89,8 @@ OBJECTS       = addnewanimal.o \
 		questions.o \
 		secondslide.o \
 		winning.o \
+		qrc_resources.o \
+		qrc_resoures2.o \
 		moc_addnewanimal.o \
 		moc_animalexists.o \
 		moc_checkanimal.o \
@@ -262,6 +266,7 @@ DIST          = /Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/spec_pr
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/qt_config.prf \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/spec_post.prf \
+		../QtPetinator/.qmake.stash \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/toolchain.prf \
@@ -500,6 +505,7 @@ Makefile: ../QtPetinator/QtPetinator.pro /Users/juliachernykh/Qt/5.12.6/clang_64
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/qt_config.prf \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/toolchain.prf \
@@ -528,6 +534,8 @@ Makefile: ../QtPetinator/QtPetinator.pro /Users/juliachernykh/Qt/5.12.6/clang_64
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/yacc.prf \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/lex.prf \
 		../QtPetinator/QtPetinator.pro \
+		../QtPetinator/resources.qrc \
+		../QtPetinator/resoures2.qrc \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtWidgets.framework/QtWidgets.prl \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtGui.framework/QtGui.prl \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtCore.framework/QtCore.prl
@@ -697,6 +705,7 @@ Makefile: ../QtPetinator/QtPetinator.pro /Users/juliachernykh/Qt/5.12.6/clang_64
 /Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/qt_config.prf:
 /Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/macx-clang/qmake.conf:
 /Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/exclusive_builds.prf:
 /Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/mac/sdk.prf:
 /Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/toolchain.prf:
@@ -725,6 +734,8 @@ Makefile: ../QtPetinator/QtPetinator.pro /Users/juliachernykh/Qt/5.12.6/clang_64
 /Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/yacc.prf:
 /Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/lex.prf:
 ../QtPetinator/QtPetinator.pro:
+../QtPetinator/resources.qrc:
+../QtPetinator/resoures2.qrc:
 /Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtWidgets.framework/QtWidgets.prl:
 /Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtGui.framework/QtGui.prl:
 /Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtCore.framework/QtCore.prl:
@@ -757,6 +768,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
+	$(COPY_FILE) --parents ../QtPetinator/resources.qrc ../QtPetinator/resoures2.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../QtPetinator/addnewanimal.h ../QtPetinator/animalexists.h ../QtPetinator/answers.h ../QtPetinator/checkanimal.h ../QtPetinator/guess.h ../QtPetinator/guesslast.h ../QtPetinator/losing.h ../QtPetinator/mainwindow.h ../QtPetinator/mainwindow2.h ../QtPetinator/questions.h ../QtPetinator/secondslide.h ../QtPetinator/winning.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../QtPetinator/addnewanimal.cpp ../QtPetinator/animalexists.cpp ../QtPetinator/answers.cpp ../QtPetinator/checkanimal.cpp ../QtPetinator/guess.cpp ../QtPetinator/guesslast.cpp ../QtPetinator/losing.cpp ../QtPetinator/main.cpp ../QtPetinator/mainwindow.cpp ../QtPetinator/mainwindow2.cpp ../QtPetinator/questions.cpp ../QtPetinator/secondslide.cpp ../QtPetinator/winning.cpp $(DISTDIR)/
@@ -770,6 +782,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r QtPetinator.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -786,8 +799,59 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all:
+compiler_rcc_make_all: qrc_resources.cpp qrc_resoures2.cpp
 compiler_rcc_clean:
+	-$(DEL_FILE) qrc_resources.cpp qrc_resoures2.cpp
+qrc_resources.cpp: ../QtPetinator/resources.qrc \
+		/Users/juliachernykh/Qt/5.12.6/clang_64/bin/rcc \
+		../QtPetinator/Slide9_5.png \
+		../QtPetinator/Slide7_3.png \
+		../QtPetinator/Slide3_4.png \
+		../QtPetinator/Slide5_1.png \
+		../QtPetinator/Slide1_2.png \
+		../QtPetinator/Slide9_4.png \
+		../QtPetinator/Slide7_2.png \
+		../QtPetinator/Slide3_3.png \
+		../QtPetinator/Slide1_1.png \
+		../QtPetinator/Slide9_3.png \
+		../QtPetinator/Slide7_1.png \
+		../QtPetinator/Slide3_2.png \
+		../QtPetinator/Slide9_2.png \
+		../QtPetinator/Slide3_1.png \
+		../QtPetinator/Slide8_5.png \
+		../QtPetinator/Slide9_1.png \
+		../QtPetinator/Slide2_4.png \
+		../QtPetinator/Slide8_4.png \
+		../QtPetinator/Slide4_5.png \
+		../QtPetinator/Slide6_2.png \
+		../QtPetinator/Slide2_3.png \
+		../QtPetinator/Script4_3.png \
+		../QtPetinator/Slide7_7.png \
+		../QtPetinator/Slide8_3.png \
+		../QtPetinator/Slide5_5.png \
+		../QtPetinator/Slide4_4.png \
+		../QtPetinator/Slide6_1.png \
+		../QtPetinator/Slide2_2.png \
+		../QtPetinator/Script4_2.png \
+		../QtPetinator/Slide7_6.png \
+		../QtPetinator/Slide8_2.png \
+		../QtPetinator/Slide5_4.png \
+		../QtPetinator/Slide2_1.png \
+		../QtPetinator/Slide7_5.png \
+		../QtPetinator/Slide5_3.png \
+		../QtPetinator/Slide1_4.png \
+		../QtPetinator/Slide7_4.png \
+		../QtPetinator/Slide3_5.png \
+		../QtPetinator/Slide5_2.png \
+		../QtPetinator/Slide4_1.png \
+		../QtPetinator/Slide1_3.png
+	/Users/juliachernykh/Qt/5.12.6/clang_64/bin/rcc -name resources ../QtPetinator/resources.qrc -o qrc_resources.cpp
+
+qrc_resoures2.cpp: ../QtPetinator/resoures2.qrc \
+		/Users/juliachernykh/Qt/5.12.6/clang_64/bin/rcc \
+		../QtPetinator/AllSlides.png
+	/Users/juliachernykh/Qt/5.12.6/clang_64/bin/rcc -name resoures2 ../QtPetinator/resoures2.qrc -o qrc_resoures2.cpp
+
 compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) moc_predefs.h
@@ -878,6 +942,8 @@ moc_mainwindow.cpp: ../QtPetinator/mainwindow.h \
 		../QtPetinator/losing.h \
 		../QtPetinator/addnewanimal.h \
 		../QtPetinator/secondslide.h \
+		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/QPixmap \
+		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/qpixmap.h \
 		moc_predefs.h \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/bin/moc
 	/Users/juliachernykh/Qt/5.12.6/clang_64/bin/moc $(DEFINES) --include '/Users/juliachernykh/Documents/university/Programming languages/Petinator/build-QtPetinator-Desktop_Qt_5_12_6_clang_64bit-Debug/moc_predefs.h' -I/Users/juliachernykh/Qt/5.12.6/clang_64/mkspecs/macx-clang -I'/Users/juliachernykh/Documents/university/Programming languages/Petinator/QtPetinator' -I/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers -I/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtGui.framework/Headers -I/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -F/Users/juliachernykh/Qt/5.12.6/clang_64/lib ../QtPetinator/mainwindow.h -o moc_mainwindow.cpp
@@ -990,7 +1056,7 @@ compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
 
@@ -1072,6 +1138,8 @@ main.o: ../QtPetinator/main.cpp ../QtPetinator/mainwindow.h \
 		../QtPetinator/losing.h \
 		../QtPetinator/addnewanimal.h \
 		../QtPetinator/secondslide.h \
+		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/QPixmap \
+		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/qpixmap.h \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QApplication \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../QtPetinator/main.cpp
@@ -1095,6 +1163,8 @@ mainwindow.o: ../QtPetinator/mainwindow.cpp ../QtPetinator/mainwindow.h \
 		../QtPetinator/losing.h \
 		../QtPetinator/addnewanimal.h \
 		../QtPetinator/secondslide.h \
+		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/QPixmap \
+		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/qpixmap.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../QtPetinator/mainwindow.cpp
 
@@ -1152,6 +1222,12 @@ winning.o: ../QtPetinator/winning.cpp ../QtPetinator/winning.h \
 		/Users/juliachernykh/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		ui_winning.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o winning.o ../QtPetinator/winning.cpp
+
+qrc_resources.o: qrc_resources.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resources.o qrc_resources.cpp
+
+qrc_resoures2.o: qrc_resoures2.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resoures2.o qrc_resoures2.cpp
 
 moc_addnewanimal.o: moc_addnewanimal.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_addnewanimal.o moc_addnewanimal.cpp

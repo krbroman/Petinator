@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>800</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,10 +34,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>170</y>
-     <width>601</width>
-     <height>171</height>
+     <x>207</x>
+     <y>200</y>
+     <width>351</width>
+     <height>110</height>
     </rect>
    </property>
    <property name="font">
@@ -46,7 +46,7 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;p align=&quot;center&quot;&gt;Животное не найдено &lt;br/&gt;в базе данных&lt;/p&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Comic Sans MS'; color:#c85836;&quot;&gt;Животное не найдено &lt;br/&gt;в базе данных.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_No">
@@ -70,10 +70,10 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>250</y>
-     <width>521</width>
-     <height>261</height>
+     <x>443</x>
+     <y>347</y>
+     <width>390</width>
+     <height>128</height>
     </rect>
    </property>
    <property name="font">
@@ -82,9 +82,116 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;p align = &quot;center&quot;&gt;Хотите его туда &lt;br/&gt;добавить?&lt;/p&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+&lt;p align = &quot;center&quot;&gt;&lt;span style=&quot; font-family:'Comic Sans MS'; font-size:30pt; color:#C85836;&quot;&gt;Хотите добавить новое&lt;br/&gt;животное в базу данных?&lt;/p&gt;
+&lt;/span&gt;&lt;/body&gt;&lt;/head&gt;&lt;/html&gt;
+
+
+</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>768</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>177</x>
+     <y>188</y>
+     <width>411</width>
+     <height>134</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>424</x>
+     <y>331</y>
+     <width>411</width>
+     <height>134</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>658</x>
+     <y>481</y>
+     <width>137</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>489</x>
+     <y>481</y>
+     <width>137</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>-21</x>
+     <y>27</y>
+     <width>1048</width>
+     <height>578</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>-20</x>
+     <y>36</y>
+     <width>1047</width>
+     <height>562</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_9</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>pushButton_No</zorder>
+  <zorder>pushButton_Yes</zorder>
  </widget>
  <resources/>
  <connections/>

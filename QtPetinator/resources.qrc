@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>Slide9_5.png</file>
+        <file>Slide9_4.png</file>
+        <file>Slide9_3.png</file>
+        <file>Slide9_2.png</file>
+        <file>Slide9_1.png</file>
+        <file>Slide8_5.png</file>
+        <file>Slide8_4.png</file>
+        <file>Slide8_3.png</file>
+        <file>Slide8_2.png</file>
+        <file>Slide7_7.png</file>
+        <file>Slide7_6.png</file>
+        <file>Slide7_5.png</file>
+        <file>Slide7_4.png</file>
+        <file>Slide7_3.png</file>
+        <file>Slide7_2.png</file>
+        <file>Slide7_1.png</file>
+        <file>Slide6_2.png</file>
+        <file>Slide6_1.png</file>
+        <file>Slide5_5.png</file>
+        <file>Slide5_4.png</file>
+        <file>Slide5_3.png</file>
+        <file>Slide5_2.png</file>
+        <file>Slide5_1.png</file>
+        <file>Slide4_5.png</file>
+        <file>Slide4_4.png</file>
+        <file>Script4_3.png</file>
+        <file>Script4_2.png</file>
+        <file>Slide4_1.png</file>
+        <file>Slide3_5.png</file>
+        <file>Slide3_4.png</file>
+        <file>Slide3_3.png</file>
+        <file>Slide3_2.png</file>
+        <file>Slide3_1.png</file>
+        <file>Slide2_4.png</file>
+        <file>Slide2_3.png</file>
+        <file>Slide2_2.png</file>
+        <file>Slide2_1.png</file>
+        <file>Slide1_4.png</file>
+        <file>Slide1_3.png</file>
+        <file>Slide1_2.png</file>
+        <file>Slide1_1.png</file>
+    </qresource>
+</RCC>

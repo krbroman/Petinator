@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>800</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>220</y>
-     <width>1051</width>
-     <height>351</height>
+     <x>275</x>
+     <y>237</y>
+     <width>473</width>
+     <height>139</height>
     </rect>
    </property>
    <property name="font">
@@ -28,7 +28,9 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;p align = &quot;center&quot;&gt;Животное в нашей базе данных существует. &lt;br/&gt;Добавить его не получится &lt;/p&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align = &quot;center&quot;&gt;&lt;span style=&quot; font-family:'Comic Sans MS'; ont-size:30pt;color:#c85836;&quot;&gt;Животное существует в базе&lt;br/&gt; данных. Возможно, ваши &lt;br/&gt;ответы были некорректны&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+
+</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Ok">
@@ -49,6 +51,145 @@
     <string>Ок</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>681</x>
+     <y>271</y>
+     <width>241</width>
+     <height>245</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>768</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label3">
+   <property name="geometry">
+    <rect>
+     <x>232</x>
+     <y>223</y>
+     <width>560</width>
+     <height>168</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label4">
+   <property name="geometry">
+    <rect>
+     <x>221</x>
+     <y>624</y>
+     <width>263</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label5">
+   <property name="geometry">
+    <rect>
+     <x>547</x>
+     <y>624</y>
+     <width>280</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label6">
+   <property name="geometry">
+    <rect>
+     <x>-42</x>
+     <y>340</y>
+     <width>1078</width>
+     <height>207</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label7">
+   <property name="geometry">
+    <rect>
+     <x>-23</x>
+     <y>437</y>
+     <width>1055</width>
+     <height>117</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>212</x>
+     <y>660</y>
+     <width>280</width>
+     <height>77</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p align = &quot;center&quot;&gt;&lt;span style=&quot;font-family:'Comic Sans MS'; font-size:30pt;color:#c85836;&quot;&gt;Выйти&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/head&gt;&lt;/html&gt;
+
+</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p align = &quot;center&quot;&gt;&lt;span style=&quot;font-family:'Comic Sans MS'; font-size:30pt;color:#c85836;&quot;&gt;Выйти&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/head&gt;&lt;/html&gt;
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>515</x>
+     <y>640</y>
+     <width>344</width>
+     <height>129</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p align = &quot;center&quot;&gt;&lt;span style=&quot;font-family:'Comic Sans MS'; font-size:30pt;color:#c85836;&quot;&gt;Играть еще раз&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/head&gt;&lt;/html&gt;
+</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p align = &quot;center&quot;&gt;&lt;span style=&quot;font-family:'Comic Sans MS'; font-size:30pt;color:#c85836;&quot;&gt;Играть еще раз&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/head&gt;&lt;/html&gt;
+</string>
+   </property>
+  </widget>
+  <zorder>label2</zorder>
+  <zorder>pushButton_Ok</zorder>
+  <zorder>label1</zorder>
+  <zorder>label3</zorder>
+  <zorder>label4</zorder>
+  <zorder>label5</zorder>
+  <zorder>label6</zorder>
+  <zorder>label7</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "mainwindow2.h"
 #include "secondslide.h"
+#include <QPixmap>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

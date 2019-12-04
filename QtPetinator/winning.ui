@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>800</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>50</y>
-     <width>351</width>
-     <height>161</height>
+     <x>250</x>
+     <y>167</y>
+     <width>302</width>
+     <height>125</height>
     </rect>
    </property>
    <property name="font">
@@ -28,7 +28,17 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;p align=&quot;center&quot;&gt;Я угадал!&lt;/p&gt;</string>
+    <string>&lt;html&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;span style=&quot; font-family:'Comic Sans MS'; font-size:50pt; color:#FFF8EA;&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;
+Я угадал
+&lt;/span&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Exit">
@@ -67,6 +77,107 @@
     <string>Играть еще раз</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>768</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>221</x>
+     <y>624</y>
+     <width>263</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label3">
+   <property name="geometry">
+    <rect>
+     <x>547</x>
+     <y>624</y>
+     <width>280</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label4">
+   <property name="geometry">
+    <rect>
+     <x>-20</x>
+     <y>399</y>
+     <width>1044</width>
+     <height>373</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label5">
+   <property name="geometry">
+    <rect>
+     <x>-3</x>
+     <y>391</y>
+     <width>1025</width>
+     <height>376</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label6">
+   <property name="geometry">
+    <rect>
+     <x>549</x>
+     <y>199</y>
+     <width>278</width>
+     <height>277</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label7">
+   <property name="geometry">
+    <rect>
+     <x>227</x>
+     <y>143</y>
+     <width>349</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label1</zorder>
+  <zorder>pushButton_Exit</zorder>
+  <zorder>pushButton_Play</zorder>
+  <zorder>label2</zorder>
+  <zorder>label3</zorder>
+  <zorder>label4</zorder>
+  <zorder>label5</zorder>
+  <zorder>label6</zorder>
+  <zorder>label7</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources/>
  <connections/>

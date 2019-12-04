@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>800</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -67,6 +67,107 @@
     <string>Я проиграл :(</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>537</x>
+     <y>237</y>
+     <width>280</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>188</x>
+     <y>161</y>
+     <width>384</width>
+     <height>185</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label3">
+   <property name="geometry">
+    <rect>
+     <x>221</x>
+     <y>624</y>
+     <width>263</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label4">
+   <property name="geometry">
+    <rect>
+     <x>547</x>
+     <y>624</y>
+     <width>280</width>
+     <height>86</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label5">
+   <property name="geometry">
+    <rect>
+     <x>-20</x>
+     <y>399</y>
+     <width>1044</width>
+     <height>373</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label6">
+   <property name="geometry">
+    <rect>
+     <x>-3</x>
+     <y>391</y>
+     <width>1025</width>
+     <height>376</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label7">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>768</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>pushButton_Play</zorder>
+  <zorder>pushButton_Exit</zorder>
+  <zorder>label7</zorder>
+  <zorder>label5</zorder>
+  <zorder>label6</zorder>
+  <zorder>label3</zorder>
+  <zorder>label4</zorder>
+  <zorder>label1</zorder>
+  <zorder>label2</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources/>
  <connections/>

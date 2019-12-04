@@ -23,12 +23,19 @@ public:
     QPushButton *pushButton_Play;
     QPushButton *pushButton_Exit;
     QLabel *label;
+    QLabel *label1;
+    QLabel *label2;
+    QLabel *label3;
+    QLabel *label4;
+    QLabel *label5;
+    QLabel *label6;
+    QLabel *label7;
 
     void setupUi(QDialog *Losing)
     {
         if (Losing->objectName().isEmpty())
             Losing->setObjectName(QString::fromUtf8("Losing"));
-        Losing->resize(1280, 800);
+        Losing->resize(1024, 768);
         pushButton_Play = new QPushButton(Losing);
         pushButton_Play->setObjectName(QString::fromUtf8("pushButton_Play"));
         pushButton_Play->setGeometry(QRect(600, 540, 280, 100));
@@ -45,6 +52,37 @@ public:
         QFont font1;
         font1.setPointSize(40);
         label->setFont(font1);
+        label1 = new QLabel(Losing);
+        label1->setObjectName(QString::fromUtf8("label1"));
+        label1->setGeometry(QRect(537, 237, 280, 281));
+        label2 = new QLabel(Losing);
+        label2->setObjectName(QString::fromUtf8("label2"));
+        label2->setGeometry(QRect(188, 161, 384, 185));
+        label3 = new QLabel(Losing);
+        label3->setObjectName(QString::fromUtf8("label3"));
+        label3->setGeometry(QRect(221, 624, 263, 86));
+        label4 = new QLabel(Losing);
+        label4->setObjectName(QString::fromUtf8("label4"));
+        label4->setGeometry(QRect(547, 624, 280, 86));
+        label5 = new QLabel(Losing);
+        label5->setObjectName(QString::fromUtf8("label5"));
+        label5->setGeometry(QRect(-20, 399, 1044, 373));
+        label6 = new QLabel(Losing);
+        label6->setObjectName(QString::fromUtf8("label6"));
+        label6->setGeometry(QRect(-3, 391, 1025, 376));
+        label7 = new QLabel(Losing);
+        label7->setObjectName(QString::fromUtf8("label7"));
+        label7->setGeometry(QRect(0, 0, 1024, 768));
+        pushButton_Play->raise();
+        pushButton_Exit->raise();
+        label7->raise();
+        label5->raise();
+        label6->raise();
+        label3->raise();
+        label4->raise();
+        label1->raise();
+        label2->raise();
+        label->raise();
 
         retranslateUi(Losing);
 
@@ -57,6 +95,13 @@ public:
         pushButton_Play->setText(QApplication::translate("Losing", "\320\230\320\263\321\200\320\260\321\202\321\214 \320\265\321\211\320\265 \321\200\320\260\320\267", nullptr));
         pushButton_Exit->setText(QApplication::translate("Losing", "\320\222\321\213\320\271\321\202\320\270", nullptr));
         label->setText(QApplication::translate("Losing", "\320\257 \320\277\321\200\320\276\320\270\320\263\321\200\320\260\320\273 :(", nullptr));
+        label1->setText(QString());
+        label2->setText(QString());
+        label3->setText(QString());
+        label4->setText(QString());
+        label5->setText(QString());
+        label6->setText(QString());
+        label7->setText(QString());
     } // retranslateUi
 
 };

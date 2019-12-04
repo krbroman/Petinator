@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>800</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>120</y>
-     <width>511</width>
-     <height>191</height>
+     <x>346</x>
+     <y>193</y>
+     <width>381</width>
+     <height>122</height>
     </rect>
    </property>
    <property name="font">
@@ -31,7 +31,10 @@
     <enum>Qt::LeftToRight</enum>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Мы не нашли ваше животное.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Введите его название &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;для дальнейшего анализа.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot;font-family:'Comic Sans MS'; font-size:30pt;color:#c85836;&quot;&gt;Животное не найдено.&lt;br&gt;Введите его название для&lt;br&gt; дальнейшего анализа&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/head&gt;&lt;/html&gt;
+
+
+</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="usersAnimal">
@@ -62,6 +65,121 @@
     <string>Проверить животное</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>286</x>
+     <y>183</y>
+     <width>452</width>
+     <height>142</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>149</x>
+     <y>225</y>
+     <width>220</width>
+     <height>226</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label3">
+   <property name="geometry">
+    <rect>
+     <x>352</x>
+     <y>348</y>
+     <width>319</width>
+     <height>67</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label4">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>431</y>
+     <width>217</width>
+     <height>55</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label5">
+   <property name="geometry">
+    <rect>
+     <x>-4</x>
+     <y>192</y>
+     <width>1042</width>
+     <height>429</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label6">
+   <property name="geometry">
+    <rect>
+     <x>-9</x>
+     <y>252</y>
+     <width>1046</width>
+     <height>356</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label8">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>768</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label7">
+   <property name="geometry">
+    <rect>
+     <x>-9</x>
+     <y>269</y>
+     <width>1035</width>
+     <height>317</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label8</zorder>
+  <zorder>label1</zorder>
+  <zorder>label</zorder>
+  <zorder>usersAnimal</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>label2</zorder>
+  <zorder>label3</zorder>
+  <zorder>label4</zorder>
+  <zorder>label5</zorder>
+  <zorder>label6</zorder>
+  <zorder>label7</zorder>
  </widget>
  <resources/>
  <connections/>

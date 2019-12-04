@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>800</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>260</y>
-     <width>161</width>
-     <height>91</height>
+     <x>513</x>
+     <y>296</y>
+     <width>220</width>
+     <height>105</height>
     </rect>
    </property>
    <property name="font">
@@ -28,8 +28,16 @@
     </font>
    </property>
    <property name="text">
-    <string>Я думаю, 
-что это...</string>
+    <string>&lt;html&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;span style=&quot; font-family:'Arial Rounded MT Bold'; font-size:35pt; color:#FFF8EA;&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;Я думаю, &lt;br/&gt;что это...
+&lt;/span&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_No">
@@ -86,6 +94,108 @@
     <string>Да</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>742</x>
+     <y>490</y>
+     <width>294</width>
+     <height>266</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>376</x>
+     <y>353</y>
+     <width>137</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label3">
+   <property name="geometry">
+    <rect>
+     <x>-9</x>
+     <y>2</y>
+     <width>1009</width>
+     <height>627</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label4">
+   <property name="geometry">
+    <rect>
+     <x>545</x>
+     <y>353</y>
+     <width>137</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label5">
+   <property name="geometry">
+    <rect>
+     <x>-2</x>
+     <y>-2</y>
+     <width>999</width>
+     <height>592</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label6">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>768</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label7">
+   <property name="geometry">
+    <rect>
+     <x>463</x>
+     <y>462</y>
+     <width>301</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label6</zorder>
+  <zorder>pushButton_No</zorder>
+  <zorder>Suggestion</zorder>
+  <zorder>pushButton_Yes</zorder>
+  <zorder>label1</zorder>
+  <zorder>label2</zorder>
+  <zorder>label3</zorder>
+  <zorder>label4</zorder>
+  <zorder>label5</zorder>
+  <zorder>label7</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources/>
  <connections/>

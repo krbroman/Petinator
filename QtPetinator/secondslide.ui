@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>800</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>60</y>
-     <width>691</width>
-     <height>221</height>
+     <y>87</y>
+     <width>425</width>
+     <height>161</height>
     </rect>
    </property>
    <property name="font">
@@ -28,14 +28,14 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Загадайте животное. &lt;br/&gt;Я постараюсь его &lt;br/&gt; отгадать&lt;/p&gt;&lt;/body&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Arial Rounded MT Bold'; font-size:30pt; color:#fceedf;&quot;&gt;Загадайте животное. &lt;br/&gt;Я постараюсь его &lt;br/&gt; отгадать&lt;/span&gt;&lt;span style=&quot; font-size:64pt;&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>590</y>
+     <x>390</x>
+     <y>570</y>
      <width>280</width>
      <height>100</height>
     </rect>
@@ -45,10 +45,96 @@
      <pointsize>24</pointsize>
     </font>
    </property>
+   <property name="toolTip">
+    <string>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+ &lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;layer1&quot;&gt;
+&lt;font size=&quot;45&quot; color=&quot;#C85836&quot; face=&quot;Arial Rounded MT Bold&quot;&gt;Далее&lt;/font&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</string>
+   </property>
    <property name="text">
     <string>Далее</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>768</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label3">
+   <property name="geometry">
+    <rect>
+     <x>361</x>
+     <y>56</y>
+     <width>451</width>
+     <height>237</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label4">
+   <property name="geometry">
+    <rect>
+     <x>164</x>
+     <y>200</y>
+     <width>237</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label5">
+   <property name="geometry">
+    <rect>
+     <x>-19</x>
+     <y>334</y>
+     <width>1173</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label6">
+   <property name="geometry">
+    <rect>
+     <x>379</x>
+     <y>564</y>
+     <width>295</width>
+     <height>108</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label2</zorder>
+  <zorder>label4</zorder>
+  <zorder>label5</zorder>
+  <zorder>label6</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>label3</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources/>
  <connections/>
