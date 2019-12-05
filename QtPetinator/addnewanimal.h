@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "losing.h"
+#include "questions.h"
 
 namespace Ui {
 class AddNewAnimal;
@@ -14,6 +15,7 @@ class AddNewAnimal : public QDialog
 
 public:
     explicit AddNewAnimal(QWidget *parent = nullptr);
+    AddNewAnimal(Questions&, QString);
     ~AddNewAnimal();
 
 private slots:

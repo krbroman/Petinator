@@ -44,13 +44,13 @@ Winning::Winning(QWidget *parent) :
     ui->label7->setPixmap(pix7.scaled(w, h, Qt::KeepAspectRatio));
 }
 
-Winning::Winning(Questions& quest, int animal) :
+Winning::Winning(int animal) :
     ui(new Ui::Winning)
 {
     ui->setupUi(this);
 
     //Добавляем совпадение. Осталось выгрузить в Result.
-    quest.frequencyOfChoise[animal]++;
+    //quest.frequencyOfChoise[animal]++;
 }
 
 Winning::~Winning()

@@ -62,7 +62,11 @@ GuessLast::GuessLast(Questions &quest) :
         if (quest.countOfСoincidence[i] > max) {
             max = quest.countOfСoincidence[i];
             expectedAnimal = i;
-        }
+        } else if (quest.countOfСoincidence[i] == max)
+            if (quest.frequencyOfChoise[i] > quest.frequencyOfChoise[expectedAnimal]) {
+                max = quest.countOfСoincidence[i];
+                expectedAnimal = i;
+            }
 
     ui->Suggestion->setText(quest.animals[expectedAnimal]);
 
@@ -78,7 +82,7 @@ GuessLast::~GuessLast()
 void GuessLast::on_pushButton_Yes_clicked()
 {
     this->close();
-    winning = new Winning(*thisQuest, expectedAnimal);
+    winning = new Winning(expectedAnimal);
     winning->show();
 }
 

@@ -14,7 +14,7 @@ class Winning : public QDialog
 
 public:
     explicit Winning(QWidget *parent = nullptr);
-    Winning (Questions&, int);
+    Winning (int);
     ~Winning();
 
 private slots:

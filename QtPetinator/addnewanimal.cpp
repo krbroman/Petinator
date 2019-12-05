@@ -44,6 +44,13 @@ AddNewAnimal::AddNewAnimal(QWidget *parent) :
     ui->label_9->setPixmap(pix6.scaled(w, h, Qt::KeepAspectRatio));
 }
 
+AddNewAnimal::AddNewAnimal(Questions& quest, QString animal) :
+    ui(new Ui::AddNewAnimal)
+{
+    ui->setupUi(this);
+    /*Работа с базой данных*/
+}
+
 AddNewAnimal::~AddNewAnimal()
 {
     delete ui;
