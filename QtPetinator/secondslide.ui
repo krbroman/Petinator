@@ -34,15 +34,18 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>570</y>
-     <width>280</width>
-     <height>100</height>
+     <x>389</x>
+     <y>569</y>
+     <width>271</width>
+     <height>91</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>24</pointsize>
+     <pointsize>45</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="toolTip">
@@ -58,6 +61,12 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:45pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Далее</string>
@@ -118,7 +127,7 @@
   <widget class="QLabel" name="label6">
    <property name="geometry">
     <rect>
-     <x>379</x>
+     <x>380</x>
      <y>564</y>
      <width>295</width>
      <height>108</height>
@@ -131,10 +140,10 @@
   <zorder>label2</zorder>
   <zorder>label4</zorder>
   <zorder>label5</zorder>
-  <zorder>label6</zorder>
-  <zorder>pushButton</zorder>
   <zorder>label3</zorder>
   <zorder>label</zorder>
+  <zorder>label6</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections/>

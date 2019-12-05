@@ -45,10 +45,17 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(390, 470, 280, 100));
+        pushButton->setGeometry(QRect(380, 459, 301, 121));
         QFont font;
-        font.setPointSize(24);
+        font.setPointSize(45);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setWeight(50);
         pushButton->setFont(font);
+        pushButton->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:45pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(155, 60, 311, 241));
@@ -74,10 +81,10 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         label5->raise();
         label3->raise();
-        label4->raise();
         label2->raise();
         label->raise();
         Slide1_1->raise();
+        label4->raise();
         pushButton->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));

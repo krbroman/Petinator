@@ -41,10 +41,17 @@ public:
         label->setFont(font);
         pushButton = new QPushButton(SecondSlide);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(390, 570, 280, 100));
+        pushButton->setGeometry(QRect(389, 569, 271, 91));
         QFont font1;
-        font1.setPointSize(24);
+        font1.setPointSize(45);
+        font1.setBold(false);
+        font1.setItalic(false);
+        font1.setWeight(50);
         pushButton->setFont(font1);
+        pushButton->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:45pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         label2 = new QLabel(SecondSlide);
         label2->setObjectName(QString::fromUtf8("label2"));
         label2->setGeometry(QRect(0, 0, 1024, 768));
@@ -59,14 +66,14 @@ public:
         label5->setGeometry(QRect(-19, 334, 1173, 300));
         label6 = new QLabel(SecondSlide);
         label6->setObjectName(QString::fromUtf8("label6"));
-        label6->setGeometry(QRect(379, 564, 295, 108));
+        label6->setGeometry(QRect(380, 564, 295, 108));
         label2->raise();
         label4->raise();
         label5->raise();
-        label6->raise();
-        pushButton->raise();
         label3->raise();
         label->raise();
+        label6->raise();
+        pushButton->raise();
 
         retranslateUi(SecondSlide);
 
