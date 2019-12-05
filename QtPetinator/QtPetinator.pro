@@ -18,7 +18,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     addnewanimal.cpp \
     animalexists.cpp \
-    answers.cpp \
     checkanimal.cpp \
     guess.cpp \
     guesslast.cpp \
@@ -33,7 +32,6 @@ SOURCES += \
 HEADERS += \
     addnewanimal.h \
     animalexists.h \
-    answers.h \
     checkanimal.h \
     guess.h \
     guesslast.h \

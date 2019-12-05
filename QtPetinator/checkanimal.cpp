@@ -67,7 +67,7 @@ CheckAnimal::~CheckAnimal()
 void CheckAnimal::on_pushButton_clicked()
 {
     usersAnimal = ui->usersAnimal->text();
-    for (int i = 0; i < Questions::getCountOfAnimals(); i++)
+    for (int i = 0; i < thisQuest->getCountOfAnimals(); i++)
         if (ui->usersAnimal->text() == thisQuest->animals[i])
             check = true;
     if (check) {

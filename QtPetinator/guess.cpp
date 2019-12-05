@@ -51,15 +51,15 @@ Guess::Guess(Questions &quest) :
 
     this->thisQuest = &quest;
 
-    for(int i = 0; i < Questions::getCountOfAnimals(); i++)
-        for(int j = 0; j < Questions::getCountOfQuestion(); j++)
+    for(int i = 0; i < thisQuest->getCountOfAnimals(); i++)
+        for(int j = 0; j < thisQuest->getCountOfQuestion(); j++)
             if(quest.answersFromUsers[j] != 2)
                 if (quest.answersFromUsers[j] == quest.answersForAnimals[i][j])
                     quest.countOfСoincidence[i]++;
 
     int max = -1;
     expectedAnimal = -1;
-    for (int i = 0; i < Questions::getCountOfAnimals(); i++)
+    for (int i = 0; i < thisQuest->getCountOfAnimals(); i++)
         if (quest.countOfСoincidence[i] > max) {
             max = quest.countOfСoincidence[i];
             expectedAnimal = i;
@@ -71,7 +71,7 @@ Guess::Guess(Questions &quest) :
 
     ui->Suggestion->setText(quest.animals[expectedAnimal]);
 
-    for(int i = 0; i < Questions::getCountOfAnimals(); i++)
+    for(int i = 0; i < thisQuest->getCountOfAnimals(); i++)
         quest.countOfСoincidence[i] = 0;
 }
 

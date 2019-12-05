@@ -1150,7 +1150,7 @@ Questions::Questions()
 int Questions::numOfTheNextQuestion() {
     srand(time(NULL));
     while (true) {
-        currenQuestion = rand() % countOfQuestion;
+        currenQuestion = rand() % this->getCountOfQuestion();
         if (maskOfUsedQuestions[currenQuestion] == 0) {
             maskOfUsedQuestions[currenQuestion] = 1;
             break;
@@ -1160,9 +1160,9 @@ int Questions::numOfTheNextQuestion() {
 }
 
 int Questions::getCountOfQuestion() {
-    return countOfQuestion;
+    return countOfQuestionTest;
 }
 
 int Questions::getCountOfAnimals() {
-    return countOfAnimals;
+    return countOfAnimalsTest;
 }
