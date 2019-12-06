@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,6 +27,7 @@ SOURCES += \
     mainwindow2.cpp \
     questions.cpp \
     secondslide.cpp \
+    sql.cpp \
     winning.cpp
 
 HEADERS += \
@@ -40,6 +41,7 @@ HEADERS += \
     mainwindow2.h \
     questions.h \
     secondslide.h \
+    sql.h \
     winning.h
 
 FORMS += \

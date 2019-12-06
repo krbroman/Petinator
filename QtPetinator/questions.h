@@ -4,6 +4,7 @@
 #include <QString>
 #include <ctime>
 #include <vector>
+#include "sql.h"
 
 using namespace std;
 
@@ -14,11 +15,12 @@ class Questions
 
 
 private:
+    Sql query;
     int currenQuestion;
     bool* maskOfUsedQuestions = new bool[countOfQuestion] {0};
 
-    int countOfAnimalsTest = 36;
-    int countOfQuestionTest = 29;
+    int countOfAnimalsTest = query.line;
+    int countOfQuestionTest = query.column;
 
 
 public:
