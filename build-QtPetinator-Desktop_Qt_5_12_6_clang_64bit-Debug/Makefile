@@ -64,7 +64,8 @@ SOURCES       = ../QtPetinator/addnewanimal.cpp \
 		../QtPetinator/questions.cpp \
 		../QtPetinator/secondslide.cpp \
 		../QtPetinator/sql.cpp \
-		../QtPetinator/winning.cpp qrc_resources.cpp \
+		../QtPetinator/winning.cpp qrc_DB.cpp \
+		qrc_resources.cpp \
 		qrc_resoures2.cpp \
 		moc_addnewanimal.cpp \
 		moc_animalexists.cpp \
@@ -89,6 +90,7 @@ OBJECTS       = addnewanimal.o \
 		secondslide.o \
 		sql.o \
 		winning.o \
+		qrc_DB.o \
 		qrc_resources.o \
 		qrc_resoures2.o \
 		moc_addnewanimal.o \
@@ -534,6 +536,7 @@ Makefile: ../QtPetinator/QtPetinator.pro /Users/romabruks/Qt/5.12.6/clang_64/mks
 		/Users/romabruks/Qt/5.12.6/clang_64/mkspecs/features/yacc.prf \
 		/Users/romabruks/Qt/5.12.6/clang_64/mkspecs/features/lex.prf \
 		../QtPetinator/QtPetinator.pro \
+		../QtPetinator/DB.qrc \
 		../QtPetinator/resources.qrc \
 		../QtPetinator/resoures2.qrc \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/QtWidgets.prl \
@@ -735,6 +738,7 @@ Makefile: ../QtPetinator/QtPetinator.pro /Users/romabruks/Qt/5.12.6/clang_64/mks
 /Users/romabruks/Qt/5.12.6/clang_64/mkspecs/features/yacc.prf:
 /Users/romabruks/Qt/5.12.6/clang_64/mkspecs/features/lex.prf:
 ../QtPetinator/QtPetinator.pro:
+../QtPetinator/DB.qrc:
 ../QtPetinator/resources.qrc:
 ../QtPetinator/resoures2.qrc:
 /Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/QtWidgets.prl:
@@ -770,7 +774,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../QtPetinator/resources.qrc ../QtPetinator/resoures2.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents ../QtPetinator/DB.qrc ../QtPetinator/resources.qrc ../QtPetinator/resoures2.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /Users/romabruks/Qt/5.12.6/clang_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../QtPetinator/addnewanimal.h ../QtPetinator/animalexists.h ../QtPetinator/checkanimal.h ../QtPetinator/guess.h ../QtPetinator/guesslast.h ../QtPetinator/losing.h ../QtPetinator/mainwindow.h ../QtPetinator/mainwindow2.h ../QtPetinator/questions.h ../QtPetinator/secondslide.h ../QtPetinator/sql.h ../QtPetinator/winning.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../QtPetinator/addnewanimal.cpp ../QtPetinator/animalexists.cpp ../QtPetinator/checkanimal.cpp ../QtPetinator/guess.cpp ../QtPetinator/guesslast.cpp ../QtPetinator/losing.cpp ../QtPetinator/main.cpp ../QtPetinator/mainwindow.cpp ../QtPetinator/mainwindow2.cpp ../QtPetinator/questions.cpp ../QtPetinator/secondslide.cpp ../QtPetinator/sql.cpp ../QtPetinator/winning.cpp $(DISTDIR)/
@@ -801,9 +805,14 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all: qrc_resources.cpp qrc_resoures2.cpp
+compiler_rcc_make_all: qrc_DB.cpp qrc_resources.cpp qrc_resoures2.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_resources.cpp qrc_resoures2.cpp
+	-$(DEL_FILE) qrc_DB.cpp qrc_resources.cpp qrc_resoures2.cpp
+qrc_DB.cpp: ../QtPetinator/DB.qrc \
+		/Users/romabruks/Qt/5.12.6/clang_64/bin/rcc \
+		../QtPetinator/Petinator.db
+	/Users/romabruks/Qt/5.12.6/clang_64/bin/rcc -name DB ../QtPetinator/DB.qrc -o qrc_DB.cpp
+
 qrc_resources.cpp: ../QtPetinator/resources.qrc \
 		/Users/romabruks/Qt/5.12.6/clang_64/bin/rcc \
 		../QtPetinator/Slide9_5.png \
@@ -870,6 +879,24 @@ moc_addnewanimal.cpp: ../QtPetinator/addnewanimal.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		moc_predefs.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/bin/moc
 	/Users/romabruks/Qt/5.12.6/clang_64/bin/moc $(DEFINES) --include /Users/romabruks/Documents/Github/Study/Petinator/build-QtPetinator-Desktop_Qt_5_12_6_clang_64bit-Debug/moc_predefs.h -I/Users/romabruks/Qt/5.12.6/clang_64/mkspecs/macx-clang -I/Users/romabruks/Documents/Github/Study/Petinator/QtPetinator -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtGui.framework/Headers -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -F/Users/romabruks/Qt/5.12.6/clang_64/lib ../QtPetinator/addnewanimal.h -o moc_addnewanimal.cpp
@@ -888,6 +915,24 @@ moc_checkanimal.cpp: ../QtPetinator/checkanimal.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		../QtPetinator/animalexists.h \
 		../QtPetinator/losing.h \
 		../QtPetinator/addnewanimal.h \
@@ -902,6 +947,24 @@ moc_guess.cpp: ../QtPetinator/guess.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		moc_predefs.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/bin/moc
 	/Users/romabruks/Qt/5.12.6/clang_64/bin/moc $(DEFINES) --include /Users/romabruks/Documents/Github/Study/Petinator/build-QtPetinator-Desktop_Qt_5_12_6_clang_64bit-Debug/moc_predefs.h -I/Users/romabruks/Qt/5.12.6/clang_64/mkspecs/macx-clang -I/Users/romabruks/Documents/Github/Study/Petinator/QtPetinator -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtGui.framework/Headers -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -F/Users/romabruks/Qt/5.12.6/clang_64/lib ../QtPetinator/guess.h -o moc_guess.cpp
@@ -912,6 +975,24 @@ moc_guesslast.cpp: ../QtPetinator/guesslast.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		../QtPetinator/winning.h \
 		../QtPetinator/checkanimal.h \
 		../QtPetinator/animalexists.h \
@@ -937,6 +1018,24 @@ moc_mainwindow.cpp: ../QtPetinator/mainwindow.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		../QtPetinator/guess.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
@@ -961,6 +1060,24 @@ moc_mainwindow2.cpp: ../QtPetinator/mainwindow2.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		../QtPetinator/guess.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
@@ -985,6 +1102,24 @@ moc_secondslide.cpp: ../QtPetinator/secondslide.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		../QtPetinator/guess.h \
 		../QtPetinator/winning.h \
 		../QtPetinator/guesslast.h \
@@ -1002,6 +1137,24 @@ moc_winning.cpp: ../QtPetinator/winning.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		moc_predefs.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/bin/moc
 	/Users/romabruks/Qt/5.12.6/clang_64/bin/moc $(DEFINES) --include /Users/romabruks/Documents/Github/Study/Petinator/build-QtPetinator-Desktop_Qt_5_12_6_clang_64bit-Debug/moc_predefs.h -I/Users/romabruks/Qt/5.12.6/clang_64/mkspecs/macx-clang -I/Users/romabruks/Documents/Github/Study/Petinator/QtPetinator -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtGui.framework/Headers -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers -I/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -F/Users/romabruks/Qt/5.12.6/clang_64/lib ../QtPetinator/winning.h -o moc_winning.cpp
@@ -1072,6 +1225,24 @@ addnewanimal.o: ../QtPetinator/addnewanimal.cpp ../QtPetinator/addnewanimal.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		ui_addnewanimal.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMessageBox \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h
@@ -1092,6 +1263,24 @@ checkanimal.o: ../QtPetinator/checkanimal.cpp ../QtPetinator/checkanimal.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		../QtPetinator/animalexists.h \
 		../QtPetinator/losing.h \
 		../QtPetinator/addnewanimal.h \
@@ -1107,6 +1296,24 @@ guess.o: ../QtPetinator/guess.cpp ../QtPetinator/guess.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		ui_guess.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMessageBox \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h
@@ -1118,6 +1325,24 @@ guesslast.o: ../QtPetinator/guesslast.cpp ../QtPetinator/guesslast.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		../QtPetinator/winning.h \
 		../QtPetinator/checkanimal.h \
 		../QtPetinator/animalexists.h \
@@ -1145,6 +1370,24 @@ main.o: ../QtPetinator/main.cpp ../QtPetinator/mainwindow.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		../QtPetinator/guess.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
@@ -1170,6 +1413,24 @@ mainwindow.o: ../QtPetinator/mainwindow.cpp ../QtPetinator/mainwindow.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		../QtPetinator/guess.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
@@ -1193,6 +1454,24 @@ mainwindow2.o: ../QtPetinator/mainwindow2.cpp ../QtPetinator/mainwindow2.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		../QtPetinator/guess.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
@@ -1207,7 +1486,25 @@ mainwindow2.o: ../QtPetinator/mainwindow2.cpp ../QtPetinator/mainwindow2.h \
 
 questions.o: ../QtPetinator/questions.cpp ../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
-		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o questions.o ../QtPetinator/questions.cpp
 
 secondslide.o: ../QtPetinator/secondslide.cpp ../QtPetinator/secondslide.h \
@@ -1221,6 +1518,24 @@ secondslide.o: ../QtPetinator/secondslide.cpp ../QtPetinator/secondslide.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		../QtPetinator/guess.h \
 		../QtPetinator/winning.h \
 		../QtPetinator/guesslast.h \
@@ -1248,7 +1563,9 @@ sql.o: ../QtPetinator/sql.cpp ../QtPetinator/sql.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
-		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QDir \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qdir.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sql.o ../QtPetinator/sql.cpp
 
 winning.o: ../QtPetinator/winning.cpp ../QtPetinator/winning.h \
@@ -1257,10 +1574,31 @@ winning.o: ../QtPetinator/winning.cpp ../QtPetinator/winning.h \
 		../QtPetinator/questions.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QString \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../QtPetinator/sql.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QtSql \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtSql.framework/Headers/QSqlQuery \
 		ui_winning.h \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMessageBox \
 		/Users/romabruks/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o winning.o ../QtPetinator/winning.cpp
+
+qrc_DB.o: qrc_DB.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_DB.o qrc_DB.cpp
 
 qrc_resources.o: qrc_resources.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resources.o qrc_resources.cpp

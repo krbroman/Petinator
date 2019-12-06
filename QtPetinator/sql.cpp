@@ -1,9 +1,12 @@
 #include "sql.h"
+#include <QDir>
 
 Sql::Sql()
 {
+    QDir dir;
     Db = QSqlDatabase::addDatabase("QSQLITE");
     Db.setDatabaseName("/Users/romabruks/Documents/Github/Study/Petinator/QtPetinator/Petinator.db");
+    //
     if(Db.open())
     {
         qu = QSqlQuery(Db);

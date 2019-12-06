@@ -36,10 +36,10 @@ public:
     int answersForAnimals[countOfAnimals][countOfQuestion];
 
     //Массив пользовательских ответов
-    int answersFromUsers[countOfQuestion];
+    int answersFromUsers[countOfQuestion] {2};
 
     //Массив совпадений
-    int countOfСoincidence[countOfAnimals];
+    int countOfСoincidence[countOfAnimals] {0};
 
     //Массив частоты выбора
     int frequencyOfChoise[countOfAnimals];
