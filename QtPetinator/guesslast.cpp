@@ -7,6 +7,13 @@ GuessLast::GuessLast(QWidget *parent) :
     ui(new Ui::GuessLast)
 {
     ui->setupUi(this);
+}
+
+GuessLast::GuessLast(Questions &quest) :
+    ui(new Ui::GuessLast)
+{
+    ui->setupUi(this);
+
 
     QPixmap pix(":/resources/Slide4_1.png");
     int h = ui->label1->height();
@@ -42,12 +49,6 @@ GuessLast::GuessLast(QWidget *parent) :
     h = ui->label7->height();
     w = ui->label7->width();
     ui->label7->setPixmap(pix7.scaled(w, h, Qt::KeepAspectRatio));
-}
-
-GuessLast::GuessLast(Questions &quest) :
-    ui(new Ui::GuessLast)
-{
-    ui->setupUi(this);
 
     this->thisQuest = &quest;
 

@@ -39,10 +39,17 @@ public:
         AddNewAnimal->resize(1024, 768);
         pushButton_Yes = new QPushButton(AddNewAnimal);
         pushButton_Yes->setObjectName(QString::fromUtf8("pushButton_Yes"));
-        pushButton_Yes->setGeometry(QRect(220, 570, 280, 100));
+        pushButton_Yes->setGeometry(QRect(491, 480, 131, 61));
         QFont font;
-        font.setPointSize(20);
+        font.setPointSize(33);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setWeight(50);
         pushButton_Yes->setFont(font);
+        pushButton_Yes->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:33pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         label = new QLabel(AddNewAnimal);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(207, 200, 351, 110));
@@ -51,11 +58,15 @@ public:
         label->setFont(font1);
         pushButton_No = new QPushButton(AddNewAnimal);
         pushButton_No->setObjectName(QString::fromUtf8("pushButton_No"));
-        pushButton_No->setGeometry(QRect(510, 570, 280, 100));
+        pushButton_No->setGeometry(QRect(661, 480, 131, 61));
         pushButton_No->setFont(font);
+        pushButton_No->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:33pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         label_2 = new QLabel(AddNewAnimal);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(443, 347, 390, 128));
+        label_2->setGeometry(QRect(443, 330, 390, 128));
         label_2->setFont(font1);
         label_3 = new QLabel(AddNewAnimal);
         label_3->setObjectName(QString::fromUtf8("label_3"));
@@ -87,8 +98,8 @@ public:
         label_9->raise();
         label->raise();
         label_2->raise();
-        pushButton_No->raise();
         pushButton_Yes->raise();
+        pushButton_No->raise();
 
         retranslateUi(AddNewAnimal);
 

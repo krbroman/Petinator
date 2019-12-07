@@ -7,6 +7,15 @@ CheckAnimal::CheckAnimal(QWidget *parent) :
     ui(new Ui::CheckAnimal)
 {
     ui->setupUi(this);
+}
+
+CheckAnimal::CheckAnimal(Questions& quest) :
+    ui(new Ui::CheckAnimal)
+{
+    ui->setupUi(this);
+    this->thisQuest = &quest;
+
+    check = false;
 
     QPixmap pix(":/resources/Slide7_2.png");
     int h = ui->label1->height();
@@ -47,15 +56,6 @@ CheckAnimal::CheckAnimal(QWidget *parent) :
     h = ui->label8->height();
     w = ui->label8->width();
     ui->label8->setPixmap(pix8.scaled(w, h, Qt::KeepAspectRatio));
-}
-
-CheckAnimal::CheckAnimal(Questions& quest) :
-    ui(new Ui::CheckAnimal)
-{
-    ui->setupUi(this);
-    this->thisQuest = &quest;
-
-    check = false;
 }
 
 

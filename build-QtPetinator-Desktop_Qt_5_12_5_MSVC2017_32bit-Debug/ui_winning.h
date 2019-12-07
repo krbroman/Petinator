@@ -44,23 +44,34 @@ public:
         label->setFont(font);
         pushButton_Exit = new QPushButton(Winning);
         pushButton_Exit->setObjectName(QString::fromUtf8("pushButton_Exit"));
-        pushButton_Exit->setGeometry(QRect(600, 540, 280, 100));
+        pushButton_Exit->setGeometry(QRect(210, 615, 280, 100));
         QFont font1;
-        font1.setPointSize(20);
+        font1.setPointSize(33);
+        font1.setBold(false);
+        font1.setItalic(false);
+        font1.setWeight(50);
         pushButton_Exit->setFont(font1);
+        pushButton_Exit->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:33pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         pushButton_Play = new QPushButton(Winning);
         pushButton_Play->setObjectName(QString::fromUtf8("pushButton_Play"));
-        pushButton_Play->setGeometry(QRect(210, 540, 280, 100));
+        pushButton_Play->setGeometry(QRect(533, 615, 280, 100));
         pushButton_Play->setFont(font1);
+        pushButton_Play->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:33pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         label1 = new QLabel(Winning);
         label1->setObjectName(QString::fromUtf8("label1"));
-        label1->setGeometry(QRect(0, 0, 1024, 768));
+        label1->setGeometry(QRect(221, 624, 263, 86));
         label2 = new QLabel(Winning);
         label2->setObjectName(QString::fromUtf8("label2"));
-        label2->setGeometry(QRect(221, 624, 263, 86));
+        label2->setGeometry(QRect(547, 624, 280, 86));
         label3 = new QLabel(Winning);
         label3->setObjectName(QString::fromUtf8("label3"));
-        label3->setGeometry(QRect(547, 624, 280, 86));
+        label3->setGeometry(QRect(0, 0, 1024, 768));
         label4 = new QLabel(Winning);
         label4->setObjectName(QString::fromUtf8("label4"));
         label4->setGeometry(QRect(-20, 399, 1044, 373));
@@ -73,14 +84,14 @@ public:
         label7 = new QLabel(Winning);
         label7->setObjectName(QString::fromUtf8("label7"));
         label7->setGeometry(QRect(227, 143, 349, 181));
-        label1->raise();
-        label2->raise();
         label3->raise();
         label4->raise();
         label5->raise();
         label6->raise();
         label7->raise();
         label->raise();
+        label1->raise();
+        label2->raise();
         pushButton_Exit->raise();
         pushButton_Play->raise();
 

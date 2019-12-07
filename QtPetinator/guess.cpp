@@ -7,6 +7,12 @@ Guess::Guess(QWidget *parent) :
     ui(new Ui::Guess)
 {
     ui->setupUi(this);
+}
+
+Guess::Guess(Questions &quest) :
+    ui(new Ui::Guess)
+{
+    ui->setupUi(this);
 
     QPixmap pix(":/resources/Slide4_1.png");
     int h = ui->label1->height();
@@ -42,12 +48,6 @@ Guess::Guess(QWidget *parent) :
     h = ui->label7->height();
     w = ui->label7->width();
     ui->label7->setPixmap(pix7.scaled(w, h, Qt::KeepAspectRatio));
-}
-
-Guess::Guess(Questions &quest) :
-    ui(new Ui::Guess)
-{
-    ui->setupUi(this);
 
     this->thisQuest = &quest;
 
