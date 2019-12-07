@@ -8,6 +8,39 @@ Guess::Guess(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
+}
+
+Guess::Guess(Questions &quest) :
+    ui(new Ui::Guess)
+{
+    ui->setupUi(this);
+
+    this->thisQuest = &quest;
+
+    for(int i = 0; i < Questions::getCountOfAnimals(); i++)
+        for(int j = 0; j < Questions::getCountOfQuestion(); j++)
+            if(quest.answersFromUsers[j] != 2)
+                if (quest.answersFromUsers[j] == quest.answersForAnimals[i][j])
+                    quest.countOfСoincidence[i]++;
+
+    int max = -1;
+    expectedAnimal = -1;
+    for (int i = 0; i < Questions::getCountOfAnimals(); i++)
+        if (quest.countOfСoincidence[i] > max) {
+            max = quest.countOfСoincidence[i];
+            expectedAnimal = i;
+        } else if (quest.countOfСoincidence[i] == max)
+            if (quest.frequencyOfChoise[i] > quest.frequencyOfChoise[expectedAnimal]) {
+                max = quest.countOfСoincidence[i];
+                expectedAnimal = i;
+            }
+
+    ui->Suggestion->setText(quest.animals[expectedAnimal]);
+
+    for(int i = 0; i < Questions::getCountOfAnimals(); i++)
+        quest.countOfСoincidence[i] = 0;
+
     QPixmap pix(":/resources/Slide4_1.png");
     int h = ui->label1->height();
     int w = ui->label1->width();
@@ -42,37 +75,6 @@ Guess::Guess(QWidget *parent) :
     h = ui->label7->height();
     w = ui->label7->width();
     ui->label7->setPixmap(pix7.scaled(w, h, Qt::KeepAspectRatio));
-}
-
-Guess::Guess(Questions &quest) :
-    ui(new Ui::Guess)
-{
-    ui->setupUi(this);
-
-    this->thisQuest = &quest;
-
-    for(int i = 0; i < Questions::getCountOfAnimals(); i++)
-        for(int j = 0; j < Questions::getCountOfQuestion(); j++)
-            if(quest.answersFromUsers[j] != 2)
-                if (quest.answersFromUsers[j] == quest.answersForAnimals[i][j])
-                    quest.countOfСoincidence[i]++;
-
-    int max = -1;
-    expectedAnimal = -1;
-    for (int i = 0; i < Questions::getCountOfAnimals(); i++)
-        if (quest.countOfСoincidence[i] > max) {
-            max = quest.countOfСoincidence[i];
-            expectedAnimal = i;
-        } else if (quest.countOfСoincidence[i] == max)
-            if (quest.frequencyOfChoise[i] > quest.frequencyOfChoise[expectedAnimal]) {
-                max = quest.countOfСoincidence[i];
-                expectedAnimal = i;
-            }
-
-    ui->Suggestion->setText(quest.animals[expectedAnimal]);
-
-    for(int i = 0; i < Questions::getCountOfAnimals(); i++)
-        quest.countOfСoincidence[i] = 0;
 }
 
 Guess::~Guess()

@@ -40,18 +40,29 @@ public:
         CheckAnimal->resize(1024, 768);
         label = new QLabel(CheckAnimal);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(346, 193, 381, 122));
+        label->setGeometry(QRect(335, 190, 381, 122));
         QFont font;
         font.setPointSize(20);
         label->setFont(font);
         label->setLayoutDirection(Qt::LeftToRight);
         usersAnimal = new QLineEdit(CheckAnimal);
         usersAnimal->setObjectName(QString::fromUtf8("usersAnimal"));
-        usersAnimal->setGeometry(QRect(400, 350, 461, 41));
+        usersAnimal->setGeometry(QRect(370, 350, 281, 51));
+        usersAnimal->setStyleSheet(QString::fromUtf8("background: rgba(255, 255, 255, 0);\n"
+"border-style: none;"));
         pushButton = new QPushButton(CheckAnimal);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(440, 430, 381, 100));
-        pushButton->setFont(font);
+        pushButton->setGeometry(QRect(360, 420, 291, 71));
+        QFont font1;
+        font1.setPointSize(27);
+        font1.setBold(false);
+        font1.setItalic(false);
+        font1.setWeight(50);
+        pushButton->setFont(font1);
+        pushButton->setStyleSheet(QString::fromUtf8("background: rgba(255, 255, 255, 0);\n"
+"font: \"Arial Rounded MT Bold\";\n"
+"color: rgba(204, 57, 31, 196);\n"
+"font-size: 27pt;"));
         label1 = new QLabel(CheckAnimal);
         label1->setObjectName(QString::fromUtf8("label1"));
         label1->setGeometry(QRect(286, 183, 452, 142));
@@ -79,14 +90,14 @@ public:
         label8->raise();
         label1->raise();
         label->raise();
-        usersAnimal->raise();
-        pushButton->raise();
         label2->raise();
         label3->raise();
         label4->raise();
         label5->raise();
         label6->raise();
         label7->raise();
+        usersAnimal->raise();
+        pushButton->raise();
 
         retranslateUi(CheckAnimal);
 
@@ -100,7 +111,8 @@ public:
 "\n"
 "\n"
 "", nullptr));
-        pushButton->setText(QApplication::translate("CheckAnimal", "\320\237\321\200\320\276\320\262\320\265\321\200\320\270\321\202\321\214 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265", nullptr));
+        usersAnimal->setText(QString());
+        pushButton->setText(QApplication::translate("CheckAnimal", "\320\237\321\200\320\276\320\262\320\265\321\200\320\270\321\202\321\214", nullptr));
         label1->setText(QString());
         label2->setText(QString());
         label3->setText(QString());

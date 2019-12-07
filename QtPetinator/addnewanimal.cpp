@@ -8,6 +8,15 @@ AddNewAnimal::AddNewAnimal(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
+}
+
+AddNewAnimal::AddNewAnimal(Questions& quest, QString animal) :
+    ui(new Ui::AddNewAnimal)
+{
+    ui->setupUi(this);
+    /*Работа с базой данных*/
+
     QPixmap pix(":/source/AllSlides.png");
     int h = ui->label_3->height();
     int w = ui->label_3->width();
@@ -42,13 +51,6 @@ AddNewAnimal::AddNewAnimal(QWidget *parent) :
     h = ui->label_9->height();
     w = ui->label_9->width();
     ui->label_9->setPixmap(pix6.scaled(w, h, Qt::KeepAspectRatio));
-}
-
-AddNewAnimal::AddNewAnimal(Questions& quest, QString animal) :
-    ui(new Ui::AddNewAnimal)
-{
-    ui->setupUi(this);
-    /*Работа с базой данных*/
 }
 
 AddNewAnimal::~AddNewAnimal()

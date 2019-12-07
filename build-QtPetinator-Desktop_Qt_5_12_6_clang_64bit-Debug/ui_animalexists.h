@@ -26,11 +26,8 @@ public:
     QLabel *label2;
     QLabel *label3;
     QLabel *label4;
-    QLabel *label5;
     QLabel *label6;
     QLabel *label7;
-    QLabel *label_2;
-    QLabel *label_3;
 
     void setupUi(QDialog *AnimalExists)
     {
@@ -45,10 +42,17 @@ public:
         label->setFont(font);
         pushButton_Ok = new QPushButton(AnimalExists);
         pushButton_Ok->setObjectName(QString::fromUtf8("pushButton_Ok"));
-        pushButton_Ok->setGeometry(QRect(470, 640, 280, 100));
+        pushButton_Ok->setGeometry(QRect(408, 623, 201, 81));
         QFont font1;
-        font1.setPointSize(20);
+        font1.setPointSize(33);
+        font1.setBold(false);
+        font1.setItalic(false);
+        font1.setWeight(50);
         pushButton_Ok->setFont(font1);
+        pushButton_Ok->setStyleSheet(QString::fromUtf8("font-size:33pt;\n"
+"font: \"Arial Rounded MT Bold\";\n"
+"color: rgba(204, 57, 31, 196);\n"
+"background: rgba(255, 255, 255, 0);"));
         label1 = new QLabel(AnimalExists);
         label1->setObjectName(QString::fromUtf8("label1"));
         label1->setGeometry(QRect(681, 271, 241, 245));
@@ -60,33 +64,21 @@ public:
         label3->setGeometry(QRect(232, 223, 560, 168));
         label4 = new QLabel(AnimalExists);
         label4->setObjectName(QString::fromUtf8("label4"));
-        label4->setGeometry(QRect(221, 624, 263, 86));
-        label5 = new QLabel(AnimalExists);
-        label5->setObjectName(QString::fromUtf8("label5"));
-        label5->setGeometry(QRect(547, 624, 280, 86));
+        label4->setGeometry(QRect(380, 623, 263, 86));
         label6 = new QLabel(AnimalExists);
         label6->setObjectName(QString::fromUtf8("label6"));
-        label6->setGeometry(QRect(-42, 340, 1078, 207));
+        label6->setGeometry(QRect(-39, 340, 1078, 207));
         label7 = new QLabel(AnimalExists);
         label7->setObjectName(QString::fromUtf8("label7"));
-        label7->setGeometry(QRect(-23, 437, 1055, 117));
-        label_2 = new QLabel(AnimalExists);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(212, 660, 280, 77));
-        label_3 = new QLabel(AnimalExists);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(515, 640, 344, 129));
+        label7->setGeometry(QRect(-1, 437, 1055, 117));
         label2->raise();
-        pushButton_Ok->raise();
-        label1->raise();
         label3->raise();
         label4->raise();
-        label5->raise();
         label6->raise();
         label7->raise();
         label->raise();
-        label_2->raise();
-        label_3->raise();
+        label1->raise();
+        pushButton_Ok->raise();
 
         retranslateUi(AnimalExists);
 
@@ -99,27 +91,13 @@ public:
         label->setText(QApplication::translate("AnimalExists", "<html><head/><body><p align = \"center\"><span style=\" font-family:'Comic Sans MS'; ont-size:30pt;color:#c85836;\">\320\226\320\270\320\262\320\276\321\202\320\275\320\276\320\265 \321\201\321\203\321\211\320\265\321\201\321\202\320\262\321\203\320\265\321\202 \320\262 \320\261\320\260\320\267\320\265<br/> \320\264\320\260\320\275\320\275\321\213\321\205. \320\222\320\276\320\267\320\274\320\276\320\266\320\275\320\276, \320\262\320\260\321\210\320\270 <br/>\320\276\321\202\320\262\320\265\321\202\321\213 \320\261\321\213\320\273\320\270 \320\275\320\265\320\272\320\276\321\200\321\200\320\265\320\272\321\202\320\275\321\213</span></p></body></html>\n"
 "\n"
 "", nullptr));
-        pushButton_Ok->setText(QApplication::translate("AnimalExists", "\320\236\320\272", nullptr));
+        pushButton_Ok->setText(QApplication::translate("AnimalExists", "\320\222\321\213\320\271\321\202\320\270", nullptr));
         label1->setText(QString());
         label2->setText(QString());
         label3->setText(QString());
         label4->setText(QString());
-        label5->setText(QString());
         label6->setText(QString());
         label7->setText(QString());
-#ifndef QT_NO_TOOLTIP
-        label_2->setToolTip(QApplication::translate("AnimalExists", "<html><head><body><p align = \"center\"><span style=\"font-family:'Comic Sans MS'; font-size:30pt;color:#c85836;\">\320\222\321\213\320\271\321\202\320\270</span></p></body></head></html>\n"
-"\n"
-"", nullptr));
-#endif // QT_NO_TOOLTIP
-        label_2->setText(QApplication::translate("AnimalExists", "<html><head><body><p align = \"center\"><span style=\"font-family:'Comic Sans MS'; font-size:30pt;color:#c85836;\">\320\222\321\213\320\271\321\202\320\270</span></p></body></head></html>\n"
-"", nullptr));
-#ifndef QT_NO_TOOLTIP
-        label_3->setToolTip(QApplication::translate("AnimalExists", "<html><head><body><p align = \"center\"><span style=\"font-family:'Comic Sans MS'; font-size:30pt;color:#c85836;\">\320\230\320\263\321\200\320\260\321\202\321\214 \320\265\321\211\320\265 \321\200\320\260\320\267</span></p></body></head></html>\n"
-"", nullptr));
-#endif // QT_NO_TOOLTIP
-        label_3->setText(QApplication::translate("AnimalExists", "<html><head><body><p align = \"center\"><span style=\"font-family:'Comic Sans MS'; font-size:30pt;color:#c85836;\">\320\230\320\263\321\200\320\260\321\202\321\214 \320\265\321\211\320\265 \321\200\320\260\320\267</span></p></body></head></html>\n"
-"", nullptr));
     } // retranslateUi
 
 };

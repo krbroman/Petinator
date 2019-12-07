@@ -16,16 +16,25 @@
   <widget class="QPushButton" name="pushButton_Play">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>540</y>
-     <width>280</width>
-     <height>100</height>
+     <x>548</x>
+     <y>626</y>
+     <width>261</width>
+     <height>81</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>16</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Играть еще раз</string>
@@ -34,16 +43,25 @@
   <widget class="QPushButton" name="pushButton_Exit">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>540</y>
-     <width>280</width>
-     <height>100</height>
+     <x>236</x>
+     <y>640</y>
+     <width>231</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>16</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Выйти</string>
@@ -52,10 +70,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>50</y>
-     <width>451</width>
-     <height>161</height>
+     <x>223</x>
+     <y>177</y>
+     <width>305</width>
+     <height>137</height>
     </rect>
    </property>
    <property name="font">
@@ -63,8 +81,38 @@
      <pointsize>40</pointsize>
     </font>
    </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head&gt;
+&lt;style&gt;
+   p {
+    color: rgb(255, 248, 234); 
+   }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;font size=&quot;33&quot; face=&quot;Comic Sans MS&quot;&gt;
+&lt;span&gt;
+Я проиграл
+&lt;/span&gt;
+&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
    <property name="text">
-    <string>Я проиграл :(</string>
+    <string>&lt;html&gt;&lt;head&gt;
+&lt;style&gt;
+   p {
+    color: rgb(255, 248, 234); 
+    font-size:	54pt;
+   }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;
+&lt;span&gt;
+Я проиграл
+&lt;/span&gt;
+&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label1">
@@ -122,7 +170,7 @@
   <widget class="QLabel" name="label5">
    <property name="geometry">
     <rect>
-     <x>-20</x>
+     <x>-10</x>
      <y>399</y>
      <width>1044</width>
      <height>373</height>
@@ -135,11 +183,17 @@
   <widget class="QLabel" name="label6">
    <property name="geometry">
     <rect>
-     <x>-3</x>
+     <x>6</x>
      <y>391</y>
      <width>1025</width>
      <height>376</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string/>
@@ -158,8 +212,6 @@
     <string/>
    </property>
   </widget>
-  <zorder>pushButton_Play</zorder>
-  <zorder>pushButton_Exit</zorder>
   <zorder>label7</zorder>
   <zorder>label5</zorder>
   <zorder>label6</zorder>
@@ -167,6 +219,8 @@
   <zorder>label4</zorder>
   <zorder>label1</zorder>
   <zorder>label2</zorder>
+  <zorder>pushButton_Play</zorder>
+  <zorder>pushButton_Exit</zorder>
   <zorder>label</zorder>
  </widget>
  <resources/>

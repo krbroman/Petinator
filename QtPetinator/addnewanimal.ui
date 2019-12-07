@@ -16,16 +16,25 @@
   <widget class="QPushButton" name="pushButton_Yes">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>570</y>
-     <width>280</width>
-     <height>100</height>
+     <x>491</x>
+     <y>480</y>
+     <width>131</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Да</string>
@@ -52,16 +61,25 @@
   <widget class="QPushButton" name="pushButton_No">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>570</y>
-     <width>280</width>
-     <height>100</height>
+     <x>661</x>
+     <y>480</y>
+     <width>131</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Нет</string>
@@ -71,7 +89,7 @@
    <property name="geometry">
     <rect>
      <x>443</x>
-     <y>347</y>
+     <y>330</y>
      <width>390</width>
      <height>128</height>
     </rect>
@@ -190,8 +208,8 @@
   <zorder>label_9</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
-  <zorder>pushButton_No</zorder>
   <zorder>pushButton_Yes</zorder>
+  <zorder>pushButton_No</zorder>
  </widget>
  <resources/>
  <connections/>

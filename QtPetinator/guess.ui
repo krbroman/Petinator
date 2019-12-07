@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="pushButton_Yes">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>381</x>
      <y>350</y>
      <width>121</width>
      <height>61</height>
@@ -24,8 +24,17 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Да</string>
@@ -34,16 +43,25 @@
   <widget class="QPushButton" name="pushButton_No">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>350</y>
+     <x>555</x>
+     <y>352</y>
      <width>111</width>
      <height>61</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Нет</string>
@@ -52,8 +70,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>513</x>
-     <y>496</y>
+     <x>500</x>
+     <y>490</y>
      <width>220</width>
      <height>105</height>
     </rect>
@@ -90,8 +108,41 @@
      <pointsize>20</pointsize>
     </font>
    </property>
+   <property name="toolTip">
+    <string>&lt;style&gt;
+   .letter { 
+    font-size: 33pt; 
+   } 
+   p {
+     background-color: rgba(255, 248, 234);
+     color: rgb(200,88,54); 
+   }
+  
+.center {
+  text-align: center;
+}
+&lt;/style&gt;
+&lt;div class=&quot;center&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;letter&quot;&gt;/*Предполагаемое животное*/&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;</string>
+   </property>
    <property name="text">
-    <string>&lt;p align=&quot;center&quot;&gt;/*Предполагаемое животное*/&lt;/p&gt;</string>
+    <string>&lt;style&gt;
+   .letter { 
+    font-size: 33pt; 
+   } 
+   p {
+     background-color: rgba(255, 248, 234);
+     color: rgb(200,88,54); 
+   }
+  
+.center {
+  text-align: center;
+}
+&lt;/style&gt;
+&lt;div class=&quot;center&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;letter&quot;&gt;/*Предполагаемое животное*/&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label1">
@@ -192,10 +243,10 @@
   <zorder>label3</zorder>
   <zorder>label1</zorder>
   <zorder>label7</zorder>
-  <zorder>Suggestion</zorder>
   <zorder>label</zorder>
   <zorder>pushButton_No</zorder>
   <zorder>pushButton_Yes</zorder>
+  <zorder>Suggestion</zorder>
  </widget>
  <resources/>
  <connections/>

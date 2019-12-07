@@ -16,8 +16,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>346</x>
-     <y>193</y>
+     <x>335</x>
+     <y>190</y>
      <width>381</width>
      <height>122</height>
     </rect>
@@ -40,29 +40,45 @@
   <widget class="QLineEdit" name="usersAnimal">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>370</x>
      <y>350</y>
-     <width>461</width>
-     <height>41</height>
+     <width>281</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgba(255, 255, 255, 0);
+border-style: none;</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>430</y>
-     <width>381</width>
-     <height>100</height>
+     <x>360</x>
+     <y>420</y>
+     <width>291</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>27</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgba(255, 255, 255, 0);
+font: &quot;Arial Rounded MT Bold&quot;;
+color: rgba(204, 57, 31, 196);
+font-size: 27pt;</string>
+   </property>
    <property name="text">
-    <string>Проверить животное</string>
+    <string>Проверить</string>
    </property>
   </widget>
   <widget class="QLabel" name="label1">
@@ -172,14 +188,14 @@
   <zorder>label8</zorder>
   <zorder>label1</zorder>
   <zorder>label</zorder>
-  <zorder>usersAnimal</zorder>
-  <zorder>pushButton</zorder>
   <zorder>label2</zorder>
   <zorder>label3</zorder>
   <zorder>label4</zorder>
   <zorder>label5</zorder>
   <zorder>label6</zorder>
   <zorder>label7</zorder>
+  <zorder>usersAnimal</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections/>
