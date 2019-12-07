@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,7 +18,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     addnewanimal.cpp \
     animalexists.cpp \
-    answers.cpp \
     checkanimal.cpp \
     guess.cpp \
     guesslast.cpp \
@@ -28,12 +27,12 @@ SOURCES += \
     mainwindow2.cpp \
     questions.cpp \
     secondslide.cpp \
+    sql.cpp \
     winning.cpp
 
 HEADERS += \
     addnewanimal.h \
     animalexists.h \
-    answers.h \
     checkanimal.h \
     guess.h \
     guesslast.h \
@@ -42,6 +41,7 @@ HEADERS += \
     mainwindow2.h \
     questions.h \
     secondslide.h \
+    sql.h \
     winning.h
 
 FORMS += \
@@ -62,5 +62,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+    DB.qrc \
     resources.qrc \
     resoures2.qrc

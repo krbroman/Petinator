@@ -3,43 +3,52 @@
 
 #include <QString>
 #include <ctime>
+#include <vector>
+#include "sql.h"
 
 using namespace std;
 
 class Questions
 {
-    static const int countOfQuestion = 29;
-    static const int countOfAnimals = 36;
+    static const int countOfAnimals = 100;
+    static const int countOfQuestion = 100;
+
 
 private:
+    Sql query;
     int currenQuestion;
     bool* maskOfUsedQuestions = new bool[countOfQuestion] {0};
 
+    int countOfAnimalsTest = query.line;
+    int countOfQuestionTest = query.column;
+
+
 public:
     Questions();
+
     //Все вопросы, где иттератор - ID
     QString questions[countOfQuestion];
 
     //Все животные, где иттератор - ID
     QString animals[countOfAnimals];
 
-    //Матрица из в стоблик животных и в строчку ответов на них
+    //Матрица из в стоблик животных и в строчку ответов на них??
     int answersForAnimals[countOfAnimals][countOfQuestion];
 
     //Массив пользовательских ответов
-    int* answersFromUsers = new int[countOfQuestion] {2};
+    int answersFromUsers[countOfQuestion] {2};
 
     //Массив совпадений
     int countOfСoincidence[countOfAnimals] {0};
 
     //Массив частоты выбора
-    int frequencyOfChoise[countOfAnimals] {1};
+    int frequencyOfChoise[countOfAnimals];
 
     //Метод, который выдает номер очередного нового вопроса.
     int numOfTheNextQuestion();
 
-    static int getCountOfQuestion();
-    static int getCountOfAnimals();
+    int getCountOfQuestion();
+    int getCountOfAnimals();
 };
 
 #endif // QUESTIONS_H

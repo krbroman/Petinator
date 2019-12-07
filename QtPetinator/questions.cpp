@@ -2,7 +2,20 @@
 
 Questions::Questions()
 {
-    questions[0] = "Я хищное?";
+query.qu.exec("Select \"Частота загадывания\" from Chances order by ID");
+   for(int i = 0; i < countOfAnimalsTest; ++i)
+   {
+       query.qu.next();
+    frequencyOfChoise[i] = query.qu.value(0).toInt();
+   }
+
+   query.qu.exec("Select \"Question\" from Indexes order by \"Index\"");
+      for(int i = 0; i < countOfQuestionTest; ++i)
+      {
+          query.qu.next();
+       questions[i] = query.qu.value(0).toString();
+      }
+   /* questions[0] = "Я хищное?";
     questions[1] = "Я травоядное?";
     questions[2] = "Я всеядное?";
     questions[3] = "Я обычно пушистое?";
@@ -30,9 +43,16 @@ Questions::Questions()
     questions[25] = "У меня панцырь?";
     questions[26] = "У меня есть хвост?";
     questions[27] = "Я могу жить в пустыне?";
-    questions[28] = "У меня есть скелет?";
+    questions[28] = "У меня есть скелет?"; */
 
-    animals[0] = "Кот";
+      query.qu.exec("Select \"Животное\" from Questions order by ID");
+         for(int i = 0; i < countOfAnimalsTest; ++i)
+         {
+             query.qu.next();
+          animals[i] = query.qu.value(0).toString();
+         }
+
+    /*animals[0] = "Кот";
     animals[1] = "Собака";
     animals[2] = "Корова";
     animals[3] = "Лошадь";
@@ -67,7 +87,7 @@ Questions::Questions()
     animals[32] = "Бобер";
     animals[33] = "Медуза";
     animals[34] = "Лама";
-    animals[35] = "Мышь";
+    animals[35] = "Мышь"; */
 
     /*answersForAnimals = new int*[countOfAnimals];
     for (int i = 0; i < countOfAnimals; i++)
@@ -1150,7 +1170,7 @@ Questions::Questions()
 int Questions::numOfTheNextQuestion() {
     srand(time(NULL));
     while (true) {
-        currenQuestion = rand() % countOfQuestion;
+        currenQuestion = rand() % this->getCountOfQuestion();
         if (maskOfUsedQuestions[currenQuestion] == 0) {
             maskOfUsedQuestions[currenQuestion] = 1;
             break;
@@ -1160,9 +1180,9 @@ int Questions::numOfTheNextQuestion() {
 }
 
 int Questions::getCountOfQuestion() {
-    return countOfQuestion;
+    return countOfQuestionTest;
 }
 
 int Questions::getCountOfAnimals() {
-    return countOfAnimals;
+    return countOfAnimalsTest;
 }

@@ -25,7 +25,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>45</pointsize>
+      <pointsize>20</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -39,7 +39,7 @@
  &lt;/head&gt;
 &lt;body&gt;
 &lt;div class=&quot;layer1&quot;&gt;
-&lt;font size=&quot;45&quot; color=&quot;#C85836&quot; face=&quot;Arial Rounded MT Bold&quot;&gt;Начать игру&lt;/font&gt;
+&lt;font size=&quot;20&quot; color=&quot;#C85836&quot; face=&quot;Arial Rounded MT Bold&quot;&gt;Начать игру&lt;/font&gt;
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -48,7 +48,7 @@
     <property name="styleSheet">
      <string notr="true">background:rgba(255, 255, 255, 0);
 color:rgba(204, 57, 31, 196);
-font-size:45pt;
+font-size:20pt;
 font:&quot;Arial Rounded MT Bold&quot;;</string>
     </property>
     <property name="text">
@@ -88,7 +88,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
      </font>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial Rounded MT Bold'; font-size:73pt; color:#fceedf;&quot;&gt;Petinator&lt;/span&gt;&lt;span style=&quot; font-size:64pt;&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial Rounded MT Bold'; font-size:73pt; color:#fceedf;&quot;&gt;Petinator&lt;/span&gt;&lt;span style=&quot; font-size:62pt;&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label2">
@@ -157,7 +157,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

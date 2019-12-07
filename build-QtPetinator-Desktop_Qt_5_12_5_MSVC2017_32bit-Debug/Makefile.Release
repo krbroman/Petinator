@@ -49,7 +49,6 @@ OBJECTS_DIR   = release
 
 SOURCES       = ..\QtPetinator\addnewanimal.cpp \
 		..\QtPetinator\animalexists.cpp \
-		..\QtPetinator\answers.cpp \
 		..\QtPetinator\checkanimal.cpp \
 		..\QtPetinator\guess.cpp \
 		..\QtPetinator\guesslast.cpp \
@@ -59,7 +58,9 @@ SOURCES       = ..\QtPetinator\addnewanimal.cpp \
 		..\QtPetinator\mainwindow2.cpp \
 		..\QtPetinator\questions.cpp \
 		..\QtPetinator\secondslide.cpp \
-		..\QtPetinator\winning.cpp release\moc_addnewanimal.cpp \
+		..\QtPetinator\winning.cpp release\qrc_resources.cpp \
+		release\qrc_resoures2.cpp \
+		release\moc_addnewanimal.cpp \
 		release\moc_animalexists.cpp \
 		release\moc_checkanimal.cpp \
 		release\moc_guess.cpp \
@@ -71,7 +72,6 @@ SOURCES       = ..\QtPetinator\addnewanimal.cpp \
 		release\moc_winning.cpp
 OBJECTS       = release\addnewanimal.obj \
 		release\animalexists.obj \
-		release\answers.obj \
 		release\checkanimal.obj \
 		release\guess.obj \
 		release\guesslast.obj \
@@ -82,6 +82,8 @@ OBJECTS       = release\addnewanimal.obj \
 		release\questions.obj \
 		release\secondslide.obj \
 		release\winning.obj \
+		release\qrc_resources.obj \
+		release\qrc_resoures2.obj \
 		release\moc_addnewanimal.obj \
 		release\moc_animalexists.obj \
 		release\moc_checkanimal.obj \
@@ -95,7 +97,6 @@ OBJECTS       = release\addnewanimal.obj \
 
 DIST          =  ..\QtPetinator\addnewanimal.h \
 		..\QtPetinator\animalexists.h \
-		..\QtPetinator\answers.h \
 		..\QtPetinator\checkanimal.h \
 		..\QtPetinator\guess.h \
 		..\QtPetinator\guesslast.h \
@@ -106,7 +107,6 @@ DIST          =  ..\QtPetinator\addnewanimal.h \
 		..\QtPetinator\secondslide.h \
 		..\QtPetinator\winning.h ..\QtPetinator\addnewanimal.cpp \
 		..\QtPetinator\animalexists.cpp \
-		..\QtPetinator\answers.cpp \
 		..\QtPetinator\checkanimal.cpp \
 		..\QtPetinator\guess.cpp \
 		..\QtPetinator\guesslast.cpp \
@@ -193,7 +193,7 @@ all: Makefile.Release  release\QtPetinator.exe
 
 release\QtPetinator.exe: E:\Qt\5.12.5\msvc2017\lib\Qt5Widgets.lib E:\Qt\5.12.5\msvc2017\lib\Qt5Gui.lib E:\Qt\5.12.5\msvc2017\lib\Qt5Core.lib E:\Qt\5.12.5\msvc2017\lib\qtmain.lib ui_addnewanimal.h ui_animalexists.h ui_checkanimal.h ui_guess.h ui_guesslast.h ui_losing.h ui_mainwindow.h ui_mainwindow2.h ui_secondslide.h ui_winning.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
-release\addnewanimal.obj release\animalexists.obj release\answers.obj release\checkanimal.obj release\guess.obj release\guesslast.obj release\losing.obj release\main.obj release\mainwindow.obj release\mainwindow2.obj release\questions.obj release\secondslide.obj release\winning.obj release\moc_addnewanimal.obj release\moc_animalexists.obj release\moc_checkanimal.obj release\moc_guess.obj release\moc_guesslast.obj release\moc_losing.obj release\moc_mainwindow.obj release\moc_mainwindow2.obj release\moc_secondslide.obj release\moc_winning.obj
+release\addnewanimal.obj release\animalexists.obj release\checkanimal.obj release\guess.obj release\guesslast.obj release\losing.obj release\main.obj release\mainwindow.obj release\mainwindow2.obj release\questions.obj release\secondslide.obj release\winning.obj release\qrc_resources.obj release\qrc_resoures2.obj release\moc_addnewanimal.obj release\moc_animalexists.obj release\moc_checkanimal.obj release\moc_guess.obj release\moc_guesslast.obj release\moc_losing.obj release\moc_mainwindow.obj release\moc_mainwindow2.obj release\moc_secondslide.obj release\moc_winning.obj
 $(LIBS)
 <<
 
@@ -203,10 +203,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) QtPetinator.zip $(SOURCES) $(DIST) ..\QtPetinator\QtPetinator.pro ..\..\Qt\5.12.5\msvc2017\mkspecs\features\spec_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\angle.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\windows-vulkan.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\msvc-desktop.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\qconfig.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3danimation.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dcore.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dinput.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dlogic.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3drender.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3drender_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axbase.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axbase_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axcontainer.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axserver.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axserver_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bluetooth.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_concurrent.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_core.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_core_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_dbus.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_dbus_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designer.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designer_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_edid_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gamepad.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gui.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gui_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_help.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_help_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_location.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_location_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimedia.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_network.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_network_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_nfc.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_nfc_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_opengl.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_opengl_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_openglextensions.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioning.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioning_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioningquick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioningquick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_printsupport.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmltest.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_repparser.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_repparser_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_scxml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_scxml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sensors.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sensors_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialbus.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialport.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialport_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sql.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sql_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_studio3d.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_studio3d_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_svg.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_svg_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_testlib.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_testlib_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_texttospeech.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uiplugin.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uitools.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uitools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_vulkan_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webchannel.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_websockets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_websockets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webview.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webview_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_widgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_widgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_winextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_winextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_zlib_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt_functions.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt_config.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\win32-msvc\qmake.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\spec_post.prf .qmake.stash ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exclusive_builds.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\msvc-version.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\toolchain.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\default_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\default_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\resolve_config.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exclusive_builds_post.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\default_post.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\build_pass.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qml_debug.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\precompile_header.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\warn_on.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\resources.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\moc.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\opengl.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\uic.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qmake_use.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\file_copies.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\windows.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\testcase_targets.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exceptions.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\yacc.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\lex.prf ..\QtPetinator\QtPetinator.pro ..\..\Qt\5.12.5\msvc2017\lib\Qt5Widgets.prl ..\..\Qt\5.12.5\msvc2017\lib\Qt5Gui.prl ..\..\Qt\5.12.5\msvc2017\lib\Qt5Core.prl ..\..\Qt\5.12.5\msvc2017\lib\qtmain.prl    ..\..\Qt\5.12.5\msvc2017\mkspecs\features\data\dummy.cpp ..\QtPetinator\addnewanimal.h ..\QtPetinator\animalexists.h ..\QtPetinator\answers.h ..\QtPetinator\checkanimal.h ..\QtPetinator\guess.h ..\QtPetinator\guesslast.h ..\QtPetinator\losing.h ..\QtPetinator\mainwindow.h ..\QtPetinator\mainwindow2.h ..\QtPetinator\questions.h ..\QtPetinator\secondslide.h ..\QtPetinator\winning.h  ..\QtPetinator\addnewanimal.cpp ..\QtPetinator\animalexists.cpp ..\QtPetinator\answers.cpp ..\QtPetinator\checkanimal.cpp ..\QtPetinator\guess.cpp ..\QtPetinator\guesslast.cpp ..\QtPetinator\losing.cpp ..\QtPetinator\main.cpp ..\QtPetinator\mainwindow.cpp ..\QtPetinator\mainwindow2.cpp ..\QtPetinator\questions.cpp ..\QtPetinator\secondslide.cpp ..\QtPetinator\winning.cpp ..\QtPetinator\addnewanimal.ui ..\QtPetinator\animalexists.ui ..\QtPetinator\checkanimal.ui ..\QtPetinator\guess.ui ..\QtPetinator\guesslast.ui ..\QtPetinator\losing.ui ..\QtPetinator\mainwindow.ui ..\QtPetinator\mainwindow2.ui ..\QtPetinator\secondslide.ui ..\QtPetinator\winning.ui    
+	$(ZIP) QtPetinator.zip $(SOURCES) $(DIST) ..\QtPetinator\QtPetinator.pro ..\..\Qt\5.12.5\msvc2017\mkspecs\features\spec_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\angle.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\windows-vulkan.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\msvc-desktop.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\qconfig.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3danimation.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dcore.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dinput.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dlogic.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3drender.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3drender_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axbase.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axbase_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axcontainer.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axserver.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axserver_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bluetooth.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_concurrent.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_core.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_core_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_dbus.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_dbus_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designer.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designer_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_edid_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gamepad.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gui.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gui_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_help.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_help_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_location.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_location_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimedia.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_network.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_network_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_nfc.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_nfc_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_opengl.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_opengl_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_openglextensions.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioning.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioning_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioningquick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioningquick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_printsupport.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmltest.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_repparser.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_repparser_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_scxml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_scxml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sensors.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sensors_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialbus.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialport.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialport_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sql.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sql_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_studio3d.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_studio3d_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_svg.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_svg_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_testlib.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_testlib_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_texttospeech.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uiplugin.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uitools.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uitools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_vulkan_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webchannel.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_websockets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_websockets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webview.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webview_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_widgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_widgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_winextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_winextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_zlib_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt_functions.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt_config.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\win32-msvc\qmake.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\spec_post.prf .qmake.stash ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exclusive_builds.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\msvc-version.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\toolchain.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\default_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\default_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\resolve_config.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exclusive_builds_post.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\default_post.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\build_pass.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qml_debug.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\precompile_header.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\warn_on.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\resources.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\moc.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\opengl.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\uic.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qmake_use.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\file_copies.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\windows.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\testcase_targets.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exceptions.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\yacc.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\lex.prf ..\QtPetinator\QtPetinator.pro ..\QtPetinator\resources.qrc ..\QtPetinator\resoures2.qrc ..\..\Qt\5.12.5\msvc2017\lib\Qt5Widgets.prl ..\..\Qt\5.12.5\msvc2017\lib\Qt5Gui.prl ..\..\Qt\5.12.5\msvc2017\lib\Qt5Core.prl ..\..\Qt\5.12.5\msvc2017\lib\qtmain.prl   ..\QtPetinator\resources.qrc ..\QtPetinator\resoures2.qrc ..\..\Qt\5.12.5\msvc2017\mkspecs\features\data\dummy.cpp ..\QtPetinator\addnewanimal.h ..\QtPetinator\animalexists.h ..\QtPetinator\checkanimal.h ..\QtPetinator\guess.h ..\QtPetinator\guesslast.h ..\QtPetinator\losing.h ..\QtPetinator\mainwindow.h ..\QtPetinator\mainwindow2.h ..\QtPetinator\questions.h ..\QtPetinator\secondslide.h ..\QtPetinator\winning.h  ..\QtPetinator\addnewanimal.cpp ..\QtPetinator\animalexists.cpp ..\QtPetinator\checkanimal.cpp ..\QtPetinator\guess.cpp ..\QtPetinator\guesslast.cpp ..\QtPetinator\losing.cpp ..\QtPetinator\main.cpp ..\QtPetinator\mainwindow.cpp ..\QtPetinator\mainwindow2.cpp ..\QtPetinator\questions.cpp ..\QtPetinator\secondslide.cpp ..\QtPetinator\winning.cpp ..\QtPetinator\addnewanimal.ui ..\QtPetinator\animalexists.ui ..\QtPetinator\checkanimal.ui ..\QtPetinator\guess.ui ..\QtPetinator\guesslast.ui ..\QtPetinator\losing.ui ..\QtPetinator\mainwindow.ui ..\QtPetinator\mainwindow2.ui ..\QtPetinator\secondslide.ui ..\QtPetinator\winning.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\addnewanimal.obj release\animalexists.obj release\answers.obj release\checkanimal.obj release\guess.obj release\guesslast.obj release\losing.obj release\main.obj release\mainwindow.obj release\mainwindow2.obj release\questions.obj release\secondslide.obj release\winning.obj release\moc_addnewanimal.obj release\moc_animalexists.obj release\moc_checkanimal.obj release\moc_guess.obj release\moc_guesslast.obj release\moc_losing.obj release\moc_mainwindow.obj release\moc_mainwindow2.obj release\moc_secondslide.obj release\moc_winning.obj
+	-$(DEL_FILE) release\addnewanimal.obj release\animalexists.obj release\checkanimal.obj release\guess.obj release\guesslast.obj release\losing.obj release\main.obj release\mainwindow.obj release\mainwindow2.obj release\questions.obj release\secondslide.obj release\winning.obj release\qrc_resources.obj release\qrc_resoures2.obj release\moc_addnewanimal.obj release\moc_animalexists.obj release\moc_checkanimal.obj release\moc_guess.obj release\moc_guesslast.obj release\moc_losing.obj release\moc_mainwindow.obj release\moc_mainwindow2.obj release\moc_secondslide.obj release\moc_winning.obj
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -223,8 +223,59 @@ benchmark: first
 
 compiler_no_pch_compiler_make_all:
 compiler_no_pch_compiler_clean:
-compiler_rcc_make_all:
+compiler_rcc_make_all: release\qrc_resources.cpp release\qrc_resoures2.cpp
 compiler_rcc_clean:
+	-$(DEL_FILE) release\qrc_resources.cpp release\qrc_resoures2.cpp
+release\qrc_resources.cpp: ..\QtPetinator\resources.qrc \
+		..\..\Qt\5.12.5\msvc2017\bin\rcc.exe \
+		..\QtPetinator\Slide9_5.png \
+		..\QtPetinator\Slide7_3.png \
+		..\QtPetinator\Slide3_4.png \
+		..\QtPetinator\Slide5_1.png \
+		..\QtPetinator\Slide1_2.png \
+		..\QtPetinator\Slide9_4.png \
+		..\QtPetinator\Slide7_2.png \
+		..\QtPetinator\Slide3_3.png \
+		..\QtPetinator\Slide1_1.png \
+		..\QtPetinator\Slide9_3.png \
+		..\QtPetinator\Slide7_1.png \
+		..\QtPetinator\Slide3_2.png \
+		..\QtPetinator\Slide9_2.png \
+		..\QtPetinator\Slide3_1.png \
+		..\QtPetinator\Slide8_5.png \
+		..\QtPetinator\Slide9_1.png \
+		..\QtPetinator\Slide2_4.png \
+		..\QtPetinator\Slide8_4.png \
+		..\QtPetinator\Slide4_5.png \
+		..\QtPetinator\Slide6_2.png \
+		..\QtPetinator\Slide2_3.png \
+		..\QtPetinator\Script4_3.png \
+		..\QtPetinator\Slide7_7.png \
+		..\QtPetinator\Slide8_3.png \
+		..\QtPetinator\Slide5_5.png \
+		..\QtPetinator\Slide4_4.png \
+		..\QtPetinator\Slide6_1.png \
+		..\QtPetinator\Slide2_2.png \
+		..\QtPetinator\Script4_2.png \
+		..\QtPetinator\Slide7_6.png \
+		..\QtPetinator\Slide8_2.png \
+		..\QtPetinator\Slide5_4.png \
+		..\QtPetinator\Slide2_1.png \
+		..\QtPetinator\Slide7_5.png \
+		..\QtPetinator\Slide5_3.png \
+		..\QtPetinator\Slide1_4.png \
+		..\QtPetinator\Slide7_4.png \
+		..\QtPetinator\Slide3_5.png \
+		..\QtPetinator\Slide5_2.png \
+		..\QtPetinator\Slide4_1.png \
+		..\QtPetinator\Slide1_3.png
+	E:\Qt\5.12.5\msvc2017\bin\rcc.exe -name resources ..\QtPetinator\resources.qrc -o release\qrc_resources.cpp
+
+release\qrc_resoures2.cpp: ..\QtPetinator\resoures2.qrc \
+		..\..\Qt\5.12.5\msvc2017\bin\rcc.exe \
+		..\QtPetinator\AllSlides.png
+	E:\Qt\5.12.5\msvc2017\bin\rcc.exe -name resoures2 ..\QtPetinator\resoures2.qrc -o release\qrc_resoures2.cpp
+
 compiler_moc_predefs_make_all: release\moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) release\moc_predefs.h
@@ -340,6 +391,8 @@ release\moc_addnewanimal.cpp: ..\QtPetinator\addnewanimal.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
 		..\QtPetinator\losing.h \
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
 		release\moc_predefs.h \
 		..\..\Qt\5.12.5\msvc2017\bin\moc.exe
 	E:\Qt\5.12.5\msvc2017\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/Petinator/build-QtPetinator-Desktop_Qt_5_12_5_MSVC2017_32bit-Debug/release/moc_predefs.h -IE:/Qt/5.12.5/msvc2017/mkspecs/win32-msvc -IE:/Petinator/QtPetinator -IE:/Qt/5.12.5/msvc2017/include -IE:/Qt/5.12.5/msvc2017/include/QtWidgets -IE:/Qt/5.12.5/msvc2017/include/QtGui -IE:/Qt/5.12.5/msvc2017/include/QtANGLE -IE:/Qt/5.12.5/msvc2017/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt" ..\QtPetinator\addnewanimal.h -o release\moc_addnewanimal.cpp
@@ -1027,6 +1080,7 @@ release\moc_mainwindow.cpp: ..\QtPetinator\mainwindow.h \
 		..\QtPetinator\losing.h \
 		..\QtPetinator\addnewanimal.h \
 		..\QtPetinator\secondslide.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\QPixmap \
 		release\moc_predefs.h \
 		..\..\Qt\5.12.5\msvc2017\bin\moc.exe
 	E:\Qt\5.12.5\msvc2017\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/Petinator/build-QtPetinator-Desktop_Qt_5_12_5_MSVC2017_32bit-Debug/release/moc_predefs.h -IE:/Qt/5.12.5/msvc2017/mkspecs/win32-msvc -IE:/Petinator/QtPetinator -IE:/Qt/5.12.5/msvc2017/include -IE:/Qt/5.12.5/msvc2017/include/QtWidgets -IE:/Qt/5.12.5/msvc2017/include/QtGui -IE:/Qt/5.12.5/msvc2017/include/QtANGLE -IE:/Qt/5.12.5/msvc2017/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt" ..\QtPetinator\mainwindow.h -o release\moc_mainwindow.cpp
@@ -1444,7 +1498,7 @@ compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
 
 
 
@@ -1556,6 +1610,8 @@ release\addnewanimal.obj: ..\QtPetinator\addnewanimal.cpp ..\QtPetinator\addnewa
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
 		..\QtPetinator\losing.h \
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
 		ui_addnewanimal.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\QVariant \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication \
@@ -1571,7 +1627,9 @@ release\addnewanimal.obj: ..\QtPetinator\addnewanimal.cpp ..\QtPetinator\addnewa
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
 
 release\animalexists.obj: ..\QtPetinator\animalexists.cpp ..\QtPetinator\animalexists.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
@@ -1694,9 +1752,9 @@ release\animalexists.obj: ..\QtPetinator\animalexists.cpp ..\QtPetinator\animale
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
-
-release\answers.obj: ..\QtPetinator\answers.cpp ..\QtPetinator\answers.h
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
 
 release\checkanimal.obj: ..\QtPetinator\checkanimal.cpp ..\QtPetinator\checkanimal.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
@@ -1829,7 +1887,9 @@ release\checkanimal.obj: ..\QtPetinator\checkanimal.cpp ..\QtPetinator\checkanim
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
 
 release\guess.obj: ..\QtPetinator\guess.cpp ..\QtPetinator\guess.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
@@ -1954,7 +2014,9 @@ release\guess.obj: ..\QtPetinator\guess.cpp ..\QtPetinator\guess.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
 
 release\guesslast.obj: ..\QtPetinator\guesslast.cpp ..\QtPetinator\guesslast.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
@@ -2083,7 +2145,9 @@ release\guesslast.obj: ..\QtPetinator\guesslast.cpp ..\QtPetinator\guesslast.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
 
 release\losing.obj: ..\QtPetinator\losing.cpp ..\QtPetinator\losing.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog \
@@ -2205,7 +2269,9 @@ release\losing.obj: ..\QtPetinator\losing.cpp ..\QtPetinator\losing.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
 
 release\main.obj: ..\QtPetinator\main.cpp ..\QtPetinator\mainwindow.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QMainWindow \
@@ -2329,6 +2395,7 @@ release\main.obj: ..\QtPetinator\main.cpp ..\QtPetinator\mainwindow.h \
 		..\QtPetinator\losing.h \
 		..\QtPetinator\addnewanimal.h \
 		..\QtPetinator\secondslide.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\QPixmap \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h \
@@ -2459,6 +2526,7 @@ release\mainwindow.obj: ..\QtPetinator\mainwindow.cpp ..\QtPetinator\mainwindow.
 		..\QtPetinator\losing.h \
 		..\QtPetinator\addnewanimal.h \
 		..\QtPetinator\secondslide.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\QPixmap \
 		ui_mainwindow.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\QVariant \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication \
@@ -2481,6 +2549,8 @@ release\mainwindow.obj: ..\QtPetinator\mainwindow.cpp ..\QtPetinator\mainwindow.
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QStatusBar \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qstatusbar.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QToolBar \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qtoolbar.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
 
 release\mainwindow2.obj: ..\QtPetinator\mainwindow2.cpp ..\QtPetinator\mainwindow2.h \
@@ -2920,7 +2990,13 @@ release\winning.obj: ..\QtPetinator\winning.cpp ..\QtPetinator\winning.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
+
+release\qrc_resources.obj: release\qrc_resources.cpp 
+
+release\qrc_resoures2.obj: release\qrc_resoures2.cpp 
 
 release\moc_addnewanimal.obj: release\moc_addnewanimal.cpp 
 

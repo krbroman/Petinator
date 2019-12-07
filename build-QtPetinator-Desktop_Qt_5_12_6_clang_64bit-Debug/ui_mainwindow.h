@@ -47,14 +47,14 @@ public:
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(380, 459, 301, 121));
         QFont font;
-        font.setPointSize(45);
+        font.setPointSize(20);
         font.setBold(false);
         font.setItalic(false);
         font.setWeight(50);
         pushButton->setFont(font);
         pushButton->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:45pt;\n"
+"font-size:20pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
@@ -88,7 +88,7 @@ public:
         pushButton->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1024, 22));
+        menubar->setGeometry(QRect(0, 0, 1024, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -113,7 +113,7 @@ public:
 " </head>\n"
 "<body>\n"
 "<div class=\"layer1\">\n"
-"<font size=\"45\" color=\"#C85836\" face=\"Arial Rounded MT Bold\">\320\235\320\260\321\207\320\260\321\202\321\214 \320\270\320\263\321\200\321\203</font>\n"
+"<font size=\"20\" color=\"#C85836\" face=\"Arial Rounded MT Bold\">\320\235\320\260\321\207\320\260\321\202\321\214 \320\270\320\263\321\200\321\203</font>\n"
 "</div>\n"
 "</body>\n"
 "</html>\n"
@@ -121,7 +121,7 @@ public:
 #endif // QT_NO_TOOLTIP
         pushButton->setText(QApplication::translate("MainWindow", "\320\235\320\260\321\207\320\260\321\202\321\214 \320\270\320\263\321\200\321\203", nullptr));
         label->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><br/></p></body></html>", nullptr));
-        Slide1_1->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-family:'Arial Rounded MT Bold'; font-size:73pt; color:#fceedf;\">Petinator</span><span style=\" font-size:64pt;\"/></p></body></html>", nullptr));
+        Slide1_1->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-family:'Arial Rounded MT Bold'; font-size:73pt; color:#fceedf;\">Petinator</span><span style=\" font-size:62pt;\"/></p></body></html>", nullptr));
         label2->setText(QString());
         label3->setText(QString());
         label4->setText(QString());

@@ -69,7 +69,7 @@ void MainWindow2::on_pushButton_2_clicked()
     quest.answersFromUsers[numberOfQuestion] = 1;
 
     //Необходимое условие для обработки ВСЕХ вопросов без вылета
-    if (countOfQuestionAfterButton < Questions::getCountOfQuestion()) {
+    if (countOfQuestionAfterButton < quest.getCountOfQuestion()) {
         //Следующий вопрос на экране
         numberOfQuestion = quest.numOfTheNextQuestion();
         ui->label->setText(quest.questions[numberOfQuestion]);
@@ -82,7 +82,7 @@ void MainWindow2::on_pushButton_2_clicked()
     } else if (countOfQuestionAfterButton == 20) {
         guess = new Guess(quest);
         guess->show();
-    } else if (countOfQuestionAfterButton == Questions::getCountOfQuestion()) {
+    } else if (countOfQuestionAfterButton == quest.getCountOfQuestion()) {
         this->close();
         guessLast = new GuessLast(quest);
         guessLast->show();
@@ -99,7 +99,7 @@ void MainWindow2::on_pushButton_clicked()
     quest.answersFromUsers[numberOfQuestion] = 0;
 
     //Необходимое условие для обработки ВСЕХ вопросов без вылета
-    if (countOfQuestionAfterButton < Questions::getCountOfQuestion()) {
+    if (countOfQuestionAfterButton < quest.getCountOfQuestion()) {
         //Следующий вопрос на экране
         numberOfQuestion = quest.numOfTheNextQuestion();
         ui->label->setText(quest.questions[numberOfQuestion]);
@@ -112,7 +112,7 @@ void MainWindow2::on_pushButton_clicked()
     } else if (countOfQuestionAfterButton == 20) {
         guess = new Guess(quest);
         guess->show();
-    } else if (countOfQuestionAfterButton == Questions::getCountOfQuestion()) {
+    } else if (countOfQuestionAfterButton == quest.getCountOfQuestion()) {
         this->close();
         guessLast = new GuessLast(quest);
         guessLast->show();
