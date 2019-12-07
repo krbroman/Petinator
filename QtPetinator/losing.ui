@@ -222,6 +222,8 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
   <zorder>pushButton_Play</zorder>
   <zorder>pushButton_Exit</zorder>
   <zorder>label</zorder>
+  <zorder>pushButton_Exit</zorder>
+  <zorder>pushButton_Play</zorder>
  </widget>
  <resources/>
  <connections/>

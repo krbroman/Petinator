@@ -77,9 +77,7 @@ public:
         label7->setObjectName(QString::fromUtf8("label7"));
         label7->setGeometry(QRect(463, 462, 301, 181));
         label6->raise();
-        pushButton_No->raise();
         Suggestion->raise();
-        pushButton_Yes->raise();
         label1->raise();
         label2->raise();
         label3->raise();
@@ -87,6 +85,8 @@ public:
         label5->raise();
         label7->raise();
         label->raise();
+        pushButton_No->raise();
+        pushButton_Yes->raise();
 
         retranslateUi(GuessLast);
 
