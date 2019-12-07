@@ -39,19 +39,17 @@ public:
         Guess->resize(1024, 768);
         pushButton_Yes = new QPushButton(Guess);
         pushButton_Yes->setObjectName(QString::fromUtf8("pushButton_Yes"));
-        pushButton_Yes->setGeometry(QRect(370, 350, 121, 61));
+        pushButton_Yes->setGeometry(QRect(390, 350, 121, 61));
         QFont font;
         font.setPointSize(20);
         pushButton_Yes->setFont(font);
-        pushButton_Yes->setStyleSheet(QString::fromUtf8("background-color: transparent"));
         pushButton_No = new QPushButton(Guess);
         pushButton_No->setObjectName(QString::fromUtf8("pushButton_No"));
-        pushButton_No->setGeometry(QRect(540, 350, 111, 61));
+        pushButton_No->setGeometry(QRect(560, 350, 111, 61));
         pushButton_No->setFont(font);
-        pushButton_No->setStyleSheet(QString::fromUtf8("background-color: transparent"));
         label = new QLabel(Guess);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(470, 470, 291, 161));
+        label->setGeometry(QRect(513, 496, 220, 105));
         label->setFont(font);
         Suggestion = new QLabel(Guess);
         Suggestion->setObjectName(QString::fromUtf8("Suggestion"));
@@ -110,7 +108,7 @@ public:
 "</body>\n"
 "</html>\n"
 "", nullptr));
-        Suggestion->setText(QApplication::translate("Guess", "<html><head/><body><p align=\"center\"><br/></p></body></html>", nullptr));
+        Suggestion->setText(QApplication::translate("Guess", "<p align=\"center\">/*\320\237\321\200\320\265\320\264\320\277\320\276\320\273\320\260\320\263\320\260\320\265\320\274\320\276\320\265 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265*/</p>", nullptr));
         label1->setText(QString());
         label3->setText(QString());
         label2->setText(QString());

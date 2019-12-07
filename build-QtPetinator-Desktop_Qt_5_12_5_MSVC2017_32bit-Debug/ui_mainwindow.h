@@ -64,10 +64,8 @@ public:
         label->setFont(font1);
         Slide1_1 = new QLabel(centralwidget);
         Slide1_1->setObjectName(QString::fromUtf8("Slide1_1"));
-        Slide1_1->setGeometry(QRect(280, -20, 581, 171));
-        QFont font2;
-        font2.setPointSize(20);
-        Slide1_1->setFont(font2);
+        Slide1_1->setGeometry(QRect(368, 22, 331, 140));
+        Slide1_1->setFont(font1);
         label2 = new QLabel(centralwidget);
         label2->setObjectName(QString::fromUtf8("label2"));
         label2->setGeometry(QRect(-4, -4, 1074, 192));

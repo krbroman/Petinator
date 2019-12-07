@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="pushButton_Yes">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>390</x>
      <y>350</y>
      <width>121</width>
      <height>61</height>
@@ -27,9 +27,6 @@
      <pointsize>20</pointsize>
     </font>
    </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: transparent</string>
-   </property>
    <property name="text">
     <string>Да</string>
    </property>
@@ -37,7 +34,7 @@
   <widget class="QPushButton" name="pushButton_No">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>560</x>
      <y>350</y>
      <width>111</width>
      <height>61</height>
@@ -48,9 +45,6 @@
      <pointsize>20</pointsize>
     </font>
    </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: transparent</string>
-   </property>
    <property name="text">
     <string>Нет</string>
    </property>
@@ -58,10 +52,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>470</y>
-     <width>291</width>
-     <height>161</height>
+     <x>513</x>
+     <y>496</y>
+     <width>220</width>
+     <height>105</height>
     </rect>
    </property>
    <property name="font">
@@ -97,7 +91,7 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;p align=&quot;center&quot;&gt;/*Предполагаемое животное*/&lt;/p&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label1">
