@@ -251,6 +251,7 @@ Makefile: ..\QtPetinator\QtPetinator.pro ..\..\Qt\5.12.5\msvc2017\mkspecs\win32-
 		..\QtPetinator\QtPetinator.pro \
 		..\..\Qt\5.12.5\msvc2017\lib\Qt5Widgets.prl \
 		..\..\Qt\5.12.5\msvc2017\lib\Qt5Gui.prl \
+		..\..\Qt\5.12.5\msvc2017\lib\Qt5Sql.prl \
 		..\..\Qt\5.12.5\msvc2017\lib\Qt5Core.prl \
 		..\..\Qt\5.12.5\msvc2017\lib\qtmain.prl
 	$(QMAKE) -o Makefile ..\QtPetinator\QtPetinator.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -428,6 +429,7 @@ Makefile: ..\QtPetinator\QtPetinator.pro ..\..\Qt\5.12.5\msvc2017\mkspecs\win32-
 ..\QtPetinator\QtPetinator.pro:
 ..\..\Qt\5.12.5\msvc2017\lib\Qt5Widgets.prl:
 ..\..\Qt\5.12.5\msvc2017\lib\Qt5Gui.prl:
+..\..\Qt\5.12.5\msvc2017\lib\Qt5Sql.prl:
 ..\..\Qt\5.12.5\msvc2017\lib\Qt5Core.prl:
 ..\..\Qt\5.12.5\msvc2017\lib\qtmain.prl:
 qmake: FORCE

@@ -88,6 +88,6 @@ void Guess::on_pushButton_No_clicked()
 void Guess::on_pushButton_Yes_clicked()
 {
     this->close();
-    winning = new Winning(expectedAnimal);
+    winning = new Winning(*thisQuest, expectedAnimal);
     winning->show();
 }

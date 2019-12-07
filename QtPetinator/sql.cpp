@@ -5,8 +5,12 @@ Sql::Sql()
 {
     QDir dir;
     Db = QSqlDatabase::addDatabase("QSQLITE");
-    Db.setDatabaseName("/Users/romabruks/Documents/Github/Study/Petinator/QtPetinator/Petinator.db");
-    //
+
+    //Путь для Ромы Голубева
+    //Db.setDatabaseName("/Users/romabruks/Documents/Github/Study/Petinator/QtPetinator/Petinator.db");
+
+    //Путь для Кирилла
+    Db.setDatabaseName("E:/Petinator/QtPetinator/Petinator.db");
     if(Db.open())
     {
         qu = QSqlQuery(Db);

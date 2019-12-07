@@ -158,8 +158,6 @@
     <string/>
    </property>
   </widget>
-  <zorder>pushButton_Play</zorder>
-  <zorder>pushButton_Exit</zorder>
   <zorder>label7</zorder>
   <zorder>label5</zorder>
   <zorder>label6</zorder>
@@ -168,6 +166,8 @@
   <zorder>label1</zorder>
   <zorder>label2</zorder>
   <zorder>label</zorder>
+  <zorder>pushButton_Exit</zorder>
+  <zorder>pushButton_Play</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -186,9 +186,7 @@
    </property>
   </widget>
   <zorder>label6</zorder>
-  <zorder>pushButton_No</zorder>
   <zorder>Suggestion</zorder>
-  <zorder>pushButton_Yes</zorder>
   <zorder>label1</zorder>
   <zorder>label2</zorder>
   <zorder>label3</zorder>
@@ -196,6 +194,8 @@
   <zorder>label5</zorder>
   <zorder>label7</zorder>
   <zorder>label</zorder>
+  <zorder>pushButton_No</zorder>
+  <zorder>pushButton_Yes</zorder>
  </widget>
  <resources/>
  <connections/>

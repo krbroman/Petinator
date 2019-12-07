@@ -169,8 +169,6 @@
    </property>
   </widget>
   <zorder>label1</zorder>
-  <zorder>pushButton_Exit</zorder>
-  <zorder>pushButton_Play</zorder>
   <zorder>label2</zorder>
   <zorder>label3</zorder>
   <zorder>label4</zorder>
@@ -178,6 +176,8 @@
   <zorder>label6</zorder>
   <zorder>label7</zorder>
   <zorder>label</zorder>
+  <zorder>pushButton_Exit</zorder>
+  <zorder>pushButton_Play</zorder>
  </widget>
  <resources/>
  <connections/>

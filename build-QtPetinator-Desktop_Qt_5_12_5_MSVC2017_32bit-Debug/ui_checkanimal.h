@@ -80,13 +80,13 @@ public:
         label1->raise();
         label->raise();
         usersAnimal->raise();
-        pushButton->raise();
         label2->raise();
         label3->raise();
         label4->raise();
         label5->raise();
         label6->raise();
         label7->raise();
+        pushButton->raise();
 
         retranslateUi(CheckAnimal);
 

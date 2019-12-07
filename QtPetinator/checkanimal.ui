@@ -173,13 +173,13 @@
   <zorder>label1</zorder>
   <zorder>label</zorder>
   <zorder>usersAnimal</zorder>
-  <zorder>pushButton</zorder>
   <zorder>label2</zorder>
   <zorder>label3</zorder>
   <zorder>label4</zorder>
   <zorder>label5</zorder>
   <zorder>label6</zorder>
   <zorder>label7</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -74,8 +74,6 @@ public:
         label7->setObjectName(QString::fromUtf8("label7"));
         label7->setGeometry(QRect(227, 143, 349, 181));
         label1->raise();
-        pushButton_Exit->raise();
-        pushButton_Play->raise();
         label2->raise();
         label3->raise();
         label4->raise();
@@ -83,6 +81,8 @@ public:
         label6->raise();
         label7->raise();
         label->raise();
+        pushButton_Exit->raise();
+        pushButton_Play->raise();
 
         retranslateUi(Winning);
 
