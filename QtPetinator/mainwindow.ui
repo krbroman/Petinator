@@ -76,15 +76,15 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
    <widget class="QLabel" name="Slide1_1">
     <property name="geometry">
      <rect>
-      <x>368</x>
-      <y>22</y>
-      <width>331</width>
-      <height>140</height>
+      <x>280</x>
+      <y>-20</y>
+      <width>581</width>
+      <height>171</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>40</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="text">

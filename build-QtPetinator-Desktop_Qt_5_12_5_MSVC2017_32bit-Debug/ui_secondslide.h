@@ -35,7 +35,7 @@ public:
         SecondSlide->resize(1024, 768);
         label = new QLabel(SecondSlide);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(340, 87, 425, 161));
+        label->setGeometry(QRect(320, 90, 491, 201));
         QFont font;
         font.setPointSize(35);
         label->setFont(font);

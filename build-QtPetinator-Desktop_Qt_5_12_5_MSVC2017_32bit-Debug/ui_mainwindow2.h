@@ -83,7 +83,7 @@ public:
 "font:\"Arial Rounded MT Bold\";"));
         pushButton_Now = new QPushButton(centralwidget);
         pushButton_Now->setObjectName(QString::fromUtf8("pushButton_Now"));
-        pushButton_Now->setGeometry(QRect(330, 670, 401, 61));
+        pushButton_Now->setGeometry(QRect(250, 670, 561, 61));
         QFont font2;
         font2.setPointSize(26);
         font2.setBold(false);
@@ -129,7 +129,7 @@ public:
         pushButton_2->raise();
         menubar = new QMenuBar(MainWindow2);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1024, 22));
+        menubar->setGeometry(QRect(0, 0, 1024, 26));
         MainWindow2->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow2);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

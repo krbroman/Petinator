@@ -100,9 +100,9 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
    <widget class="QPushButton" name="pushButton_Now">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>250</x>
       <y>670</y>
-      <width>401</width>
+      <width>561</width>
       <height>61</height>
      </rect>
     </property>
@@ -233,7 +233,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

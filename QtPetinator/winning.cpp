@@ -7,6 +7,16 @@ Winning::Winning(QWidget *parent) :
     ui(new Ui::Winning)
 {
     ui->setupUi(this);
+}
+
+Winning::Winning(Questions& quest, int animal) :
+    ui(new Ui::Winning)
+{
+    ui->setupUi(this);
+    this->thisQuest = &quest;
+    //Добавляем совпадение. Осталось выгрузить в Result.
+    //quest.frequencyOfChoise[animal]++;
+
 
     QPixmap pix(":/resources/Slide5_3.png");
     int h = ui->label1->height();
@@ -42,15 +52,6 @@ Winning::Winning(QWidget *parent) :
     h = ui->label7->height();
     w = ui->label7->width();
     ui->label7->setPixmap(pix7.scaled(w, h, Qt::KeepAspectRatio));
-}
-
-Winning::Winning(Questions& quest, int animal) :
-    ui(new Ui::Winning)
-{
-    ui->setupUi(this);
-    this->thisQuest = &quest;
-    //Добавляем совпадение. Осталось выгрузить в Result.
-    //quest.frequencyOfChoise[animal]++;
 }
 
 Winning::~Winning()
