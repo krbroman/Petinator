@@ -2,6 +2,7 @@
 #define LOSING_H
 
 #include <QDialog>
+#include "questions.h"
 
 namespace Ui {
 class Losing;
@@ -13,6 +14,7 @@ class Losing : public QDialog
 
 public:
     explicit Losing(QWidget *parent = nullptr);
+    Losing(Questions&);
     ~Losing();
 
 private slots:
@@ -22,6 +24,7 @@ private slots:
 
 private:
     Ui::Losing *ui;
+    Questions* thisQuest;
 };
 
 #endif // LOSING_H

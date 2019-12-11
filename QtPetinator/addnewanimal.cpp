@@ -13,7 +13,7 @@ AddNewAnimal::AddNewAnimal(Questions& quest, QString animal) :
     ui(new Ui::AddNewAnimal)
 {
     ui->setupUi(this);
-    /*Работа с базой данных*/
+    thisQuest = &quest;
 
     QPixmap pix(":/source/AllSlides.png");
     int h = ui->label_3->height();

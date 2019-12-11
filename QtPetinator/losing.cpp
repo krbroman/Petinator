@@ -44,6 +44,13 @@ Losing::Losing(QWidget *parent) :
     ui->label7->setPixmap(pix7.scaled(w, h, Qt::KeepAspectRatio));
 }
 
+Losing::Losing(Questions& quest) :
+    ui(new Ui::Losing)
+{
+    ui->setupUi(this);
+    thisQuest = &quest;
+}
+
 Losing::~Losing()
 {
     delete ui;

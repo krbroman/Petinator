@@ -26,6 +26,7 @@ private slots:
 private:
     Ui::AddNewAnimal *ui;
     Losing* losing;
+    Questions* thisQuest;
 };
 
 #endif // ADDNEWANIMAL_H

@@ -28,11 +28,6 @@ AnimalExists::AnimalExists(QWidget *parent) :
     w = ui->label4->width();
     ui->label4->setPixmap(pix4.scaled(w, h, Qt::KeepAspectRatio));
 
-    QPixmap pix5(":/resources/Slide9_3.png");
-    h = ui->label5->height();
-    w = ui->label5->width();
-    ui->label5->setPixmap(pix5.scaled(w, h, Qt::KeepAspectRatio));
-
     QPixmap pix6(":/resources/Slide9_4.png");
     h = ui->label6->height();
     w = ui->label6->width();
