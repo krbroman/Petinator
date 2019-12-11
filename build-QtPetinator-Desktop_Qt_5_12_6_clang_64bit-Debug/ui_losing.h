@@ -73,8 +73,6 @@ public:
         label7 = new QLabel(Losing);
         label7->setObjectName(QString::fromUtf8("label7"));
         label7->setGeometry(QRect(0, 0, 1024, 768));
-        pushButton_Play->raise();
-        pushButton_Exit->raise();
         label7->raise();
         label5->raise();
         label6->raise();
@@ -83,6 +81,8 @@ public:
         label1->raise();
         label2->raise();
         label->raise();
+        pushButton_Exit->raise();
+        pushButton_Play->raise();
 
         retranslateUi(Losing);
 

@@ -77,7 +77,6 @@ public:
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(515, 640, 344, 129));
         label2->raise();
-        pushButton_Ok->raise();
         label1->raise();
         label3->raise();
         label4->raise();
@@ -87,6 +86,7 @@ public:
         label->raise();
         label_2->raise();
         label_3->raise();
+        pushButton_Ok->raise();
 
         retranslateUi(AnimalExists);
 

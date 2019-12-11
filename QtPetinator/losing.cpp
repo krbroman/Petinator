@@ -50,14 +50,14 @@ Losing::Losing(Questions& quest, QString animal) :
     ui->setupUi(this);
     thisQuest = &quest;
 
-    quest.query.qu.prepare("INSERT INTO Questions VALUE(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+    quest.query.qu.prepare("INSERT INTO Questions VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
     quest.query.qu.addBindValue(quest.countOfAnimalsTest);
-    quest.query.qu.addBindValue(">>>");//
+    quest.query.qu.addBindValue(animal);
     for(int i = 0; i < quest.countOfQuestionTest;++i)
         quest.query.qu.addBindValue(quest.answersFromUsers[i]);
     quest.query.qu.exec();
 
-    quest.query.qu.prepare("INSERT INTO Chances VALUE(:i, 2, 0)");
+    quest.query.qu.prepare("INSERT INTO Chances VALUES(:i, 2, 0)");
     quest.query.qu.bindValue(":i", quest.countOfAnimalsTest);
     quest.query.qu.exec();
 

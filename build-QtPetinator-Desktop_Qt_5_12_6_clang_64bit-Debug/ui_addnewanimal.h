@@ -77,7 +77,7 @@ public:
         label_8->setGeometry(QRect(-21, 27, 1048, 578));
         label_9 = new QLabel(AddNewAnimal);
         label_9->setObjectName(QString::fromUtf8("label_9"));
-        label_9->setGeometry(QRect(-20, 36, 1047, 562));
+        label_9->setGeometry(QRect(-10, -140, 1047, 562));
         label_3->raise();
         label_4->raise();
         label_5->raise();
@@ -87,8 +87,8 @@ public:
         label_9->raise();
         label->raise();
         label_2->raise();
-        pushButton_No->raise();
         pushButton_Yes->raise();
+        pushButton_No->raise();
 
         retranslateUi(AddNewAnimal);
 

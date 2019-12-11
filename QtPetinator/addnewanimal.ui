@@ -171,8 +171,8 @@
   <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
-     <x>-20</x>
-     <y>36</y>
+     <x>-10</x>
+     <y>-140</y>
      <width>1047</width>
      <height>562</height>
     </rect>
@@ -190,8 +190,8 @@
   <zorder>label_9</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
-  <zorder>pushButton_No</zorder>
   <zorder>pushButton_Yes</zorder>
+  <zorder>pushButton_No</zorder>
  </widget>
  <resources/>
  <connections/>
