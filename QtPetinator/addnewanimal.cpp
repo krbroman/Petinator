@@ -60,6 +60,8 @@ void AddNewAnimal::on_pushButton_Yes_clicked()
 {
     this->close();
     /*перезаписать в базу животное*/
+
+
     losing = new Losing();
     losing->show();
 }

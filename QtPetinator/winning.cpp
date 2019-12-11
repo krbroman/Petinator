@@ -49,6 +49,11 @@ Winning::Winning(Questions& quest, int animal) :
 {
     ui->setupUi(this);
     this->thisQuest = &quest;
+
+    quest.query.qu.prepare("Update Chances SET \"Частота загадывания\" = \"Частота загадывания\" + 1  where ID = :i  ");
+    quest.query.qu.bindValue(":i", animal);
+    quest.query.qu.exec();
+
     //Добавляем совпадение. Осталось выгрузить в Result.
     //quest.frequencyOfChoise[animal]++;
 }
