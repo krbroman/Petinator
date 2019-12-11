@@ -33,7 +33,6 @@ private:
     GuessLast* guessLast;
 
     int numberOfQuestion;
-
     int countOfQuestionAfterButton;
 };
 

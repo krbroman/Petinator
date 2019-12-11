@@ -13,20 +13,17 @@ class Questions
     static const int countOfAnimals = 100;
     static const int countOfQuestion = 100;
 
-
 private:
-
     int currenQuestion;
     bool* maskOfUsedQuestions = new bool[countOfQuestion] {0};
 
-
-
-
 public:
     Questions();
- Sql query;
- int countOfAnimalsTest = query.line;
- int countOfQuestionTest = query.column;
+
+    Sql query;
+    int countOfAnimalsTest = query.line;
+    int countOfQuestionTest = query.column;
+
     //Все вопросы, где иттератор - ID
     QString questions[countOfQuestion];
 

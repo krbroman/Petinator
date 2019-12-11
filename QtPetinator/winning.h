@@ -19,7 +19,6 @@ public:
 
 private slots:
     void on_pushButton_Exit_clicked();
-
     void on_pushButton_Play_clicked();
 
 private:
