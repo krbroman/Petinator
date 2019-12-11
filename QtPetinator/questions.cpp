@@ -93,7 +93,7 @@ query.qu.exec("Select \"Частота загадывания\" from Chances ord
     for (int i = 0; i < countOfAnimals; i++)
         answersForAnimals[countOfAnimals] = new int[countOfQuestion];*/
 
-    answersForAnimals[0][0] = 1;
+   /* answersForAnimals[0][0] = 1;
     answersForAnimals[1][0] = 1;
     answersForAnimals[2][0] = 0;
     answersForAnimals[3][0] = 0;
@@ -1164,7 +1164,7 @@ query.qu.exec("Select \"Частота загадывания\" from Chances ord
     answersForAnimals[32][28] = 1;
     answersForAnimals[33][28] = 0;
     answersForAnimals[34][28] = 1;
-    answersForAnimals[35][28] = 1;
+    answersForAnimals[35][28] = 1; */
 }
 
 int Questions::numOfTheNextQuestion() {

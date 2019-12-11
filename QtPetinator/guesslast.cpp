@@ -53,9 +53,23 @@ GuessLast::GuessLast(Questions &quest) :
     this->thisQuest = &quest;
 
     for(int i = 0; i < thisQuest->getCountOfAnimals(); i++)
+          { thisQuest->query.qu.prepare("Select * from Questions where ID = :i");
+           thisQuest->query.qu.bindValue(":i", i);
+           thisQuest->query.qu.exec();
+           thisQuest->query.qu.next();
+           for(int j = 0; j < thisQuest->getCountOfQuestion(); j++)
+           {
+               if(quest.answersFromUsers[j] != 2)
+                   if (quest.answersFromUsers[j] == thisQuest->query.qu.value(j+2).toInt())
+                       quest.countOfСoincidence[i]++;
+           }
+       }
+
+
+    /*for(int i = 0; i < thisQuest->getCountOfAnimals(); i++)
         for(int j = 0; j < thisQuest->getCountOfQuestion(); j++)
             if (quest.answersFromUsers[j] == quest.answersForAnimals[i][j])
-                quest.countOfСoincidence[i]++;
+                quest.countOfСoincidence[i]++; */
 
     int max = -1;
     expectedAnimal = -1;

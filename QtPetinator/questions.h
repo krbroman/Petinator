@@ -15,17 +15,18 @@ class Questions
 
 
 private:
-    Sql query;
+
     int currenQuestion;
     bool* maskOfUsedQuestions = new bool[countOfQuestion] {0};
 
-    int countOfAnimalsTest = query.line;
-    int countOfQuestionTest = query.column;
+
 
 
 public:
     Questions();
-
+ Sql query;
+ int countOfAnimalsTest = query.line;
+ int countOfQuestionTest = query.column;
     //Все вопросы, где иттератор - ID
     QString questions[countOfQuestion];
 
