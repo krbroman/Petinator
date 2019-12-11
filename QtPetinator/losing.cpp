@@ -52,6 +52,18 @@ Losing::Losing(Questions& quest) :
 
     /*Вот именно здесь надо добавить новое в базу*/
 
+    quest.query.qu.prepare("INSERT INTO Questions VALUE(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+    quest.query.qu.addBindValue(quest.countOfAnimalsTest);
+    quest.query.qu.addBindValue(">>>");//
+    for(int i = 0; i < quest.countOfQuestionTest;++i)
+        quest.query.qu.addBindValue(quest.answersFromUsers[i]);
+    quest.query.qu.exec();
+
+    quest.query.qu.prepare("INSERT INTO Chances VALUE(:i, 2, 0)");
+    quest.query.qu.bindValue(":i", quest.countOfAnimalsTest);
+    quest.query.qu.exec();
+
+
     QPixmap pix(":/resources/Slide6_1.png");
     int h = ui->label1->height();
     int w = ui->label1->width();
