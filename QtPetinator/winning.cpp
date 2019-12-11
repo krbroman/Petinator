@@ -7,6 +7,18 @@ Winning::Winning(QWidget *parent) :
     ui(new Ui::Winning)
 {
     ui->setupUi(this);
+}
+
+Winning::Winning(Questions& quest, int animal) :
+    ui(new Ui::Winning)
+{
+    ui->setupUi(this);
+    this->thisQuest = &quest;
+
+    quest.query.qu.prepare("Update Chances SET \"Частота загадывания\" = \"Частота загадывания\" + 1  where ID = :i  ");
+    quest.query.qu.bindValue(":i", animal);
+    quest.query.qu.exec();
+
 
     QPixmap pix(":/resources/Slide5_3.png");
     int h = ui->label1->height();
@@ -42,17 +54,6 @@ Winning::Winning(QWidget *parent) :
     h = ui->label7->height();
     w = ui->label7->width();
     ui->label7->setPixmap(pix7.scaled(w, h, Qt::KeepAspectRatio));
-}
-
-Winning::Winning(Questions& quest, int animal) :
-    ui(new Ui::Winning)
-{
-    ui->setupUi(this);
-    this->thisQuest = &quest;
-
-    quest.query.qu.prepare("Update Chances SET \"Частота загадывания\" = \"Частота загадывания\" + 1  where ID = :i  ");
-    quest.query.qu.bindValue(":i", animal);
-    quest.query.qu.exec();
 
     //Добавляем совпадение. Осталось выгрузить в Result.
     //quest.frequencyOfChoise[animal]++;

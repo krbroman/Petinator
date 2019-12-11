@@ -14,7 +14,6 @@ GuessLast::GuessLast(Questions &quest) :
 {
     ui->setupUi(this);
 
-
     QPixmap pix(":/resources/Slide4_1.png");
     int h = ui->label1->height();
     int w = ui->label1->width();
