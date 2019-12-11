@@ -44,13 +44,11 @@ Losing::Losing(QWidget *parent) :
     ui->label7->setPixmap(pix7.scaled(w, h, Qt::KeepAspectRatio));
 }
 
-Losing::Losing(Questions& quest) :
+Losing::Losing(Questions& quest, QString animal) :
     ui(new Ui::Losing)
 {
     ui->setupUi(this);
     thisQuest = &quest;
-
-    /*Вот именно здесь надо добавить новое в базу*/
 
     quest.query.qu.prepare("INSERT INTO Questions VALUE(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
     quest.query.qu.addBindValue(quest.countOfAnimalsTest);

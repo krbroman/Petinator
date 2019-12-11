@@ -27,6 +27,7 @@ private:
     Ui::AddNewAnimal *ui;
     Losing* losing;
     Questions* thisQuest;
+    QString thisAnimal;
 };
 
 #endif // ADDNEWANIMAL_H

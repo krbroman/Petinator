@@ -14,7 +14,7 @@ class Losing : public QDialog
 
 public:
     explicit Losing(QWidget *parent = nullptr);
-    Losing(Questions&);
+    Losing(Questions&, QString);
     ~Losing();
 
 private slots:

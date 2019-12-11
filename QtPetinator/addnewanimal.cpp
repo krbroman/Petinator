@@ -14,6 +14,7 @@ AddNewAnimal::AddNewAnimal(Questions& quest, QString animal) :
 {
     ui->setupUi(this);
     thisQuest = &quest;
+    thisAnimal = animal;
 
     QPixmap pix(":/source/AllSlides.png");
     int h = ui->label_3->height();
@@ -60,7 +61,7 @@ void AddNewAnimal::on_pushButton_Yes_clicked()
 {
     this->close();
 
-    losing = new Losing(*thisQuest);
+    losing = new Losing(*thisQuest, thisAnimal);
     losing->show();
 }
 
