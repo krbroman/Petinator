@@ -16,8 +16,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>513</x>
-     <y>296</y>
+     <x>500</x>
+     <y>496</y>
      <width>220</width>
      <height>105</height>
     </rect>
@@ -43,16 +43,26 @@
   <widget class="QPushButton" name="pushButton_No">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>410</y>
-     <width>201</width>
-     <height>121</height>
+     <x>530</x>
+     <y>347</y>
+     <width>161</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: &quot;Comic Sans MS&quot;;
+color: rgba(204, 57, 31, 196);
+background: rgba(255, 255, 255, 0);
+font-size: 33pt;
+</string>
    </property>
    <property name="text">
     <string>Нет</string>
@@ -61,34 +71,64 @@
   <widget class="QLabel" name="Suggestion">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>450</x>
      <y>50</y>
-     <width>591</width>
+     <width>771</width>
      <height>131</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: &quot;Comic Sans MS&quot;;
+color: rgba(204, 57, 31, 196);
+font-size: 33pt;
+text-align: right;</string>
+   </property>
    <property name="text">
-    <string>/*Предполагаемое животное*/</string>
+    <string>&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.text{
+text-align:  center;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div class=&quot;text&quot;&gt;&lt;p&gt;/*Предполагаемое животное*/&lt;/p&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Yes">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>410</y>
-     <width>201</width>
-     <height>121</height>
+     <x>365</x>
+     <y>347</y>
+     <width>151</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: &quot;Comic Sans MS&quot;;
+color: rgba(204, 57, 31, 196);
+background: rgba(255, 255, 255, 0);
+font-size: 33pt;</string>
    </property>
    <property name="text">
     <string>Да</string>
@@ -186,7 +226,6 @@
    </property>
   </widget>
   <zorder>label6</zorder>
-  <zorder>Suggestion</zorder>
   <zorder>label1</zorder>
   <zorder>label2</zorder>
   <zorder>label3</zorder>
@@ -196,6 +235,7 @@
   <zorder>label</zorder>
   <zorder>pushButton_No</zorder>
   <zorder>pushButton_Yes</zorder>
+  <zorder>Suggestion</zorder>
  </widget>
  <resources/>
  <connections/>

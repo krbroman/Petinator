@@ -39,10 +39,17 @@ public:
         AddNewAnimal->resize(1024, 768);
         pushButton_Yes = new QPushButton(AddNewAnimal);
         pushButton_Yes->setObjectName(QString::fromUtf8("pushButton_Yes"));
-        pushButton_Yes->setGeometry(QRect(220, 570, 280, 100));
+        pushButton_Yes->setGeometry(QRect(498, 480, 121, 61));
         QFont font;
-        font.setPointSize(20);
+        font.setPointSize(27);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setWeight(50);
         pushButton_Yes->setFont(font);
+        pushButton_Yes->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:27pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         label = new QLabel(AddNewAnimal);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(207, 200, 351, 110));
@@ -51,11 +58,15 @@ public:
         label->setFont(font1);
         pushButton_No = new QPushButton(AddNewAnimal);
         pushButton_No->setObjectName(QString::fromUtf8("pushButton_No"));
-        pushButton_No->setGeometry(QRect(510, 570, 280, 100));
+        pushButton_No->setGeometry(QRect(660, 480, 131, 61));
         pushButton_No->setFont(font);
+        pushButton_No->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:27pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         label_2 = new QLabel(AddNewAnimal);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(443, 347, 390, 128));
+        label_2->setGeometry(QRect(443, 335, 390, 128));
         label_2->setFont(font1);
         label_3 = new QLabel(AddNewAnimal);
         label_3->setObjectName(QString::fromUtf8("label_3"));
@@ -77,7 +88,7 @@ public:
         label_8->setGeometry(QRect(-21, 27, 1048, 578));
         label_9 = new QLabel(AddNewAnimal);
         label_9->setObjectName(QString::fromUtf8("label_9"));
-        label_9->setGeometry(QRect(-10, -140, 1047, 562));
+        label_9->setGeometry(QRect(-20, 36, 1047, 562));
         label_3->raise();
         label_4->raise();
         label_5->raise();

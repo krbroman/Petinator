@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="pushButton_Yes">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>380</x>
      <y>350</y>
      <width>121</width>
      <height>61</height>
@@ -24,8 +24,17 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Да</string>
@@ -34,7 +43,7 @@
   <widget class="QPushButton" name="pushButton_No">
    <property name="geometry">
     <rect>
-     <x>560</x>
+     <x>555</x>
      <y>350</y>
      <width>111</width>
      <height>61</height>
@@ -42,8 +51,17 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Нет</string>
@@ -52,7 +70,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>513</x>
+     <x>500</x>
      <y>496</y>
      <width>220</width>
      <height>105</height>
@@ -79,19 +97,43 @@
   <widget class="QLabel" name="Suggestion">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>490</x>
      <y>60</y>
-     <width>591</width>
+     <width>661</width>
      <height>131</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
+   <property name="toolTip">
+    <string>text-align: center;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: &quot;Comic Sans MS&quot;;
+color: rgba(204, 57, 31, 196);
+font-size: 33pt;
+text-align: right;</string>
+   </property>
    <property name="text">
-    <string>&lt;p align=&quot;center&quot;&gt;/*Предполагаемое животное*/&lt;/p&gt;</string>
+    <string>&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.text{
+text-align:  center;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div class=&quot;text&quot;&gt;&lt;p&gt;/*Предполагаемое животное*/&lt;/p&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label1">

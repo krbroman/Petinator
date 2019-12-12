@@ -39,22 +39,40 @@ public:
         GuessLast->resize(1024, 768);
         label = new QLabel(GuessLast);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(513, 296, 220, 105));
+        label->setGeometry(QRect(500, 496, 220, 105));
         QFont font;
         font.setPointSize(20);
         label->setFont(font);
         pushButton_No = new QPushButton(GuessLast);
         pushButton_No->setObjectName(QString::fromUtf8("pushButton_No"));
-        pushButton_No->setGeometry(QRect(280, 410, 201, 121));
-        pushButton_No->setFont(font);
+        pushButton_No->setGeometry(QRect(530, 347, 161, 71));
+        QFont font1;
+        font1.setPointSize(33);
+        font1.setBold(false);
+        font1.setItalic(false);
+        font1.setWeight(50);
+        pushButton_No->setFont(font1);
+        pushButton_No->setStyleSheet(QString::fromUtf8("font: \"Comic Sans MS\";\n"
+"color: rgba(204, 57, 31, 196);\n"
+"background: rgba(255, 255, 255, 0);\n"
+"font-size: 33pt;\n"
+""));
         Suggestion = new QLabel(GuessLast);
         Suggestion->setObjectName(QString::fromUtf8("Suggestion"));
-        Suggestion->setGeometry(QRect(70, 50, 591, 131));
-        Suggestion->setFont(font);
+        Suggestion->setGeometry(QRect(450, 50, 771, 131));
+        Suggestion->setFont(font1);
+        Suggestion->setStyleSheet(QString::fromUtf8("font: \"Comic Sans MS\";\n"
+"color: rgba(204, 57, 31, 196);\n"
+"font-size: 33pt;\n"
+"text-align: right;"));
         pushButton_Yes = new QPushButton(GuessLast);
         pushButton_Yes->setObjectName(QString::fromUtf8("pushButton_Yes"));
-        pushButton_Yes->setGeometry(QRect(80, 410, 201, 121));
-        pushButton_Yes->setFont(font);
+        pushButton_Yes->setGeometry(QRect(365, 347, 151, 71));
+        pushButton_Yes->setFont(font1);
+        pushButton_Yes->setStyleSheet(QString::fromUtf8("font: \"Comic Sans MS\";\n"
+"color: rgba(204, 57, 31, 196);\n"
+"background: rgba(255, 255, 255, 0);\n"
+"font-size: 33pt;"));
         label1 = new QLabel(GuessLast);
         label1->setObjectName(QString::fromUtf8("label1"));
         label1->setGeometry(QRect(742, 490, 294, 266));
@@ -77,7 +95,6 @@ public:
         label7->setObjectName(QString::fromUtf8("label7"));
         label7->setGeometry(QRect(463, 462, 301, 181));
         label6->raise();
-        Suggestion->raise();
         label1->raise();
         label2->raise();
         label3->raise();
@@ -87,6 +104,7 @@ public:
         label->raise();
         pushButton_No->raise();
         pushButton_Yes->raise();
+        Suggestion->raise();
 
         retranslateUi(GuessLast);
 
@@ -107,7 +125,19 @@ public:
 "</html>\n"
 "", nullptr));
         pushButton_No->setText(QApplication::translate("GuessLast", "\320\235\320\265\321\202", nullptr));
-        Suggestion->setText(QApplication::translate("GuessLast", "/*\320\237\321\200\320\265\320\264\320\277\320\276\320\273\320\260\320\263\320\260\320\265\320\274\320\276\320\265 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265*/", nullptr));
+        Suggestion->setText(QApplication::translate("GuessLast", "<!DOCTYPE>\n"
+"<html>\n"
+"<head>\n"
+"<style>\n"
+".text{\n"
+"text-align:  center;\n"
+"}\n"
+"</style>\n"
+"</head>\n"
+"<body>\n"
+"	<div class=\"text\"><p>/*\320\237\321\200\320\265\320\264\320\277\320\276\320\273\320\260\320\263\320\260\320\265\320\274\320\276\320\265 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265*/</p></div>\n"
+"</body>\n"
+"</html>", nullptr));
         pushButton_Yes->setText(QApplication::translate("GuessLast", "\320\224\320\260", nullptr));
         label1->setText(QString());
         label2->setText(QString());
