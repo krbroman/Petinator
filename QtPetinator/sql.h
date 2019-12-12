@@ -12,7 +12,6 @@ public:
     QSqlDatabase Db;
     int column;
     int line;
-
 };
 
 #endif // SQL_H

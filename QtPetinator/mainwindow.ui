@@ -25,7 +25,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>20</pointsize>
+      <pointsize>45</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -48,7 +48,7 @@
     <property name="styleSheet">
      <string notr="true">background:rgba(255, 255, 255, 0);
 color:rgba(204, 57, 31, 196);
-font-size:20pt;
+font-size:45pt;
 font:&quot;Arial Rounded MT Bold&quot;;</string>
     </property>
     <property name="text">
@@ -157,7 +157,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

@@ -44,16 +44,25 @@
   <widget class="QPushButton" name="pushButton_Exit">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>540</y>
+     <x>538</x>
+     <y>617</y>
      <width>280</width>
      <height>100</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Выйти</string>
@@ -63,15 +72,24 @@
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>540</y>
+     <y>615</y>
      <width>280</width>
      <height>100</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Играть еще раз</string>
@@ -80,10 +98,10 @@
   <widget class="QLabel" name="label1">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1024</width>
-     <height>768</height>
+     <x>547</x>
+     <y>624</y>
+     <width>280</width>
+     <height>86</height>
     </rect>
    </property>
    <property name="text">
@@ -106,10 +124,10 @@
   <widget class="QLabel" name="label3">
    <property name="geometry">
     <rect>
-     <x>547</x>
-     <y>624</y>
-     <width>280</width>
-     <height>86</height>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>768</height>
     </rect>
    </property>
    <property name="text">
@@ -168,9 +186,9 @@
     <string/>
    </property>
   </widget>
+  <zorder>label3</zorder>
   <zorder>label1</zorder>
   <zorder>label2</zorder>
-  <zorder>label3</zorder>
   <zorder>label4</zorder>
   <zorder>label5</zorder>
   <zorder>label6</zorder>

@@ -16,16 +16,25 @@
   <widget class="QPushButton" name="pushButton_Play">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>540</y>
+     <x>540</x>
+     <y>617</y>
      <width>280</width>
      <height>100</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>16</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Играть еще раз</string>
@@ -35,15 +44,24 @@
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>540</y>
+     <y>617</y>
      <width>280</width>
      <height>100</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>16</pointsize>
+     <pointsize>33</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(255, 255, 255, 0);
+color:rgba(204, 57, 31, 196);
+font-size:33pt;
+font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
     <string>Выйти</string>
@@ -52,10 +70,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>50</y>
-     <width>451</width>
-     <height>161</height>
+     <x>227</x>
+     <y>177</y>
+     <width>305</width>
+     <height>137</height>
     </rect>
    </property>
    <property name="font">
@@ -64,7 +82,16 @@
     </font>
    </property>
    <property name="text">
-    <string>Я проиграл :(</string>
+    <string>&lt;html&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;span style=&quot; font-family:'Comic Sans MS'; font-size:54pt; color:#FFF8EA;&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;Я проиграл
+&lt;/span&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</string>
    </property>
   </widget>
   <widget class="QLabel" name="label1">

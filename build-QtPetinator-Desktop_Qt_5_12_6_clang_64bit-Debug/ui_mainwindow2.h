@@ -47,7 +47,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(344, 150, 341, 156));
+        label->setGeometry(QRect(284, 150, 401, 156));
         QFont font;
         font.setFamily(QString::fromUtf8("Sans MS"));
         font.setPointSize(40);
