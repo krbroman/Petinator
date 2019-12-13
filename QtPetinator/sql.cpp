@@ -11,7 +11,7 @@ Sql::Sql()
 
     //Путь для Кирилла
     //Db.setDatabaseName("E:/Petinator/QtPetinator/Petinator.db");
-    Db.setDatabaseName("E:/Petinator/build-QtPetinator-Desktop_Qt_5_12_6_MSVC2017_32bit-Debug/Petinator.db");
+    Db.setDatabaseName("E:\\Petinator\\build-QtPetinator-Desktop_Qt_5_12_6_MSVC2017_32bit-Debug\\Petinator.db");
 
     //Путь для Юли
     //Db.setDatabaseName("/Users/juliachernykh/Documents/university/Programming languages/Petinator/QtPetinator/Petinator.db");

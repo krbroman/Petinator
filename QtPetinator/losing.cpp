@@ -50,16 +50,47 @@ Losing::Losing(Questions& quest, QString animal) :
     ui->setupUi(this);
     thisQuest = &quest;
 
+    int _index = -1;
+    for (int i = 0; i < quest.countOfAnimalsTest; ++i)
+    if(quest.animals[i] == animal)
+    _index = i;
+
+    if(_index == -1)
+    {
     quest.query.qu.prepare("INSERT INTO Questions VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
     quest.query.qu.addBindValue(quest.countOfAnimalsTest);
     quest.query.qu.addBindValue(animal);
     for(int i = 0; i < quest.countOfQuestionTest;++i)
-        quest.query.qu.addBindValue(quest.answersFromUsers[i]);
+    quest.query.qu.addBindValue(quest.answersFromUsers[i]);
     quest.query.qu.exec();
-
     quest.query.qu.prepare("INSERT INTO Chances VALUES(:i, 2, 0)");
     quest.query.qu.bindValue(":i", quest.countOfAnimalsTest);
     quest.query.qu.exec();
+    }
+    else if (_index != -1)
+    {
+    quest.query.qu.prepare("Select \"Частота загадывания\" from Chances where ID = :i");
+    quest.query.qu.bindValue(":i", _index);
+    quest.query.qu.exec();
+    quest.query.qu.next();
+    int _chance = quest.query.qu.value(0).toInt();
+    quest.query.qu.prepare("Delete From Chances where ID = :i");
+    quest.query.qu.bindValue(":i",_index);
+    quest.query.qu.exec();
+    quest.query.qu.prepare("Delete From Questions where ID = :i");
+    quest.query.qu.bindValue(":i",_index);
+    quest.query.qu.exec();
+    quest.query.qu.prepare("INSERT INTO Questions VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
+    quest.query.qu.addBindValue(_index);
+    quest.query.qu.addBindValue(animal);
+    for(int i = 0; i < quest.countOfQuestionTest;++i)
+    quest.query.qu.addBindValue(quest.answersFromUsers[i]);
+    quest.query.qu.exec();
+    quest.query.qu.prepare("INSERT INTO Chances VALUES(:i, :j, 0)");
+    quest.query.qu.bindValue(":i", _index);
+    quest.query.qu.bindValue(":j",_chance + 1);
+    quest.query.qu.exec();
+    }
 
 
     QPixmap pix(":/resources/Slide6_1.png");
