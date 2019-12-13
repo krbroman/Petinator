@@ -15,7 +15,6 @@ class Questions
 
 private:
     int currenQuestion;
-    bool* maskOfUsedQuestions = new bool[countOfQuestion] {0};
 
 public:
     Questions();
@@ -44,6 +43,8 @@ public:
 
     //Метод, который выдает номер очередного нового вопроса.
     int numOfTheNextQuestion();
+
+    bool* maskOfUsedQuestions = new bool[countOfQuestion] {0};
 
     int getCountOfQuestion();
     int getCountOfAnimals();

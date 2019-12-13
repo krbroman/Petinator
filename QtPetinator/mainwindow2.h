@@ -34,6 +34,7 @@ private:
 
     int numberOfQuestion;
     int countOfQuestionAfterButton;
+    int flagOfFirsly = 0;
 };
 
 #endif // MAINWINDOW2_H

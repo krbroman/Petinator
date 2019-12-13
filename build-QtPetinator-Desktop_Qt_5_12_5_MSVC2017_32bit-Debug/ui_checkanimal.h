@@ -40,32 +40,35 @@ public:
         CheckAnimal->resize(1024, 768);
         label = new QLabel(CheckAnimal);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(335, 190, 381, 122));
+        label->setGeometry(QRect(341, 190, 381, 122));
         QFont font;
         font.setPointSize(20);
         label->setFont(font);
         label->setLayoutDirection(Qt::LeftToRight);
         usersAnimal = new QLineEdit(CheckAnimal);
         usersAnimal->setObjectName(QString::fromUtf8("usersAnimal"));
-        usersAnimal->setGeometry(QRect(370, 350, 281, 51));
-        usersAnimal->setStyleSheet(QString::fromUtf8("background: rgba(255, 255, 255, 0);\n"
-"border-style: none;"));
+        usersAnimal->setGeometry(QRect(354, 349, 300, 60));
+        usersAnimal->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"border: 1px solid rgba(255, 255, 255, 0);\n"
+"font-size: 27pt;\n"
+"font: \"Comic Sans MS\";"));
         pushButton = new QPushButton(CheckAnimal);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(360, 420, 291, 71));
+        pushButton->setGeometry(QRect(390, 427, 231, 61));
         QFont font1;
         font1.setPointSize(27);
         font1.setBold(false);
         font1.setItalic(false);
         font1.setWeight(50);
         pushButton->setFont(font1);
-        pushButton->setStyleSheet(QString::fromUtf8("background: rgba(255, 255, 255, 0);\n"
-"font: \"Arial Rounded MT Bold\";\n"
-"color: rgba(204, 57, 31, 196);\n"
-"font-size: 27pt;"));
+        pushButton->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:27pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         label1 = new QLabel(CheckAnimal);
         label1->setObjectName(QString::fromUtf8("label1"));
-        label1->setGeometry(QRect(286, 183, 452, 142));
+        label1->setGeometry(QRect(300, 183, 452, 142));
         label2 = new QLabel(CheckAnimal);
         label2->setObjectName(QString::fromUtf8("label2"));
         label2->setGeometry(QRect(149, 225, 220, 226));
@@ -87,6 +90,7 @@ public:
         label7 = new QLabel(CheckAnimal);
         label7->setObjectName(QString::fromUtf8("label7"));
         label7->setGeometry(QRect(-9, 269, 1035, 317));
+        label7->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);"));
         label8->raise();
         label1->raise();
         label->raise();
@@ -96,8 +100,8 @@ public:
         label5->raise();
         label6->raise();
         label7->raise();
-        usersAnimal->raise();
         pushButton->raise();
+        usersAnimal->raise();
 
         retranslateUi(CheckAnimal);
 
