@@ -105,10 +105,17 @@ Losing::~Losing()
 
 void Losing::on_pushButton_Play_clicked()
 {
+    //system("\\Client\\Petinator_Server_Client.exe, Upload");
+    QString file = QDir::toNativeSeparators(QApplication::applicationDirPath()) + "/Client/Petinator_Server_Client.exe, Upload";
+    system(qPrintable(file));
+
     this->close();
 }
 
 void Losing::on_pushButton_Exit_clicked()
 {
+    QString file = QDir::toNativeSeparators(QApplication::applicationDirPath()) + "/Client/Petinator_Server_Client.exe, Upload";
+    system(qPrintable(file));
+
     this->close();
 }

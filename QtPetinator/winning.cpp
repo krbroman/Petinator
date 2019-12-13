@@ -66,10 +66,16 @@ Winning::~Winning()
 
 void Winning::on_pushButton_Exit_clicked()
 {
+    QString file = QDir::toNativeSeparators(QApplication::applicationDirPath()) + "/Client/Petinator_Server_Client.exe, Upload";
+    system(qPrintable(file));
+
     this->close();
 }
 
 void Winning::on_pushButton_Play_clicked()
 {
+    QString file = QDir::toNativeSeparators(QApplication::applicationDirPath()) + "/Client/Petinator_Server_Client.exe, Upload";
+    system(qPrintable(file));
+
     this->close();
 }

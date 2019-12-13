@@ -45,6 +45,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+
+    QString file = QDir::toNativeSeparators(QApplication::applicationDirPath()) + "/Client/Petinator_Server_Client.exe, Get";
+    system(qPrintable(file));
+
     secondSlide = new SecondSlide;
     secondSlide->show();
 }
