@@ -70,7 +70,11 @@ void CheckAnimal::on_pushButton_clicked()
     for (int i = 0; i < thisQuest->getCountOfAnimals(); i++)
         if (ui->usersAnimal->text() == thisQuest->animals[i])
             check = true;
-    if (check == true /*и животное помечено единицей в специальном столбике в третьей таблице*/) {
+    thisQuest->query.qu.prepare("Select is_adm from Chances join Questions on Chances.ID = Questions.ID where \"Животное\" = :i");
+    thisQuest->query.qu.bindValue(":i", usersAnimal);
+    thisQuest->query.qu.exec();
+    thisQuest->query.qu.next();
+    if (check == true && thisQuest->query.qu.value(0).toInt() == 1) {
         this->close();
         animalExists = new AnimalExists();
         animalExists->show();
