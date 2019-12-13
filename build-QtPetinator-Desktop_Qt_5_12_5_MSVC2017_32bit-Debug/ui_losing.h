@@ -38,7 +38,7 @@ public:
         Losing->resize(1024, 768);
         pushButton_Play = new QPushButton(Losing);
         pushButton_Play->setObjectName(QString::fromUtf8("pushButton_Play"));
-        pushButton_Play->setGeometry(QRect(548, 626, 261, 81));
+        pushButton_Play->setGeometry(QRect(540, 617, 280, 100));
         QFont font;
         font.setPointSize(33);
         font.setBold(false);
@@ -51,7 +51,7 @@ public:
 "font:\"Arial Rounded MT Bold\";"));
         pushButton_Exit = new QPushButton(Losing);
         pushButton_Exit->setObjectName(QString::fromUtf8("pushButton_Exit"));
-        pushButton_Exit->setGeometry(QRect(236, 640, 231, 51));
+        pushButton_Exit->setGeometry(QRect(210, 617, 280, 100));
         pushButton_Exit->setFont(font);
         pushButton_Exit->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
@@ -59,7 +59,7 @@ public:
 "font:\"Arial Rounded MT Bold\";"));
         label = new QLabel(Losing);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(223, 177, 305, 137));
+        label->setGeometry(QRect(227, 177, 305, 137));
         QFont font1;
         font1.setPointSize(40);
         label->setFont(font1);
@@ -77,14 +77,10 @@ public:
         label4->setGeometry(QRect(547, 624, 280, 86));
         label5 = new QLabel(Losing);
         label5->setObjectName(QString::fromUtf8("label5"));
-        label5->setGeometry(QRect(-10, 399, 1044, 373));
+        label5->setGeometry(QRect(-20, 399, 1044, 373));
         label6 = new QLabel(Losing);
         label6->setObjectName(QString::fromUtf8("label6"));
-        label6->setGeometry(QRect(6, 391, 1025, 376));
-        label6->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
-"color:rgba(204, 57, 31, 196);\n"
-"font-size:33pt;\n"
-"font:\"Arial Rounded MT Bold\";"));
+        label6->setGeometry(QRect(-3, 391, 1025, 376));
         label7 = new QLabel(Losing);
         label7->setObjectName(QString::fromUtf8("label7"));
         label7->setGeometry(QRect(0, 0, 1024, 768));
@@ -95,9 +91,9 @@ public:
         label4->raise();
         label1->raise();
         label2->raise();
-        pushButton_Play->raise();
-        pushButton_Exit->raise();
         label->raise();
+        pushButton_Exit->raise();
+        pushButton_Play->raise();
 
         retranslateUi(Losing);
 
@@ -109,37 +105,16 @@ public:
         Losing->setWindowTitle(QApplication::translate("Losing", "Dialog", nullptr));
         pushButton_Play->setText(QApplication::translate("Losing", "\320\230\320\263\321\200\320\260\321\202\321\214 \320\265\321\211\320\265 \321\200\320\260\320\267", nullptr));
         pushButton_Exit->setText(QApplication::translate("Losing", "\320\222\321\213\320\271\321\202\320\270", nullptr));
-#ifndef QT_NO_TOOLTIP
-        label->setToolTip(QApplication::translate("Losing", "<html><head>\n"
-"<style>\n"
-"   p {\n"
-"    color: rgb(255, 248, 234); \n"
-"   }\n"
-"  </style>\n"
-"</head>\n"
+        label->setText(QApplication::translate("Losing", "<html>\n"
+"<head/>\n"
 "<body>\n"
-"<p><font size=\"33\" face=\"Comic Sans MS\">\n"
-"<span>\n"
-"\320\257 \320\277\321\200\320\276\320\270\320\263\321\200\320\260\320\273\n"
+"<span style=\" font-family:'Comic Sans MS'; font-size:54pt; color:#FFF8EA;\">\n"
+"<p align=\"center\">\320\257 \320\277\321\200\320\276\320\270\320\263\321\200\320\260\320\273\n"
 "</span>\n"
 "</p>\n"
-"</body></html>", nullptr));
-#endif // QT_NO_TOOLTIP
-        label->setText(QApplication::translate("Losing", "<html><head>\n"
-"<style>\n"
-"   p {\n"
-"    color: rgb(255, 248, 234); \n"
-"    font-size:	54pt;\n"
-"   }\n"
-"  </style>\n"
-"</head>\n"
-"<body>\n"
-"<p><font face=\"Comic Sans MS\">\n"
-"<span>\n"
-"\320\257 \320\277\321\200\320\276\320\270\320\263\321\200\320\260\320\273\n"
-"</span>\n"
-"</p>\n"
-"</body></html>", nullptr));
+"</body>\n"
+"</html>\n"
+"", nullptr));
         label1->setText(QString());
         label2->setText(QString());
         label3->setText(QString());

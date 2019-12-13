@@ -39,22 +39,39 @@ public:
         Guess->resize(1024, 768);
         pushButton_Yes = new QPushButton(Guess);
         pushButton_Yes->setObjectName(QString::fromUtf8("pushButton_Yes"));
-        pushButton_Yes->setGeometry(QRect(390, 350, 121, 61));
+        pushButton_Yes->setGeometry(QRect(380, 350, 121, 61));
         QFont font;
-        font.setPointSize(20);
+        font.setPointSize(33);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setWeight(50);
         pushButton_Yes->setFont(font);
+        pushButton_Yes->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:33pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         pushButton_No = new QPushButton(Guess);
         pushButton_No->setObjectName(QString::fromUtf8("pushButton_No"));
-        pushButton_No->setGeometry(QRect(560, 350, 111, 61));
+        pushButton_No->setGeometry(QRect(555, 350, 111, 61));
         pushButton_No->setFont(font);
+        pushButton_No->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:33pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         label = new QLabel(Guess);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(513, 496, 220, 105));
-        label->setFont(font);
+        label->setGeometry(QRect(500, 496, 220, 105));
+        QFont font1;
+        font1.setPointSize(20);
+        label->setFont(font1);
         Suggestion = new QLabel(Guess);
         Suggestion->setObjectName(QString::fromUtf8("Suggestion"));
-        Suggestion->setGeometry(QRect(270, 60, 591, 131));
+        Suggestion->setGeometry(QRect(490, 60, 661, 131));
         Suggestion->setFont(font);
+        Suggestion->setStyleSheet(QString::fromUtf8("font: \"Comic Sans MS\";\n"
+"color: rgba(204, 57, 31, 196);\n"
+"font-size: 33pt;\n"
+"text-align: right;"));
         label1 = new QLabel(Guess);
         label1->setObjectName(QString::fromUtf8("label1"));
         label1->setGeometry(QRect(742, 490, 294, 266));
@@ -108,7 +125,22 @@ public:
 "</body>\n"
 "</html>\n"
 "", nullptr));
-        Suggestion->setText(QApplication::translate("Guess", "<p align=\"center\">/*\320\237\321\200\320\265\320\264\320\277\320\276\320\273\320\260\320\263\320\260\320\265\320\274\320\276\320\265 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265*/</p>", nullptr));
+#ifndef QT_NO_TOOLTIP
+        Suggestion->setToolTip(QApplication::translate("Guess", "text-align: center;", nullptr));
+#endif // QT_NO_TOOLTIP
+        Suggestion->setText(QApplication::translate("Guess", "<!DOCTYPE>\n"
+"<html>\n"
+"<head>\n"
+"<style>\n"
+".text{\n"
+"text-align:  center;\n"
+"}\n"
+"</style>\n"
+"</head>\n"
+"<body>\n"
+"	<div class=\"text\"><p>/*\320\237\321\200\320\265\320\264\320\277\320\276\320\273\320\260\320\263\320\260\320\265\320\274\320\276\320\265 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265*/</p></div>\n"
+"</body>\n"
+"</html>", nullptr));
         label1->setText(QString());
         label3->setText(QString());
         label2->setText(QString());

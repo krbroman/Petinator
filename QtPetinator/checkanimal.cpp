@@ -70,7 +70,7 @@ void CheckAnimal::on_pushButton_clicked()
     for (int i = 0; i < thisQuest->getCountOfAnimals(); i++)
         if (ui->usersAnimal->text() == thisQuest->animals[i])
             check = true;
-    if (check) {
+    if (check == true /*и животное помечено единицей в специальном столбике в третьей таблице*/) {
         this->close();
         animalExists = new AnimalExists();
         animalExists->show();

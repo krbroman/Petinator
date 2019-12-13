@@ -59,9 +59,7 @@ MainWindow2::~MainWindow2()
 //Обработчик "да"
 void MainWindow2::on_pushButton_2_clicked()
 {
-    /*if (countOfQuestionAfterButton == Questions::getCountOfQuestion()) {
 
-    }*/
     //Увеличиваем счетчик
     countOfQuestionAfterButton++;
 
@@ -72,14 +70,55 @@ void MainWindow2::on_pushButton_2_clicked()
     if (countOfQuestionAfterButton < quest.getCountOfQuestion()) {
         //Следующий вопрос на экране
         numberOfQuestion = quest.numOfTheNextQuestion();
+
+        //Обработчик неповторяющихся вопросов
+        if (numberOfQuestion == 0) {
+
+            if ((quest.maskOfUsedQuestions[1] == 0) && (quest.maskOfUsedQuestions[2] == 0)) {
+                countOfQuestionAfterButton++;
+                countOfQuestionAfterButton++;
+            } else if (((quest.maskOfUsedQuestions[1] == 0) && (quest.maskOfUsedQuestions[2] == 1))
+                    || ((quest.maskOfUsedQuestions[1] == 1) && (quest.maskOfUsedQuestions[2] == 0)))
+                countOfQuestionAfterButton++;
+
+            quest.maskOfUsedQuestions[1] = 0;
+            quest.maskOfUsedQuestions[2] = 0;
+
+        } else if (numberOfQuestion == 1) {
+
+            if ((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[2] == 0)) {
+                countOfQuestionAfterButton++;
+                countOfQuestionAfterButton++;
+            } else if (((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[2] == 1))
+                    || ((quest.maskOfUsedQuestions[0] == 1) && (quest.maskOfUsedQuestions[2] == 0)))
+                countOfQuestionAfterButton++;
+
+            quest.maskOfUsedQuestions[0] = 0;
+            quest.maskOfUsedQuestions[2] = 0;
+
+        } else if (numberOfQuestion == 2) {
+
+            if ((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[1] == 0)) {
+                countOfQuestionAfterButton++;
+                countOfQuestionAfterButton++;
+            } else if (((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[1] == 1))
+                    || ((quest.maskOfUsedQuestions[0] == 1) && (quest.maskOfUsedQuestions[1] == 0)))
+                countOfQuestionAfterButton++;
+
+            quest.maskOfUsedQuestions[0] = 0;
+            quest.maskOfUsedQuestions[1] = 0;
+        }
+
         ui->label->setText(quest.questions[numberOfQuestion]);
     }
 
     //Обработчик на десятом, двадцатом и последнем вопросе.
-    if (countOfQuestionAfterButton == 10) {
+    if ((countOfQuestionAfterButton >= 10) && (countOfQuestionAfterButton <= 13) && (flagOfFirsly == 0)) {
+        flagOfFirsly = 1;
         guess = new Guess(quest);
         guess->show();
-    } else if (countOfQuestionAfterButton == 20) {
+    } else if ((countOfQuestionAfterButton >= 20) && (countOfQuestionAfterButton <= 23) && (flagOfFirsly == 1)) {
+        flagOfFirsly = 2;
         guess = new Guess(quest);
         guess->show();
     } else if (countOfQuestionAfterButton == quest.getCountOfQuestion()) {
@@ -106,10 +145,12 @@ void MainWindow2::on_pushButton_clicked()
     }
 
     //Обработчик на десятом, двадцатом и последнем вопросе.
-    if (countOfQuestionAfterButton == 10) {
+    if ((countOfQuestionAfterButton >= 10) && (countOfQuestionAfterButton <= 13) && (flagOfFirsly == 0)) {
+        flagOfFirsly = 1;
         guess = new Guess(quest);
         guess->show();
-    } else if (countOfQuestionAfterButton == 20) {
+    } else if ((countOfQuestionAfterButton >= 20) && (countOfQuestionAfterButton <= 23) && (flagOfFirsly == 1)) {
+        flagOfFirsly = 2;
         guess = new Guess(quest);
         guess->show();
     } else if (countOfQuestionAfterButton == quest.getCountOfQuestion()) {

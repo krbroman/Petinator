@@ -42,17 +42,17 @@ public:
         label->setFont(font);
         pushButton_Ok = new QPushButton(AnimalExists);
         pushButton_Ok->setObjectName(QString::fromUtf8("pushButton_Ok"));
-        pushButton_Ok->setGeometry(QRect(408, 623, 201, 81));
+        pushButton_Ok->setGeometry(QRect(380, 624, 271, 91));
         QFont font1;
         font1.setPointSize(33);
         font1.setBold(false);
         font1.setItalic(false);
         font1.setWeight(50);
         pushButton_Ok->setFont(font1);
-        pushButton_Ok->setStyleSheet(QString::fromUtf8("font-size:33pt;\n"
-"font: \"Arial Rounded MT Bold\";\n"
-"color: rgba(204, 57, 31, 196);\n"
-"background: rgba(255, 255, 255, 0);"));
+        pushButton_Ok->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
+"color:rgba(204, 57, 31, 196);\n"
+"font-size:33pt;\n"
+"font:\"Arial Rounded MT Bold\";"));
         label1 = new QLabel(AnimalExists);
         label1->setObjectName(QString::fromUtf8("label1"));
         label1->setGeometry(QRect(681, 271, 241, 245));
@@ -64,20 +64,20 @@ public:
         label3->setGeometry(QRect(232, 223, 560, 168));
         label4 = new QLabel(AnimalExists);
         label4->setObjectName(QString::fromUtf8("label4"));
-        label4->setGeometry(QRect(380, 623, 263, 86));
+        label4->setGeometry(QRect(380, 624, 263, 86));
         label6 = new QLabel(AnimalExists);
         label6->setObjectName(QString::fromUtf8("label6"));
-        label6->setGeometry(QRect(-39, 340, 1078, 207));
+        label6->setGeometry(QRect(-35, 340, 1078, 207));
         label7 = new QLabel(AnimalExists);
         label7->setObjectName(QString::fromUtf8("label7"));
-        label7->setGeometry(QRect(-1, 437, 1055, 117));
+        label7->setGeometry(QRect(3, 437, 1055, 117));
         label2->raise();
         label3->raise();
+        label1->raise();
         label4->raise();
         label6->raise();
         label7->raise();
         label->raise();
-        label1->raise();
         pushButton_Ok->raise();
 
         retranslateUi(AnimalExists);

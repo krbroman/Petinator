@@ -47,14 +47,14 @@ public:
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(380, 459, 301, 121));
         QFont font;
-        font.setPointSize(20);
+        font.setPointSize(45);
         font.setBold(false);
         font.setItalic(false);
         font.setWeight(50);
         pushButton->setFont(font);
         pushButton->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:20pt;\n"
+"font-size:45pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
@@ -88,7 +88,7 @@ public:
         pushButton->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1024, 26));
+        menubar->setGeometry(QRect(0, 0, 1024, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
