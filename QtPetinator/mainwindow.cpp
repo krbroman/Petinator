@@ -46,8 +46,9 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
 
-    QString file = QDir::toNativeSeparators(QApplication::applicationDirPath()) + "/Client/Petinator_Server_Client.exe, Get";
-    system(qPrintable(file));
+    //QString file = QDir::toNativeSeparators(QApplication::applicationDirPath()) + "/Client/Petinator_Server_Client.exe, Get";
+    //system(qPrintable(file));
+    system("E:\\Petinator\\build-QtPetinator-Desktop_Qt_5_12_6_MSVC2017_32bit-Debug\\Client\\Petinator_Server_Client.exe, Get");
 
     secondSlide = new SecondSlide;
     secondSlide->show();

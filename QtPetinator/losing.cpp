@@ -137,16 +137,18 @@ Losing::~Losing()
 void Losing::on_pushButton_Play_clicked()
 {
     //system("\\Client\\Petinator_Server_Client.exe, Upload");
-    QString file = QDir::toNativeSeparators(QApplication::applicationDirPath()) + "/Client/Petinator_Server_Client.exe, Upload";
-    system(qPrintable(file));
+    //QString file = QDir::toNativeSeparators(QApplication::applicationDirPath()) + "/Client/Petinator_Server_Client.exe, Upload";
+    //system(qPrintable(file));
+    system("E:\\Petinator\\build-QtPetinator-Desktop_Qt_5_12_6_MSVC2017_32bit-Debug\\Client\\Petinator_Server_Client.exe, Upload");
 
     this->close();
 }
 
 void Losing::on_pushButton_Exit_clicked()
 {
-    QString file = QDir::toNativeSeparators(QApplication::applicationDirPath()) + "/Client/Petinator_Server_Client.exe, Upload";
-    system(qPrintable(file));
+    //QString file = QDir::toNativeSeparators(QApplication::applicationDirPath()) + "/Client/Petinator_Server_Client.exe, Upload";
+    //system(qPrintable(file));
+    system("E:\\Petinator\\build-QtPetinator-Desktop_Qt_5_12_6_MSVC2017_32bit-Debug\\Client\\Petinator_Server_Client.exe, Upload");
 
     this->close();
 }
