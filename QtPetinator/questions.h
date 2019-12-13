@@ -3,7 +3,6 @@
 
 #include <QString>
 #include <ctime>
-#include <vector>
 #include "sql.h"
 
 using namespace std;
