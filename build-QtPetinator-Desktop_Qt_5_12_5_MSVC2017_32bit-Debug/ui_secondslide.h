@@ -35,7 +35,7 @@ public:
         SecondSlide->resize(1024, 768);
         label = new QLabel(SecondSlide);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(340, 87, 425, 161));
+        label->setGeometry(QRect(350, 90, 411, 161));
         QFont font;
         font.setPointSize(35);
         label->setFont(font);
@@ -83,7 +83,7 @@ public:
     void retranslateUi(QDialog *SecondSlide)
     {
         SecondSlide->setWindowTitle(QApplication::translate("SecondSlide", "Petinator", nullptr));
-        label->setText(QApplication::translate("SecondSlide", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Arial Rounded MT Bold'; font-size:30pt; color:#fceedf;\">\320\227\320\260\320\263\320\260\320\264\320\260\320\271\321\202\320\265 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265. <br/>\320\257 \320\277\320\276\321\201\321\202\320\260\321\200\320\260\321\216\321\201\321\214 \320\265\320\263\320\276 <br/> \320\276\321\202\320\263\320\260\320\264\320\260\321\202\321\214</span><span style=\" font-size:64pt;\"/></p></body></html>", nullptr));
+        label->setText(QApplication::translate("SecondSlide", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Arial Rounded MT Bold'; font-size:20pt; color:#fceedf;\">\320\227\320\260\320\263\320\260\320\264\320\260\320\271\321\202\320\265 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265. <br/>\320\257 \320\277\320\276\321\201\321\202\320\260\321\200\320\260\321\216\321\201\321\214 \320\265\320\263\320\276 <br/> \320\276\321\202\320\263\320\260\320\264\320\260\321\202\321\214</span><span style=\" font-size:45pt;\"/></p></body></html>", nullptr));
 #ifndef QT_NO_TOOLTIP
         pushButton->setToolTip(QApplication::translate("SecondSlide", "<!DOCTYPE html>\n"
 "<html>\n"

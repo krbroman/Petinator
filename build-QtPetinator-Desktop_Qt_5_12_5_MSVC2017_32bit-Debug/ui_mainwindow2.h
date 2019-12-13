@@ -47,10 +47,10 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(284, 150, 401, 156));
+        label->setGeometry(QRect(270, 150, 371, 156));
         QFont font;
         font.setFamily(QString::fromUtf8("Sans MS"));
-        font.setPointSize(40);
+        font.setPointSize(16);
         font.setBold(false);
         font.setItalic(false);
         font.setWeight(50);
@@ -58,7 +58,7 @@ public:
         label->setStyleSheet(QString::fromUtf8("font:Comic Sans MS;\n"
 "color:rgb(255, 247, 227);\n"
 "background:rgba(255, 255, 255, 0);\n"
-"font-size:40pt;\n"
+"font-size:16pt;\n"
 ""));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
@@ -85,14 +85,14 @@ public:
         pushButton_Now->setObjectName(QString::fromUtf8("pushButton_Now"));
         pushButton_Now->setGeometry(QRect(330, 670, 401, 61));
         QFont font2;
-        font2.setPointSize(26);
+        font2.setPointSize(16);
         font2.setBold(false);
         font2.setItalic(false);
         font2.setWeight(50);
         pushButton_Now->setFont(font2);
         pushButton_Now->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:26pt;\n"
+"font-size:16pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         label1 = new QLabel(centralwidget);
         label1->setObjectName(QString::fromUtf8("label1"));
@@ -129,7 +129,7 @@ public:
         pushButton_2->raise();
         menubar = new QMenuBar(MainWindow2);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1024, 22));
+        menubar->setGeometry(QRect(0, 0, 1024, 26));
         MainWindow2->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow2);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -143,7 +143,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow2)
     {
         MainWindow2->setWindowTitle(QApplication::translate("MainWindow2", "Petinator", nullptr));
-        label->setText(QApplication::translate("MainWindow2", "<html><head/><body><p align=\"center\"><br/></p></body></html>", nullptr));
+        label->setText(QApplication::translate("MainWindow2", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Arial Rounded MT Bold'; font-size:20pt; color:#fceedf;\"></span><span style=\" font-size:45pt;\"/><br/></p></body></html>", nullptr));
         pushButton->setText(QApplication::translate("MainWindow2", "\320\235\320\265\321\202", nullptr));
         pushButton_2->setText(QApplication::translate("MainWindow2", "\320\224\320\260", nullptr));
         pushButton_Now->setText(QApplication::translate("MainWindow2", "\320\237\320\276\320\272\320\260\320\267\320\260\321\202\321\214 \320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265 \321\201\320\265\320\271\321\207\320\260\321\201", nullptr));

@@ -17,16 +17,16 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>284</x>
+      <x>270</x>
       <y>150</y>
-      <width>401</width>
+      <width>371</width>
       <height>156</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Sans MS</family>
-      <pointsize>40</pointsize>
+      <pointsize>16</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -36,11 +36,11 @@
      <string notr="true">font:Comic Sans MS;
 color:rgb(255, 247, 227);
 background:rgba(255, 255, 255, 0);
-font-size:40pt;
+font-size:16pt;
 </string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Arial Rounded MT Bold'; font-size:20pt; color:#fceedf;&quot;&gt;&lt;/span&gt;&lt;span style=&quot; font-size:45pt;&quot;/&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -108,7 +108,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>26</pointsize>
+      <pointsize>16</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -117,7 +117,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
     <property name="styleSheet">
      <string notr="true">background:rgba(255, 255, 255, 0);
 color:rgba(204, 57, 31, 196);
-font-size:26pt;
+font-size:16pt;
 font:&quot;Arial Rounded MT Bold&quot;;</string>
     </property>
     <property name="text">
@@ -233,7 +233,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
