@@ -81,8 +81,8 @@ void MainWindow2::on_pushButton_2_clicked()
                     || ((quest.maskOfUsedQuestions[1] == 1) && (quest.maskOfUsedQuestions[2] == 0)))
                 countOfQuestionAfterButton++;
 
-            quest.maskOfUsedQuestions[1] = 0;
-            quest.maskOfUsedQuestions[2] = 0;
+            quest.maskOfUsedQuestions[1] = 1;
+            quest.maskOfUsedQuestions[2] = 1;
 
         } else if (numberOfQuestion == 1) {
 
@@ -93,8 +93,8 @@ void MainWindow2::on_pushButton_2_clicked()
                     || ((quest.maskOfUsedQuestions[0] == 1) && (quest.maskOfUsedQuestions[2] == 0)))
                 countOfQuestionAfterButton++;
 
-            quest.maskOfUsedQuestions[0] = 0;
-            quest.maskOfUsedQuestions[2] = 0;
+            quest.maskOfUsedQuestions[0] = 1;
+            quest.maskOfUsedQuestions[2] = 1;
 
         } else if (numberOfQuestion == 2) {
 
@@ -105,8 +105,8 @@ void MainWindow2::on_pushButton_2_clicked()
                     || ((quest.maskOfUsedQuestions[0] == 1) && (quest.maskOfUsedQuestions[1] == 0)))
                 countOfQuestionAfterButton++;
 
-            quest.maskOfUsedQuestions[0] = 0;
-            quest.maskOfUsedQuestions[1] = 0;
+            quest.maskOfUsedQuestions[0] = 1;
+            quest.maskOfUsedQuestions[1] = 1;
         }
 
         ui->label->setText(quest.questions[numberOfQuestion]);
