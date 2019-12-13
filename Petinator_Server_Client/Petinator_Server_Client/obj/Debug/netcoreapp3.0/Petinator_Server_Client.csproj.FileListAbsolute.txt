@@ -1,0 +1,10 @@
+C:\Users\1\source\repos\Petinator\Petinator_Server_Client\Petinator_Server_Client\bin\Debug\netcoreapp3.0\Petinator_Server_Client.exe
+C:\Users\1\source\repos\Petinator\Petinator_Server_Client\Petinator_Server_Client\bin\Debug\netcoreapp3.0\Petinator_Server_Client.deps.json
+C:\Users\1\source\repos\Petinator\Petinator_Server_Client\Petinator_Server_Client\bin\Debug\netcoreapp3.0\Petinator_Server_Client.runtimeconfig.json
+C:\Users\1\source\repos\Petinator\Petinator_Server_Client\Petinator_Server_Client\bin\Debug\netcoreapp3.0\Petinator_Server_Client.runtimeconfig.dev.json
+C:\Users\1\source\repos\Petinator\Petinator_Server_Client\Petinator_Server_Client\bin\Debug\netcoreapp3.0\Petinator_Server_Client.dll
+C:\Users\1\source\repos\Petinator\Petinator_Server_Client\Petinator_Server_Client\bin\Debug\netcoreapp3.0\Petinator_Server_Client.pdb
+C:\Users\1\source\repos\Petinator\Petinator_Server_Client\Petinator_Server_Client\obj\Debug\netcoreapp3.0\Petinator_Server_Client.AssemblyInfoInputs.cache
+C:\Users\1\source\repos\Petinator\Petinator_Server_Client\Petinator_Server_Client\obj\Debug\netcoreapp3.0\Petinator_Server_Client.AssemblyInfo.cs
+C:\Users\1\source\repos\Petinator\Petinator_Server_Client\Petinator_Server_Client\obj\Debug\netcoreapp3.0\Petinator_Server_Client.dll
+C:\Users\1\source\repos\Petinator\Petinator_Server_Client\Petinator_Server_Client\obj\Debug\netcoreapp3.0\Petinator_Server_Client.pdb
