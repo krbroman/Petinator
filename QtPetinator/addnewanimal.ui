@@ -55,7 +55,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Comic Sans MS'; color:#c85836;&quot;&gt;Животное не найдено &lt;br/&gt;в базе данных.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Comic Sans MS'; font-size:20pt; color:#c85836;&quot;&gt;Животное не найдено &lt;br/&gt;в базе данных.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_No">
@@ -100,12 +100,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p align = &quot;center&quot;&gt;&lt;span style=&quot; font-family:'Comic Sans MS'; font-size:30pt; color:#C85836;&quot;&gt;Хотите добавить новое&lt;br/&gt;животное в базу данных?&lt;/p&gt;
-&lt;/span&gt;&lt;/body&gt;&lt;/head&gt;&lt;/html&gt;
-
-
-</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Comic Sans MS'; font-size:18pt; color:#c85836;&quot;&gt;Хотите добавить новое&lt;br/&gt;животное в базу данных?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">

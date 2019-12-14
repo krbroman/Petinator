@@ -20,7 +20,6 @@ public:
 
 private slots:
     void on_pushButton_Yes_clicked();
-
     void on_pushButton_No_clicked();
 
 private:

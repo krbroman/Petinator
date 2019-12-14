@@ -39,7 +39,7 @@ public:
         GuessLast->resize(1024, 768);
         label = new QLabel(GuessLast);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(500, 496, 220, 105));
+        label->setGeometry(QRect(500, 480, 221, 131));
         QFont font;
         font.setPointSize(20);
         label->setFont(font);
@@ -114,16 +114,7 @@ public:
     void retranslateUi(QDialog *GuessLast)
     {
         GuessLast->setWindowTitle(QApplication::translate("GuessLast", "Dialog", nullptr));
-        label->setText(QApplication::translate("GuessLast", "<html>\n"
-"<head/>\n"
-"<body>\n"
-"<span style=\" font-family:'Arial Rounded MT Bold'; font-size:35pt; color:#FFF8EA;\">\n"
-"<p align=\"center\">\320\257 \320\264\321\203\320\274\320\260\321\216, <br/>\321\207\321\202\320\276 \321\215\321\202\320\276...\n"
-"</span>\n"
-"</p>\n"
-"</body>\n"
-"</html>\n"
-"", nullptr));
+        label->setText(QApplication::translate("GuessLast", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Arial Rounded MT Bold'; font-size:22pt; color:#fff8ea;\">\320\257 \320\264\321\203\320\274\320\260\321\216, <br/>\321\207\321\202\320\276 \321\215\321\202\320\276... </span></p></body></html>", nullptr));
         pushButton_No->setText(QApplication::translate("GuessLast", "\320\235\320\265\321\202", nullptr));
         Suggestion->setText(QApplication::translate("GuessLast", "<!DOCTYPE>\n"
 "<html>\n"

@@ -50,7 +50,7 @@ public:
         label->setGeometry(QRect(270, 150, 371, 156));
         QFont font;
         font.setFamily(QString::fromUtf8("Sans MS"));
-        font.setPointSize(16);
+        font.setPointSize(20);
         font.setBold(false);
         font.setItalic(false);
         font.setWeight(50);
@@ -58,7 +58,7 @@ public:
         label->setStyleSheet(QString::fromUtf8("font:Comic Sans MS;\n"
 "color:rgb(255, 247, 227);\n"
 "background:rgba(255, 255, 255, 0);\n"
-"font-size:16pt;\n"
+"font-size:20pt;\n"
 ""));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));

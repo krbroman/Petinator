@@ -26,7 +26,7 @@
     <property name="font">
      <font>
       <family>Sans MS</family>
-      <pointsize>16</pointsize>
+      <pointsize>20</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -36,7 +36,7 @@
      <string notr="true">font:Comic Sans MS;
 color:rgb(255, 247, 227);
 background:rgba(255, 255, 255, 0);
-font-size:16pt;
+font-size:20pt;
 </string>
     </property>
     <property name="text">

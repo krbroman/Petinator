@@ -40,14 +40,14 @@ public:
         pushButton_Play->setObjectName(QString::fromUtf8("pushButton_Play"));
         pushButton_Play->setGeometry(QRect(540, 617, 280, 100));
         QFont font;
-        font.setPointSize(33);
+        font.setPointSize(20);
         font.setBold(false);
         font.setItalic(false);
         font.setWeight(50);
         pushButton_Play->setFont(font);
         pushButton_Play->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:33pt;\n"
+"font-size:20pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         pushButton_Exit = new QPushButton(Losing);
         pushButton_Exit->setObjectName(QString::fromUtf8("pushButton_Exit"));
@@ -55,11 +55,11 @@ public:
         pushButton_Exit->setFont(font);
         pushButton_Exit->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:33pt;\n"
+"font-size:20pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         label = new QLabel(Losing);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(227, 177, 305, 137));
+        label->setGeometry(QRect(190, 180, 371, 137));
         QFont font1;
         font1.setPointSize(40);
         label->setFont(font1);
@@ -105,16 +105,7 @@ public:
         Losing->setWindowTitle(QApplication::translate("Losing", "Dialog", nullptr));
         pushButton_Play->setText(QApplication::translate("Losing", "\320\230\320\263\321\200\320\260\321\202\321\214 \320\265\321\211\320\265 \321\200\320\260\320\267", nullptr));
         pushButton_Exit->setText(QApplication::translate("Losing", "\320\222\321\213\320\271\321\202\320\270", nullptr));
-        label->setText(QApplication::translate("Losing", "<html>\n"
-"<head/>\n"
-"<body>\n"
-"<span style=\" font-family:'Comic Sans MS'; font-size:54pt; color:#FFF8EA;\">\n"
-"<p align=\"center\">\320\257 \320\277\321\200\320\276\320\270\320\263\321\200\320\260\320\273\n"
-"</span>\n"
-"</p>\n"
-"</body>\n"
-"</html>\n"
-"", nullptr));
+        label->setText(QApplication::translate("Losing", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Comic Sans MS'; font-size:28pt; color:#fff8ea;\">\320\257 \320\277\321\200\320\276\320\270\320\263\321\200\320\260\320\273 </span></p></body></html>", nullptr));
         label1->setText(QString());
         label2->setText(QString());
         label3->setText(QString());

@@ -23,7 +23,6 @@ private slots:
 
 private:
     Ui::Winning *ui;
-
     Questions* thisQuest;
 };
 

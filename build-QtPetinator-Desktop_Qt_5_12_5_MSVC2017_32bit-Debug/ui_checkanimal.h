@@ -40,7 +40,7 @@ public:
         CheckAnimal->resize(1024, 768);
         label = new QLabel(CheckAnimal);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(341, 190, 381, 122));
+        label->setGeometry(QRect(340, 180, 391, 141));
         QFont font;
         font.setPointSize(20);
         label->setFont(font);
@@ -57,14 +57,14 @@ public:
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(390, 427, 231, 61));
         QFont font1;
-        font1.setPointSize(27);
+        font1.setPointSize(20);
         font1.setBold(false);
         font1.setItalic(false);
         font1.setWeight(50);
         pushButton->setFont(font1);
         pushButton->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:27pt;\n"
+"font-size:20pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         label1 = new QLabel(CheckAnimal);
         label1->setObjectName(QString::fromUtf8("label1"));
@@ -83,7 +83,7 @@ public:
         label5->setGeometry(QRect(-4, 192, 1042, 429));
         label6 = new QLabel(CheckAnimal);
         label6->setObjectName(QString::fromUtf8("label6"));
-        label6->setGeometry(QRect(-9, 252, 1046, 356));
+        label6->setGeometry(QRect(-10, 240, 1046, 356));
         label8 = new QLabel(CheckAnimal);
         label8->setObjectName(QString::fromUtf8("label8"));
         label8->setGeometry(QRect(0, 0, 1024, 768));
@@ -93,7 +93,6 @@ public:
         label7->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);"));
         label8->raise();
         label1->raise();
-        label->raise();
         label2->raise();
         label3->raise();
         label4->raise();
@@ -102,6 +101,7 @@ public:
         label7->raise();
         pushButton->raise();
         usersAnimal->raise();
+        label->raise();
 
         retranslateUi(CheckAnimal);
 
@@ -111,7 +111,7 @@ public:
     void retranslateUi(QDialog *CheckAnimal)
     {
         CheckAnimal->setWindowTitle(QApplication::translate("CheckAnimal", "Dialog", nullptr));
-        label->setText(QApplication::translate("CheckAnimal", "<html><head><body><p align=\"center\"><span style=\"font-family:'Comic Sans MS'; font-size:30pt;color:#c85836;\">\320\226\320\270\320\262\320\276\321\202\320\275\320\276\320\265 \320\275\320\265 \320\275\320\260\320\271\320\264\320\265\320\275\320\276.<br>\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\265\320\263\320\276 \320\275\320\260\320\267\320\262\320\260\320\275\320\270\320\265 \320\264\320\273\321\217<br> \320\264\320\260\320\273\321\214\320\275\320\265\320\271\321\210\320\265\320\263\320\276 \320\260\320\275\320\260\320\273\320\270\320\267\320\260</span></p></body></head></html>\n"
+        label->setText(QApplication::translate("CheckAnimal", "<html><head><body><p align=\"center\"><span style=\"font-family:'Comic Sans MS'; font-size:16pt;color:#c85836;\">\320\226\320\270\320\262\320\276\321\202\320\275\320\276\320\265 \320\275\320\265 \320\275\320\260\320\271\320\264\320\265\320\275\320\276.<br>\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\265\320\263\320\276 \320\275\320\260\320\267\320\262\320\260\320\275\320\270\320\265 \320\264\320\273\321\217<br> \320\264\320\260\320\273\321\214\320\275\320\265\320\271\321\210\320\265\320\263\320\276 \320\260\320\275\320\260\320\273\320\270\320\267\320\260</span></p></body></head></html>\n"
 "\n"
 "\n"
 "", nullptr));

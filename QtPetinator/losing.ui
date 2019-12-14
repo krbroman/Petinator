@@ -24,7 +24,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>33</pointsize>
+     <pointsize>20</pointsize>
      <weight>50</weight>
      <italic>false</italic>
      <bold>false</bold>
@@ -33,7 +33,7 @@
    <property name="styleSheet">
     <string notr="true">background:rgba(255, 255, 255, 0);
 color:rgba(204, 57, 31, 196);
-font-size:33pt;
+font-size:20pt;
 font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
@@ -51,7 +51,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>33</pointsize>
+     <pointsize>20</pointsize>
      <weight>50</weight>
      <italic>false</italic>
      <bold>false</bold>
@@ -60,7 +60,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
    <property name="styleSheet">
     <string notr="true">background:rgba(255, 255, 255, 0);
 color:rgba(204, 57, 31, 196);
-font-size:33pt;
+font-size:20pt;
 font:&quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="text">
@@ -70,9 +70,9 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>227</x>
-     <y>177</y>
-     <width>305</width>
+     <x>190</x>
+     <y>180</y>
+     <width>371</width>
      <height>137</height>
     </rect>
    </property>
@@ -82,16 +82,7 @@ font:&quot;Arial Rounded MT Bold&quot;;</string>
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;
-&lt;head/&gt;
-&lt;body&gt;
-&lt;span style=&quot; font-family:'Comic Sans MS'; font-size:54pt; color:#FFF8EA;&quot;&gt;
-&lt;p align=&quot;center&quot;&gt;Я проиграл
-&lt;/span&gt;
-&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Comic Sans MS'; font-size:28pt; color:#fff8ea;&quot;&gt;Я проиграл &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label1">

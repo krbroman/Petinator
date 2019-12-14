@@ -64,12 +64,6 @@ GuessLast::GuessLast(Questions &quest) :
            }
        }
 
-
-    /*for(int i = 0; i < thisQuest->getCountOfAnimals(); i++)
-        for(int j = 0; j < thisQuest->getCountOfQuestion(); j++)
-            if (quest.answersFromUsers[j] == quest.answersForAnimals[i][j])
-                quest.countOfСoincidence[i]++; */
-
     int max = -1;
     expectedAnimal = -1;
     for (int i = 0; i < thisQuest->getCountOfAnimals(); i++)

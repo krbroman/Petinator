@@ -38,7 +38,7 @@ public:
         Winning->resize(1024, 768);
         label = new QLabel(Winning);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(250, 167, 302, 125));
+        label->setGeometry(QRect(260, 160, 271, 125));
         QFont font;
         font.setPointSize(40);
         label->setFont(font);
@@ -46,14 +46,14 @@ public:
         pushButton_Exit->setObjectName(QString::fromUtf8("pushButton_Exit"));
         pushButton_Exit->setGeometry(QRect(538, 617, 280, 100));
         QFont font1;
-        font1.setPointSize(33);
+        font1.setPointSize(20);
         font1.setBold(false);
         font1.setItalic(false);
         font1.setWeight(50);
         pushButton_Exit->setFont(font1);
         pushButton_Exit->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:33pt;\n"
+"font-size:20pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         pushButton_Play = new QPushButton(Winning);
         pushButton_Play->setObjectName(QString::fromUtf8("pushButton_Play"));
@@ -61,7 +61,7 @@ public:
         pushButton_Play->setFont(font1);
         pushButton_Play->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:33pt;\n"
+"font-size:20pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         label1 = new QLabel(Winning);
         label1->setObjectName(QString::fromUtf8("label1"));
@@ -103,17 +103,7 @@ public:
     void retranslateUi(QDialog *Winning)
     {
         Winning->setWindowTitle(QApplication::translate("Winning", "Dialog", nullptr));
-        label->setText(QApplication::translate("Winning", "<html>\n"
-"<head/>\n"
-"<body>\n"
-"<span style=\" font-family:'Comic Sans MS'; font-size:50pt; color:#FFF8EA;\">\n"
-"<p align=\"center\">\n"
-"\320\257 \321\203\320\263\320\260\320\264\320\260\320\273\n"
-"</span>\n"
-"</p>\n"
-"</body>\n"
-"</html>\n"
-"", nullptr));
+        label->setText(QApplication::translate("Winning", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Comic Sans MS'; font-size:28pt; color:#fff8ea;\">\320\257 \321\203\320\263\320\260\320\264\320\260\320\273 </span></p></body></html>", nullptr));
         pushButton_Exit->setText(QApplication::translate("Winning", "\320\222\321\213\320\271\321\202\320\270", nullptr));
         pushButton_Play->setText(QApplication::translate("Winning", "\320\230\320\263\321\200\320\260\321\202\321\214 \320\265\321\211\320\265 \321\200\320\260\320\267", nullptr));
         label1->setText(QString());

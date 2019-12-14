@@ -29,10 +29,10 @@ private:
 
     Winning* winning;
     CheckAnimal* checkAnimal;
-
-    int expectedAnimal;
-
     Questions* thisQuest;
+
+    //Выбранное животное
+    int expectedAnimal;
 };
 
 #endif // GUESSLAST_H

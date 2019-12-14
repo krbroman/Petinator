@@ -20,13 +20,11 @@ public:
 
 private slots:
     void on_pushButton_No_clicked();
-
     void on_pushButton_Yes_clicked();
 
 private:
     Ui::Guess *ui;
     Winning* winning;
-
     Questions* thisQuest;
 
     //Выбранное животное

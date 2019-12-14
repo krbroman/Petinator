@@ -110,14 +110,9 @@ public:
     {
         AddNewAnimal->setWindowTitle(QApplication::translate("AddNewAnimal", "Dialog", nullptr));
         pushButton_Yes->setText(QApplication::translate("AddNewAnimal", "\320\224\320\260", nullptr));
-        label->setText(QApplication::translate("AddNewAnimal", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Comic Sans MS'; color:#c85836;\">\320\226\320\270\320\262\320\276\321\202\320\275\320\276\320\265 \320\275\320\265 \320\275\320\260\320\271\320\264\320\265\320\275\320\276 <br/>\320\262 \320\261\320\260\320\267\320\265 \320\264\320\260\320\275\320\275\321\213\321\205.</span></p></body></html>", nullptr));
+        label->setText(QApplication::translate("AddNewAnimal", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Comic Sans MS'; font-size:20pt; color:#c85836;\">\320\226\320\270\320\262\320\276\321\202\320\275\320\276\320\265 \320\275\320\265 \320\275\320\260\320\271\320\264\320\265\320\275\320\276 <br/>\320\262 \320\261\320\260\320\267\320\265 \320\264\320\260\320\275\320\275\321\213\321\205.</span></p></body></html>", nullptr));
         pushButton_No->setText(QApplication::translate("AddNewAnimal", "\320\235\320\265\321\202", nullptr));
-        label_2->setText(QApplication::translate("AddNewAnimal", "<html><head/><body>\n"
-"<p align = \"center\"><span style=\" font-family:'Comic Sans MS'; font-size:30pt; color:#C85836;\">\320\245\320\276\321\202\320\270\321\202\320\265 \320\264\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\275\320\276\320\262\320\276\320\265<br/>\320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265 \320\262 \320\261\320\260\320\267\321\203 \320\264\320\260\320\275\320\275\321\213\321\205?</p>\n"
-"</span></body></head></html>\n"
-"\n"
-"\n"
-"", nullptr));
+        label_2->setText(QApplication::translate("AddNewAnimal", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Comic Sans MS'; font-size:18pt; color:#c85836;\">\320\245\320\276\321\202\320\270\321\202\320\265 \320\264\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\275\320\276\320\262\320\276\320\265<br/>\320\266\320\270\320\262\320\276\321\202\320\275\320\276\320\265 \320\262 \320\261\320\260\320\267\321\203 \320\264\320\260\320\275\320\275\321\213\321\205?</span></p></body></html>", nullptr));
         label_3->setText(QString());
         label_4->setText(QString());
         label_5->setText(QString());

@@ -16,8 +16,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>275</x>
-     <y>237</y>
+     <x>260</x>
+     <y>240</y>
      <width>473</width>
      <height>139</height>
     </rect>
@@ -28,9 +28,7 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align = &quot;center&quot;&gt;&lt;span style=&quot; font-family:'Comic Sans MS'; ont-size:30pt;color:#c85836;&quot;&gt;Животное существует в базе&lt;br/&gt; данных. Возможно, ваши &lt;br/&gt;ответы были некорректны&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-
-</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Comic Sans MS'; font-size:20pt; color:#c85836;&quot;&gt;Животное существует в базе&lt;br/&gt;данных. Возможно, ваши &lt;br/&gt;ответы были некорректны&lt;/span&gt;&lt;span style=&quot; font-size:20pt;&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Ok">

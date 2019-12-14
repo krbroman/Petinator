@@ -36,7 +36,7 @@ public:
         AnimalExists->resize(1024, 768);
         label = new QLabel(AnimalExists);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(275, 237, 473, 139));
+        label->setGeometry(QRect(260, 240, 473, 139));
         QFont font;
         font.setPointSize(30);
         label->setFont(font);
@@ -88,9 +88,7 @@ public:
     void retranslateUi(QDialog *AnimalExists)
     {
         AnimalExists->setWindowTitle(QApplication::translate("AnimalExists", "Dialog", nullptr));
-        label->setText(QApplication::translate("AnimalExists", "<html><head/><body><p align = \"center\"><span style=\" font-family:'Comic Sans MS'; ont-size:30pt;color:#c85836;\">\320\226\320\270\320\262\320\276\321\202\320\275\320\276\320\265 \321\201\321\203\321\211\320\265\321\201\321\202\320\262\321\203\320\265\321\202 \320\262 \320\261\320\260\320\267\320\265<br/> \320\264\320\260\320\275\320\275\321\213\321\205. \320\222\320\276\320\267\320\274\320\276\320\266\320\275\320\276, \320\262\320\260\321\210\320\270 <br/>\320\276\321\202\320\262\320\265\321\202\321\213 \320\261\321\213\320\273\320\270 \320\275\320\265\320\272\320\276\321\200\321\200\320\265\320\272\321\202\320\275\321\213</span></p></body></html>\n"
-"\n"
-"", nullptr));
+        label->setText(QApplication::translate("AnimalExists", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Comic Sans MS'; font-size:20pt; color:#c85836;\">\320\226\320\270\320\262\320\276\321\202\320\275\320\276\320\265 \321\201\321\203\321\211\320\265\321\201\321\202\320\262\321\203\320\265\321\202 \320\262 \320\261\320\260\320\267\320\265<br/>\320\264\320\260\320\275\320\275\321\213\321\205. \320\222\320\276\320\267\320\274\320\276\320\266\320\275\320\276, \320\262\320\260\321\210\320\270 <br/>\320\276\321\202\320\262\320\265\321\202\321\213 \320\261\321\213\320\273\320\270 \320\275\320\265\320\272\320\276\321\200\321\200\320\265\320\272\321\202\320\275\321\213</span><span style=\" font-size:20pt;\"/></p></body></html>", nullptr));
         pushButton_Ok->setText(QApplication::translate("AnimalExists", "\320\222\321\213\320\271\321\202\320\270", nullptr));
         label1->setText(QString());
         label2->setText(QString());
