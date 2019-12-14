@@ -61,6 +61,50 @@ MainWindow2::~MainWindow2()
 void MainWindow2::on_pushButton_2_clicked()
 {
 
+    //Обработчик неповторяющихся вопросов
+    if (numberOfQuestion == 0) {
+
+        if ((quest.maskOfUsedQuestions[1] == 0) && (quest.maskOfUsedQuestions[2] == 0)) {
+            countOfQuestionAfterButton++;
+            countOfQuestionAfterButton++;
+        } else if (((quest.maskOfUsedQuestions[1] == 0) && (quest.maskOfUsedQuestions[2] == 1))
+                || ((quest.maskOfUsedQuestions[1] == 1) && (quest.maskOfUsedQuestions[2] == 0)))
+            countOfQuestionAfterButton++;
+
+        quest.maskOfUsedQuestions[1] = 1;
+        quest.maskOfUsedQuestions[2] = 1;
+        quest.answersFromUsers[1] = 0;
+        quest.answersFromUsers[2] = 0;
+
+    } else if (numberOfQuestion == 1) {
+
+        if ((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[2] == 0)) {
+            countOfQuestionAfterButton++;
+            countOfQuestionAfterButton++;
+        } else if (((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[2] == 1))
+                || ((quest.maskOfUsedQuestions[0] == 1) && (quest.maskOfUsedQuestions[2] == 0)))
+            countOfQuestionAfterButton++;
+
+        quest.maskOfUsedQuestions[0] = 1;
+        quest.maskOfUsedQuestions[2] = 1;
+        quest.answersFromUsers[0] = 0;
+        quest.answersFromUsers[2] = 0;
+
+    } else if (numberOfQuestion == 2) {
+
+        if ((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[1] == 0)) {
+            countOfQuestionAfterButton++;
+            countOfQuestionAfterButton++;
+        } else if (((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[1] == 1))
+                || ((quest.maskOfUsedQuestions[0] == 1) && (quest.maskOfUsedQuestions[1] == 0)))
+            countOfQuestionAfterButton++;
+
+        quest.maskOfUsedQuestions[0] = 1;
+        quest.maskOfUsedQuestions[1] = 1;
+        quest.answersFromUsers[0] = 0;
+        quest.answersFromUsers[1] = 0;
+    }
+
     //Увеличиваем счетчик
     countOfQuestionAfterButton++;
 
@@ -71,45 +115,6 @@ void MainWindow2::on_pushButton_2_clicked()
     if (countOfQuestionAfterButton < quest.getCountOfQuestion()) {
         //Следующий вопрос на экране
         numberOfQuestion = quest.numOfTheNextQuestion();
-
-        //Обработчик неповторяющихся вопросов
-        if (numberOfQuestion == 0) {
-
-            if ((quest.maskOfUsedQuestions[1] == 0) && (quest.maskOfUsedQuestions[2] == 0)) {
-                countOfQuestionAfterButton++;
-                countOfQuestionAfterButton++;
-            } else if (((quest.maskOfUsedQuestions[1] == 0) && (quest.maskOfUsedQuestions[2] == 1))
-                    || ((quest.maskOfUsedQuestions[1] == 1) && (quest.maskOfUsedQuestions[2] == 0)))
-                countOfQuestionAfterButton++;
-
-            quest.maskOfUsedQuestions[1] = 1;
-            quest.maskOfUsedQuestions[2] = 1;
-
-        } else if (numberOfQuestion == 1) {
-
-            if ((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[2] == 0)) {
-                countOfQuestionAfterButton++;
-                countOfQuestionAfterButton++;
-            } else if (((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[2] == 1))
-                    || ((quest.maskOfUsedQuestions[0] == 1) && (quest.maskOfUsedQuestions[2] == 0)))
-                countOfQuestionAfterButton++;
-
-            quest.maskOfUsedQuestions[0] = 1;
-            quest.maskOfUsedQuestions[2] = 1;
-
-        } else if (numberOfQuestion == 2) {
-
-            if ((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[1] == 0)) {
-                countOfQuestionAfterButton++;
-                countOfQuestionAfterButton++;
-            } else if (((quest.maskOfUsedQuestions[0] == 0) && (quest.maskOfUsedQuestions[1] == 1))
-                    || ((quest.maskOfUsedQuestions[0] == 1) && (quest.maskOfUsedQuestions[1] == 0)))
-                countOfQuestionAfterButton++;
-
-            quest.maskOfUsedQuestions[0] = 1;
-            quest.maskOfUsedQuestions[1] = 1;
-        }
-
         ui->label->setText(quest.questions[numberOfQuestion]);
     }
 

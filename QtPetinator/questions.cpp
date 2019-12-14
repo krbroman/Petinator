@@ -18,6 +18,8 @@ query.qu.exec("Select \"Частота загадывания\" from Chances ord
            questions[i] = "Я больше собаки?";
        if(questions[i] == "Я обычно с гладкой шерстью?")
            questions[i] = "Я с гладной шерстью?";
+       if(questions[i] == "Оно лазает по деревьям?")
+           questions[i] = "Я лазаю по деревьям?";
       }
 
       query.qu.exec("Select \"Животное\" from Questions order by ID");
