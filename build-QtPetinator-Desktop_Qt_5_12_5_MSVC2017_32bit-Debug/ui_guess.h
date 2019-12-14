@@ -41,14 +41,14 @@ public:
         pushButton_Yes->setObjectName(QString::fromUtf8("pushButton_Yes"));
         pushButton_Yes->setGeometry(QRect(380, 350, 121, 61));
         QFont font;
-        font.setPointSize(33);
+        font.setPointSize(26);
         font.setBold(false);
         font.setItalic(false);
         font.setWeight(50);
         pushButton_Yes->setFont(font);
         pushButton_Yes->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:33pt;\n"
+"font-size:26pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         pushButton_No = new QPushButton(Guess);
         pushButton_No->setObjectName(QString::fromUtf8("pushButton_No"));
@@ -56,7 +56,7 @@ public:
         pushButton_No->setFont(font);
         pushButton_No->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:33pt;\n"
+"font-size:26pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         label = new QLabel(Guess);
         label->setObjectName(QString::fromUtf8("label"));
@@ -66,8 +66,13 @@ public:
         label->setFont(font1);
         Suggestion = new QLabel(Guess);
         Suggestion->setObjectName(QString::fromUtf8("Suggestion"));
-        Suggestion->setGeometry(QRect(490, 60, 661, 131));
-        Suggestion->setFont(font);
+        Suggestion->setGeometry(QRect(350, 60, 661, 131));
+        QFont font2;
+        font2.setPointSize(33);
+        font2.setBold(false);
+        font2.setItalic(false);
+        font2.setWeight(50);
+        Suggestion->setFont(font2);
         Suggestion->setStyleSheet(QString::fromUtf8("font: \"Comic Sans MS\";\n"
 "color: rgba(204, 57, 31, 196);\n"
 "font-size: 33pt;\n"

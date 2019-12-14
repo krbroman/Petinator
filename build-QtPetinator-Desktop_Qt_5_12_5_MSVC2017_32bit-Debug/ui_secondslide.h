@@ -43,14 +43,14 @@ public:
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(389, 569, 271, 91));
         QFont font1;
-        font1.setPointSize(45);
+        font1.setPointSize(33);
         font1.setBold(false);
         font1.setItalic(false);
         font1.setWeight(50);
         pushButton->setFont(font1);
         pushButton->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:45pt;\n"
+"font-size:33pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         label2 = new QLabel(SecondSlide);
         label2->setObjectName(QString::fromUtf8("label2"));

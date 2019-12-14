@@ -47,7 +47,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(270, 150, 371, 156));
+        label->setGeometry(QRect(300, 150, 371, 156));
         QFont font;
         font.setFamily(QString::fromUtf8("Sans MS"));
         font.setPointSize(20);
@@ -64,14 +64,14 @@ public:
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(560, 400, 191, 81));
         QFont font1;
-        font1.setPointSize(41);
+        font1.setPointSize(33);
         font1.setBold(false);
         font1.setItalic(false);
         font1.setWeight(50);
         pushButton->setFont(font1);
         pushButton->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:41pt;\n"
+"font-size:33pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
@@ -79,7 +79,7 @@ public:
         pushButton_2->setFont(font1);
         pushButton_2->setStyleSheet(QString::fromUtf8("background:rgba(255, 255, 255, 0);\n"
 "color:rgba(204, 57, 31, 196);\n"
-"font-size:41pt;\n"
+"font-size:33pt;\n"
 "font:\"Arial Rounded MT Bold\";"));
         pushButton_Now = new QPushButton(centralwidget);
         pushButton_Now->setObjectName(QString::fromUtf8("pushButton_Now"));

@@ -42,7 +42,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>33</pointsize>
+     <pointsize>26</pointsize>
      <weight>50</weight>
      <italic>false</italic>
      <bold>false</bold>
@@ -52,7 +52,7 @@
     <string notr="true">font: &quot;Comic Sans MS&quot;;
 color: rgba(204, 57, 31, 196);
 background: rgba(255, 255, 255, 0);
-font-size: 33pt;
+font-size: 26pt;
 </string>
    </property>
    <property name="text">
@@ -62,7 +62,7 @@ font-size: 33pt;
   <widget class="QLabel" name="Suggestion">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>370</x>
      <y>50</y>
      <width>771</width>
      <height>131</height>
@@ -83,19 +83,7 @@ font-size: 33pt;
 text-align: right;</string>
    </property>
    <property name="text">
-    <string>&lt;!DOCTYPE&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
-.text{
-text-align:  center;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;div class=&quot;text&quot;&gt;&lt;p&gt;/*Предполагаемое животное*/&lt;/p&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;/*Предполагаемое животное*/&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Yes">
@@ -109,7 +97,7 @@ text-align:  center;
    </property>
    <property name="font">
     <font>
-     <pointsize>33</pointsize>
+     <pointsize>26</pointsize>
      <weight>50</weight>
      <italic>false</italic>
      <bold>false</bold>
@@ -119,7 +107,7 @@ text-align:  center;
     <string notr="true">font: &quot;Comic Sans MS&quot;;
 color: rgba(204, 57, 31, 196);
 background: rgba(255, 255, 255, 0);
-font-size: 33pt;</string>
+font-size: 26pt;</string>
    </property>
    <property name="text">
     <string>Да</string>
@@ -180,8 +168,8 @@ font-size: 33pt;</string>
   <widget class="QLabel" name="label5">
    <property name="geometry">
     <rect>
-     <x>-2</x>
-     <y>-2</y>
+     <x>30</x>
+     <y>-140</y>
      <width>999</width>
      <height>592</height>
     </rect>
