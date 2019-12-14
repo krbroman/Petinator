@@ -55,8 +55,7 @@ Winning::Winning(Questions& quest, int animal) :
     w = ui->label7->width();
     ui->label7->setPixmap(pix7.scaled(w, h, Qt::KeepAspectRatio));
 
-    //Добавляем совпадение. Осталось выгрузить в Result.
-    //quest.frequencyOfChoise[animal]++;
+    this->setWindowIcon(QIcon(":/icon/icon.png"));
 }
 
 Winning::~Winning()

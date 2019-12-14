@@ -113,7 +113,7 @@ public:
 
     void retranslateUi(QDialog *GuessLast)
     {
-        GuessLast->setWindowTitle(QApplication::translate("GuessLast", "Dialog", nullptr));
+        GuessLast->setWindowTitle(QApplication::translate("GuessLast", "Petinator", nullptr));
         label->setText(QApplication::translate("GuessLast", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Arial Rounded MT Bold'; font-size:22pt; color:#fff8ea;\">\320\257 \320\264\321\203\320\274\320\260\321\216, <br/>\321\207\321\202\320\276 \321\215\321\202\320\276... </span></p></body></html>", nullptr));
         pushButton_No->setText(QApplication::translate("GuessLast", "\320\235\320\265\321\202", nullptr));
         Suggestion->setText(QApplication::translate("GuessLast", "<!DOCTYPE>\n"

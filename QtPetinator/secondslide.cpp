@@ -33,6 +33,7 @@ SecondSlide::SecondSlide(QWidget *parent) :
     w = ui->label5->width();
     ui->label5->setPixmap(pix5.scaled(w, h, Qt::KeepAspectRatio));
 
+    this->setWindowIcon(QIcon(":/icon/icon.png"));
 }
 
 SecondSlide::~SecondSlide()

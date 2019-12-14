@@ -110,7 +110,7 @@ public:
 
     void retranslateUi(QDialog *CheckAnimal)
     {
-        CheckAnimal->setWindowTitle(QApplication::translate("CheckAnimal", "Dialog", nullptr));
+        CheckAnimal->setWindowTitle(QApplication::translate("CheckAnimal", "Petinator", nullptr));
         label->setText(QApplication::translate("CheckAnimal", "<html><head><body><p align=\"center\"><span style=\"font-family:'Comic Sans MS'; font-size:16pt;color:#c85836;\">\320\226\320\270\320\262\320\276\321\202\320\275\320\276\320\265 \320\275\320\265 \320\275\320\260\320\271\320\264\320\265\320\275\320\276.<br>\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\265\320\263\320\276 \320\275\320\260\320\267\320\262\320\260\320\275\320\270\320\265 \320\264\320\273\321\217<br> \320\264\320\260\320\273\321\214\320\275\320\265\320\271\321\210\320\265\320\263\320\276 \320\260\320\275\320\260\320\273\320\270\320\267\320\260</span></p></body></head></html>\n"
 "\n"
 "\n"

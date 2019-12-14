@@ -42,6 +42,8 @@ Losing::Losing(QWidget *parent) :
     h = ui->label7->height();
     w = ui->label7->width();
     ui->label7->setPixmap(pix7.scaled(w, h, Qt::KeepAspectRatio));
+
+    this->setWindowIcon(QIcon(":/icon/icon.png"));
 }
 
 Losing::Losing(Questions& quest, QString animal) :
@@ -127,6 +129,8 @@ Losing::Losing(Questions& quest, QString animal) :
     h = ui->label7->height();
     w = ui->label7->width();
     ui->label7->setPixmap(pix7.scaled(w, h, Qt::KeepAspectRatio));
+
+    this->setWindowIcon(QIcon(":/icon/icon.png"));
 }
 
 Losing::~Losing()

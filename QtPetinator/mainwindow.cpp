@@ -35,6 +35,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label5->setPixmap(pix5.scaled(w, h, Qt::KeepAspectRatio));
 
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(showAgain()));
+
+    this->setWindowIcon(QIcon(":/icon/icon.png"));
 }
 
 MainWindow::~MainWindow()

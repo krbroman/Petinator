@@ -112,7 +112,7 @@ public:
 
     void retranslateUi(QDialog *Guess)
     {
-        Guess->setWindowTitle(QApplication::translate("Guess", "Dialog", nullptr));
+        Guess->setWindowTitle(QApplication::translate("Guess", "Petinator", nullptr));
         pushButton_Yes->setText(QApplication::translate("Guess", "\320\224\320\260", nullptr));
         pushButton_No->setText(QApplication::translate("Guess", "\320\235\320\265\321\202", nullptr));
         label->setText(QApplication::translate("Guess", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Arial Rounded MT Bold'; font-size:22pt; color:#fff8ea;\">\320\257 \320\264\321\203\320\274\320\260\321\216, <br/>\321\207\321\202\320\276 \321\215\321\202\320\276... </span></p></body></html>", nullptr));

@@ -63,5 +63,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     DB.qrc \
+    icons.qrc \
     resources.qrc \
     resoures2.qrc

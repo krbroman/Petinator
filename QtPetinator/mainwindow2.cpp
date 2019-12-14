@@ -47,6 +47,7 @@ MainWindow2::MainWindow2(QWidget *parent) :
     ui->label->setText(quest.questions[numberOfQuestion]);
     countOfQuestionAfterButton = 0;
 
+    this->setWindowIcon(QIcon(":/icon/icon.png"));
 }
 
 MainWindow2::~MainWindow2()

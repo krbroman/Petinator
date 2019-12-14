@@ -102,7 +102,7 @@ public:
 
     void retranslateUi(QDialog *Losing)
     {
-        Losing->setWindowTitle(QApplication::translate("Losing", "Dialog", nullptr));
+        Losing->setWindowTitle(QApplication::translate("Losing", "Petinator", nullptr));
         pushButton_Play->setText(QApplication::translate("Losing", "\320\230\320\263\321\200\320\260\321\202\321\214 \320\265\321\211\320\265 \321\200\320\260\320\267", nullptr));
         pushButton_Exit->setText(QApplication::translate("Losing", "\320\222\321\213\320\271\321\202\320\270", nullptr));
         label->setText(QApplication::translate("Losing", "<html><head/><body><p align=\"center\"><span style=\" font-family:'Comic Sans MS'; font-size:28pt; color:#fff8ea;\">\320\257 \320\277\321\200\320\276\320\270\320\263\321\200\320\260\320\273 </span></p></body></html>", nullptr));

@@ -80,6 +80,8 @@ Guess::Guess(Questions &quest) :
 
     for(int i = 0; i < thisQuest->getCountOfAnimals(); i++)
         quest.countOfСoincidence[i] = 0;
+
+    this->setWindowIcon(QIcon(":/icon/icon.png"));
 }
 
 Guess::~Guess()

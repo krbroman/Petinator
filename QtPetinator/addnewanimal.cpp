@@ -50,6 +50,8 @@ AddNewAnimal::AddNewAnimal(Questions& quest, QString animal) :
     h = ui->label_9->height();
     w = ui->label_9->width();
     ui->label_9->setPixmap(pix6.scaled(w, h, Qt::KeepAspectRatio));
+
+    this->setWindowIcon(QIcon(":/icon/icon.png"));
 }
 
 AddNewAnimal::~AddNewAnimal()

@@ -56,6 +56,8 @@ CheckAnimal::CheckAnimal(Questions& quest) :
     h = ui->label8->height();
     w = ui->label8->width();
     ui->label8->setPixmap(pix8.scaled(w, h, Qt::KeepAspectRatio));
+
+    this->setWindowIcon(QIcon(":/icon/icon.png"));
 }
 
 

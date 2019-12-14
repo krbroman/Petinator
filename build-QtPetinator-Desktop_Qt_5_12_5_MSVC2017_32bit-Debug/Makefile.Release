@@ -60,6 +60,7 @@ SOURCES       = ..\QtPetinator\addnewanimal.cpp \
 		..\QtPetinator\secondslide.cpp \
 		..\QtPetinator\sql.cpp \
 		..\QtPetinator\winning.cpp release\qrc_DB.cpp \
+		release\qrc_icons.cpp \
 		release\qrc_resources.cpp \
 		release\qrc_resoures2.cpp \
 		release\moc_addnewanimal.cpp \
@@ -86,6 +87,7 @@ OBJECTS       = release\addnewanimal.obj \
 		release\sql.obj \
 		release\winning.obj \
 		release\qrc_DB.obj \
+		release\qrc_icons.obj \
 		release\qrc_resources.obj \
 		release\qrc_resoures2.obj \
 		release\moc_addnewanimal.obj \
@@ -199,7 +201,7 @@ all: Makefile.Release  release\QtPetinator.exe
 
 release\QtPetinator.exe: E:\Qt\5.12.5\msvc2017\lib\Qt5Widgets.lib E:\Qt\5.12.5\msvc2017\lib\Qt5Gui.lib E:\Qt\5.12.5\msvc2017\lib\Qt5Sql.lib E:\Qt\5.12.5\msvc2017\lib\Qt5Core.lib E:\Qt\5.12.5\msvc2017\lib\qtmain.lib ui_addnewanimal.h ui_animalexists.h ui_checkanimal.h ui_guess.h ui_guesslast.h ui_losing.h ui_mainwindow.h ui_mainwindow2.h ui_secondslide.h ui_winning.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
-release\addnewanimal.obj release\animalexists.obj release\checkanimal.obj release\guess.obj release\guesslast.obj release\losing.obj release\main.obj release\mainwindow.obj release\mainwindow2.obj release\questions.obj release\secondslide.obj release\sql.obj release\winning.obj release\qrc_DB.obj release\qrc_resources.obj release\qrc_resoures2.obj release\moc_addnewanimal.obj release\moc_animalexists.obj release\moc_checkanimal.obj release\moc_guess.obj release\moc_guesslast.obj release\moc_losing.obj release\moc_mainwindow.obj release\moc_mainwindow2.obj release\moc_secondslide.obj release\moc_winning.obj
+release\addnewanimal.obj release\animalexists.obj release\checkanimal.obj release\guess.obj release\guesslast.obj release\losing.obj release\main.obj release\mainwindow.obj release\mainwindow2.obj release\questions.obj release\secondslide.obj release\sql.obj release\winning.obj release\qrc_DB.obj release\qrc_icons.obj release\qrc_resources.obj release\qrc_resoures2.obj release\moc_addnewanimal.obj release\moc_animalexists.obj release\moc_checkanimal.obj release\moc_guess.obj release\moc_guesslast.obj release\moc_losing.obj release\moc_mainwindow.obj release\moc_mainwindow2.obj release\moc_secondslide.obj release\moc_winning.obj
 $(LIBS)
 <<
 
@@ -209,10 +211,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) QtPetinator.zip $(SOURCES) $(DIST) ..\QtPetinator\QtPetinator.pro ..\..\Qt\5.12.5\msvc2017\mkspecs\features\spec_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\angle.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\windows-vulkan.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\msvc-desktop.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\qconfig.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3danimation.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dcore.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dinput.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dlogic.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3drender.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3drender_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axbase.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axbase_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axcontainer.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axserver.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axserver_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bluetooth.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_concurrent.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_core.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_core_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_dbus.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_dbus_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designer.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designer_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_edid_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gamepad.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gui.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gui_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_help.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_help_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_location.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_location_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimedia.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_network.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_network_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_nfc.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_nfc_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_opengl.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_opengl_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_openglextensions.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioning.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioning_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioningquick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioningquick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_printsupport.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmltest.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_repparser.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_repparser_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_scxml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_scxml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sensors.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sensors_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialbus.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialport.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialport_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sql.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sql_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_studio3d.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_studio3d_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_svg.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_svg_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_testlib.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_testlib_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_texttospeech.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uiplugin.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uitools.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uitools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_vulkan_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webchannel.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_websockets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_websockets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webview.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webview_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_widgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_widgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_winextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_winextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_zlib_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt_functions.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt_config.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\win32-msvc\qmake.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\spec_post.prf .qmake.stash ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exclusive_builds.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\msvc-version.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\toolchain.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\default_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\default_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\resolve_config.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exclusive_builds_post.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\default_post.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\build_pass.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qml_debug.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\precompile_header.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\warn_on.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\resources.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\moc.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\opengl.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\uic.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qmake_use.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\file_copies.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\windows.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\testcase_targets.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exceptions.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\yacc.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\lex.prf ..\QtPetinator\QtPetinator.pro ..\QtPetinator\DB.qrc ..\QtPetinator\resources.qrc ..\QtPetinator\resoures2.qrc ..\..\Qt\5.12.5\msvc2017\lib\Qt5Widgets.prl ..\..\Qt\5.12.5\msvc2017\lib\Qt5Gui.prl ..\..\Qt\5.12.5\msvc2017\lib\Qt5Sql.prl ..\..\Qt\5.12.5\msvc2017\lib\Qt5Core.prl ..\..\Qt\5.12.5\msvc2017\lib\qtmain.prl   ..\QtPetinator\DB.qrc ..\QtPetinator\resources.qrc ..\QtPetinator\resoures2.qrc ..\..\Qt\5.12.5\msvc2017\mkspecs\features\data\dummy.cpp ..\QtPetinator\addnewanimal.h ..\QtPetinator\animalexists.h ..\QtPetinator\checkanimal.h ..\QtPetinator\guess.h ..\QtPetinator\guesslast.h ..\QtPetinator\losing.h ..\QtPetinator\mainwindow.h ..\QtPetinator\mainwindow2.h ..\QtPetinator\questions.h ..\QtPetinator\secondslide.h ..\QtPetinator\sql.h ..\QtPetinator\winning.h  ..\QtPetinator\addnewanimal.cpp ..\QtPetinator\animalexists.cpp ..\QtPetinator\checkanimal.cpp ..\QtPetinator\guess.cpp ..\QtPetinator\guesslast.cpp ..\QtPetinator\losing.cpp ..\QtPetinator\main.cpp ..\QtPetinator\mainwindow.cpp ..\QtPetinator\mainwindow2.cpp ..\QtPetinator\questions.cpp ..\QtPetinator\secondslide.cpp ..\QtPetinator\sql.cpp ..\QtPetinator\winning.cpp ..\QtPetinator\addnewanimal.ui ..\QtPetinator\animalexists.ui ..\QtPetinator\checkanimal.ui ..\QtPetinator\guess.ui ..\QtPetinator\guesslast.ui ..\QtPetinator\losing.ui ..\QtPetinator\mainwindow.ui ..\QtPetinator\mainwindow2.ui ..\QtPetinator\secondslide.ui ..\QtPetinator\winning.ui    
+	$(ZIP) QtPetinator.zip $(SOURCES) $(DIST) ..\QtPetinator\QtPetinator.pro ..\..\Qt\5.12.5\msvc2017\mkspecs\features\spec_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\angle.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\windows-vulkan.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\msvc-desktop.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\qconfig.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3danimation.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dcore.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dinput.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dlogic.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3drender.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_3drender_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axbase.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axbase_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axcontainer.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axserver.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_axserver_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bluetooth.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_concurrent.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_core.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_core_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_dbus.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_dbus_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designer.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designer_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_edid_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gamepad.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gui.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_gui_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_help.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_help_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_location.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_location_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimedia.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_network.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_network_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_nfc.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_nfc_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_opengl.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_opengl_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_openglextensions.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioning.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioning_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioningquick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_positioningquick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_printsupport.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmltest.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quick.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quick_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_repparser.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_repparser_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_scxml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_scxml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sensors.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sensors_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialbus.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialport.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_serialport_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sql.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_sql_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_studio3d.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_studio3d_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_svg.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_svg_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_testlib.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_testlib_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_texttospeech.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uiplugin.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uitools.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_uitools_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_vulkan_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webchannel.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_websockets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_websockets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webview.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_webview_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_widgets.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_widgets_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_winextras.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_winextras_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xml.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xml_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\modules\qt_lib_zlib_private.pri ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt_functions.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt_config.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\win32-msvc\qmake.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\spec_post.prf .qmake.stash ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exclusive_builds.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\common\msvc-version.conf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\toolchain.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\default_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\default_pre.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\resolve_config.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exclusive_builds_post.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\default_post.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\build_pass.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qml_debug.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\precompile_header.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\warn_on.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qt.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\resources.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\moc.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\opengl.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\uic.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\qmake_use.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\file_copies.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\win32\windows.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\testcase_targets.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\exceptions.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\yacc.prf ..\..\Qt\5.12.5\msvc2017\mkspecs\features\lex.prf ..\QtPetinator\QtPetinator.pro ..\QtPetinator\DB.qrc ..\QtPetinator\icons.qrc ..\QtPetinator\resources.qrc ..\QtPetinator\resoures2.qrc ..\..\Qt\5.12.5\msvc2017\lib\Qt5Widgets.prl ..\..\Qt\5.12.5\msvc2017\lib\Qt5Gui.prl ..\..\Qt\5.12.5\msvc2017\lib\Qt5Sql.prl ..\..\Qt\5.12.5\msvc2017\lib\Qt5Core.prl ..\..\Qt\5.12.5\msvc2017\lib\qtmain.prl   ..\QtPetinator\DB.qrc ..\QtPetinator\icons.qrc ..\QtPetinator\resources.qrc ..\QtPetinator\resoures2.qrc ..\..\Qt\5.12.5\msvc2017\mkspecs\features\data\dummy.cpp ..\QtPetinator\addnewanimal.h ..\QtPetinator\animalexists.h ..\QtPetinator\checkanimal.h ..\QtPetinator\guess.h ..\QtPetinator\guesslast.h ..\QtPetinator\losing.h ..\QtPetinator\mainwindow.h ..\QtPetinator\mainwindow2.h ..\QtPetinator\questions.h ..\QtPetinator\secondslide.h ..\QtPetinator\sql.h ..\QtPetinator\winning.h  ..\QtPetinator\addnewanimal.cpp ..\QtPetinator\animalexists.cpp ..\QtPetinator\checkanimal.cpp ..\QtPetinator\guess.cpp ..\QtPetinator\guesslast.cpp ..\QtPetinator\losing.cpp ..\QtPetinator\main.cpp ..\QtPetinator\mainwindow.cpp ..\QtPetinator\mainwindow2.cpp ..\QtPetinator\questions.cpp ..\QtPetinator\secondslide.cpp ..\QtPetinator\sql.cpp ..\QtPetinator\winning.cpp ..\QtPetinator\addnewanimal.ui ..\QtPetinator\animalexists.ui ..\QtPetinator\checkanimal.ui ..\QtPetinator\guess.ui ..\QtPetinator\guesslast.ui ..\QtPetinator\losing.ui ..\QtPetinator\mainwindow.ui ..\QtPetinator\mainwindow2.ui ..\QtPetinator\secondslide.ui ..\QtPetinator\winning.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\addnewanimal.obj release\animalexists.obj release\checkanimal.obj release\guess.obj release\guesslast.obj release\losing.obj release\main.obj release\mainwindow.obj release\mainwindow2.obj release\questions.obj release\secondslide.obj release\sql.obj release\winning.obj release\qrc_DB.obj release\qrc_resources.obj release\qrc_resoures2.obj release\moc_addnewanimal.obj release\moc_animalexists.obj release\moc_checkanimal.obj release\moc_guess.obj release\moc_guesslast.obj release\moc_losing.obj release\moc_mainwindow.obj release\moc_mainwindow2.obj release\moc_secondslide.obj release\moc_winning.obj
+	-$(DEL_FILE) release\addnewanimal.obj release\animalexists.obj release\checkanimal.obj release\guess.obj release\guesslast.obj release\losing.obj release\main.obj release\mainwindow.obj release\mainwindow2.obj release\questions.obj release\secondslide.obj release\sql.obj release\winning.obj release\qrc_DB.obj release\qrc_icons.obj release\qrc_resources.obj release\qrc_resoures2.obj release\moc_addnewanimal.obj release\moc_animalexists.obj release\moc_checkanimal.obj release\moc_guess.obj release\moc_guesslast.obj release\moc_losing.obj release\moc_mainwindow.obj release\moc_mainwindow2.obj release\moc_secondslide.obj release\moc_winning.obj
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -229,13 +231,18 @@ benchmark: first
 
 compiler_no_pch_compiler_make_all:
 compiler_no_pch_compiler_clean:
-compiler_rcc_make_all: release\qrc_DB.cpp release\qrc_resources.cpp release\qrc_resoures2.cpp
+compiler_rcc_make_all: release\qrc_DB.cpp release\qrc_icons.cpp release\qrc_resources.cpp release\qrc_resoures2.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) release\qrc_DB.cpp release\qrc_resources.cpp release\qrc_resoures2.cpp
+	-$(DEL_FILE) release\qrc_DB.cpp release\qrc_icons.cpp release\qrc_resources.cpp release\qrc_resoures2.cpp
 release\qrc_DB.cpp: ..\QtPetinator\DB.qrc \
 		..\..\Qt\5.12.5\msvc2017\bin\rcc.exe \
 		..\QtPetinator\Petinator.db
 	E:\Qt\5.12.5\msvc2017\bin\rcc.exe -name DB ..\QtPetinator\DB.qrc -o release\qrc_DB.cpp
+
+release\qrc_icons.cpp: ..\QtPetinator\icons.qrc \
+		..\..\Qt\5.12.5\msvc2017\bin\rcc.exe \
+		..\QtPetinator\icon.png
+	E:\Qt\5.12.5\msvc2017\bin\rcc.exe -name icons ..\QtPetinator\icons.qrc -o release\qrc_icons.cpp
 
 release\qrc_resources.cpp: ..\QtPetinator\resources.qrc \
 		..\..\Qt\5.12.5\msvc2017\bin\rcc.exe \
@@ -672,6 +679,166 @@ release\moc_animalexists.cpp: ..\QtPetinator\animalexists.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
 		..\QtPetinator\losing.h \
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
+		..\QtPetinator\sql.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QtSql \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QtSqlDepends \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QtCore \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QtCoreDepends \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstracteventdispatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractitemmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstracttransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qarraydataops.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qarraydatapointer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbasictimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbitarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbuffer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbytearraymatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcache.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborvalue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdatetime.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborcommon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qregularexpression.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\quuid.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcbormap.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborstream.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfloat16.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcollator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineoption.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineparser.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcryptographichash.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdeadlinetimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qelapsedtimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdir.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfileinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdiriterator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeasingcurve.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qendian.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeventtransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qexception.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfactoryinterface.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfileselector.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QObject \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QStringList \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfilesystemwatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfinalstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuture.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfutureinterface.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qrunnable.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qresultstore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuturesynchronizer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuturewatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qhistorystate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qidentityproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qisenum.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qitemselectionmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonvalue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsondocument.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonobject.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlibrary.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlibraryinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qversionnumber.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlinkedlist.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlockfile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qloggingcategory.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmath.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmessageauthenticationcode.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmetaobject.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimedata.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimedatabase.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimetype.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qobjectcleanuphandler.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qoperatingsystemversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qparallelanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpauseanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qplugin.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpointer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpluginloader.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qprocess.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpropertyanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qvariantanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qqueue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qrandom.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qreadwritelock.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qresource.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsavefile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qscopedvaluerollback.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qscopeguard.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsemaphore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsequentialanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsettings.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsharedmemory.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsignalmapper.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsignaltransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsocketnotifier.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsortfilterproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstack.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstandardpaths.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstatemachine.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstorageinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstringlistmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsystemsemaphore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtemporarydir.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtemporaryfile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtextboundaryfinder.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtextcodec.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthread.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthreadpool.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthreadstorage.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimeline.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimezone.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtranslator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtypetraits.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qwaitcondition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qwineventnotifier.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qxmlstream.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtcoreversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsqlglobal.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsql-config.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldatabase.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldriver.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldriverplugin.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlerror.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlfield.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlindex.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrecord.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlquery.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlquerymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaldelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qitemdelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemdelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qstyleoption.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractspinbox.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvalidator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qslider.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractslider.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qstyle.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qtabbar.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qrubberband.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qlistview.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemview.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractscrollarea.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qcombobox.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaltablemodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqltablemodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlresult.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsqlversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QSqlQuery \
 		release\moc_predefs.h \
 		..\..\Qt\5.12.5\msvc2017\bin\moc.exe
 	E:\Qt\5.12.5\msvc2017\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/Petinator/build-QtPetinator-Desktop_Qt_5_12_5_MSVC2017_32bit-Debug/release/moc_predefs.h -IE:/Qt/5.12.5/msvc2017/mkspecs/win32-msvc -IE:/Petinator/QtPetinator -IE:/Qt/5.12.5/msvc2017/include -IE:/Qt/5.12.5/msvc2017/include/QtWidgets -IE:/Qt/5.12.5/msvc2017/include/QtGui -IE:/Qt/5.12.5/msvc2017/include/QtANGLE -IE:/Qt/5.12.5/msvc2017/include/QtSql -IE:/Qt/5.12.5/msvc2017/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt" ..\QtPetinator\animalexists.h -o release\moc_animalexists.cpp
@@ -1597,6 +1764,166 @@ release\moc_losing.cpp: ..\QtPetinator\losing.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
+		..\QtPetinator\sql.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QtSql \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QtSqlDepends \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QtCore \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QtCoreDepends \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstracteventdispatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractitemmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstracttransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qarraydataops.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qarraydatapointer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbasictimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbitarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbuffer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbytearraymatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcache.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborvalue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdatetime.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborcommon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qregularexpression.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\quuid.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcbormap.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborstream.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfloat16.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcollator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineoption.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineparser.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcryptographichash.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdeadlinetimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qelapsedtimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdir.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfileinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdiriterator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeasingcurve.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qendian.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeventtransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qexception.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfactoryinterface.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfileselector.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QObject \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QStringList \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfilesystemwatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfinalstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuture.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfutureinterface.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qrunnable.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qresultstore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuturesynchronizer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuturewatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qhistorystate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qidentityproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qisenum.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qitemselectionmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonvalue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsondocument.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonobject.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlibrary.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlibraryinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qversionnumber.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlinkedlist.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlockfile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qloggingcategory.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmath.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmessageauthenticationcode.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmetaobject.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimedata.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimedatabase.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimetype.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qobjectcleanuphandler.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qoperatingsystemversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qparallelanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpauseanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qplugin.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpointer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpluginloader.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qprocess.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpropertyanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qvariantanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qqueue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qrandom.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qreadwritelock.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qresource.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsavefile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qscopedvaluerollback.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qscopeguard.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsemaphore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsequentialanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsettings.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsharedmemory.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsignalmapper.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsignaltransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsocketnotifier.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsortfilterproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstack.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstandardpaths.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstatemachine.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstorageinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstringlistmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsystemsemaphore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtemporarydir.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtemporaryfile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtextboundaryfinder.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtextcodec.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthread.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthreadpool.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthreadstorage.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimeline.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimezone.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtranslator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtypetraits.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qwaitcondition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qwineventnotifier.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qxmlstream.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtcoreversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsqlglobal.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsql-config.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldatabase.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldriver.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldriverplugin.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlerror.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlfield.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlindex.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrecord.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlquery.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlquerymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaldelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qitemdelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemdelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qstyleoption.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractspinbox.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvalidator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qslider.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractslider.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qstyle.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qtabbar.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qrubberband.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qlistview.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemview.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractscrollarea.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qcombobox.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaltablemodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqltablemodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlresult.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsqlversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QSqlQuery \
 		release\moc_predefs.h \
 		..\..\Qt\5.12.5\msvc2017\bin\moc.exe
 	E:\Qt\5.12.5\msvc2017\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/Petinator/build-QtPetinator-Desktop_Qt_5_12_5_MSVC2017_32bit-Debug/release/moc_predefs.h -IE:/Qt/5.12.5/msvc2017/mkspecs/win32-msvc -IE:/Petinator/QtPetinator -IE:/Qt/5.12.5/msvc2017/include -IE:/Qt/5.12.5/msvc2017/include/QtWidgets -IE:/Qt/5.12.5/msvc2017/include/QtGui -IE:/Qt/5.12.5/msvc2017/include/QtANGLE -IE:/Qt/5.12.5/msvc2017/include/QtSql -IE:/Qt/5.12.5/msvc2017/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt" ..\QtPetinator\losing.h -o release\moc_losing.cpp
@@ -3160,22 +3487,178 @@ release\animalexists.obj: ..\QtPetinator\animalexists.cpp ..\QtPetinator\animale
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
 		..\QtPetinator\losing.h \
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
+		..\QtPetinator\sql.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QtSql \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QtSqlDepends \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QtCore \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QtCoreDepends \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstracteventdispatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractitemmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstracttransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qarraydataops.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qarraydatapointer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbasictimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbitarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbuffer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbytearraymatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcache.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborvalue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdatetime.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborcommon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qregularexpression.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\quuid.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcbormap.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborstream.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfloat16.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcollator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineoption.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineparser.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcryptographichash.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdeadlinetimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qelapsedtimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdir.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfileinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdiriterator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeasingcurve.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qendian.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeventtransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qexception.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfactoryinterface.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfileselector.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QObject \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QStringList \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfilesystemwatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfinalstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuture.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfutureinterface.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qrunnable.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qresultstore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuturesynchronizer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuturewatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qhistorystate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qidentityproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qisenum.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qitemselectionmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonvalue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsondocument.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonobject.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlibrary.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlibraryinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qversionnumber.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlinkedlist.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlockfile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qloggingcategory.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmath.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmessageauthenticationcode.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmetaobject.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimedata.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimedatabase.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimetype.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qobjectcleanuphandler.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qoperatingsystemversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qparallelanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpauseanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qplugin.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpointer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpluginloader.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qprocess.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpropertyanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qvariantanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qqueue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qrandom.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qreadwritelock.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qresource.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsavefile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qscopedvaluerollback.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qscopeguard.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsemaphore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsequentialanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsettings.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsharedmemory.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsignalmapper.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsignaltransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsocketnotifier.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsortfilterproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstack.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstandardpaths.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstatemachine.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstorageinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstringlistmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsystemsemaphore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtemporarydir.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtemporaryfile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtextboundaryfinder.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtextcodec.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthread.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthreadpool.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthreadstorage.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimeline.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimezone.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtranslator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtypetraits.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qwaitcondition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qwineventnotifier.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qxmlstream.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtcoreversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsqlglobal.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsql-config.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldatabase.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldriver.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldriverplugin.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlerror.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlfield.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlindex.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrecord.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlquery.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlquerymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaldelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qitemdelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemdelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qstyleoption.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractspinbox.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvalidator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qslider.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractslider.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qstyle.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qtabbar.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qrubberband.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qlistview.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemview.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractscrollarea.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qcombobox.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaltablemodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqltablemodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlresult.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsqlversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QSqlQuery \
 		ui_animalexists.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\QVariant \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
 
@@ -4139,22 +4622,178 @@ release\losing.obj: ..\QtPetinator\losing.cpp ..\QtPetinator\losing.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h \
+		..\QtPetinator\questions.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QString \
+		..\QtPetinator\sql.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QtSql \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QtSqlDepends \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QtCore \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QtCoreDepends \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstracteventdispatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractitemmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstractstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qabstracttransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qarraydataops.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qarraydatapointer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbasictimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbitarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbuffer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qbytearraymatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcache.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborvalue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdatetime.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborcommon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qregularexpression.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\quuid.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcbormap.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcborstream.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfloat16.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcollator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineoption.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineparser.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcryptographichash.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdeadlinetimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qelapsedtimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdir.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfileinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qdiriterator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeasingcurve.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qendian.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeventtransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qexception.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfactoryinterface.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfileselector.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QObject \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\QStringList \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfilesystemwatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfinalstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuture.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfutureinterface.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qrunnable.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qresultstore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuturesynchronizer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qfuturewatcher.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qhistorystate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qidentityproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qisenum.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qitemselectionmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonarray.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonvalue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsondocument.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qjsonobject.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlibrary.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlibraryinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qversionnumber.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlinkedlist.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qlockfile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qloggingcategory.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmath.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmessageauthenticationcode.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmetaobject.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimedata.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimedatabase.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qmimetype.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qobjectcleanuphandler.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qoperatingsystemversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qparallelanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpauseanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qplugin.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpointer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpluginloader.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qprocess.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qpropertyanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qvariantanimation.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qqueue.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qrandom.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qreadwritelock.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qresource.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsavefile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qscopedvaluerollback.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qscopeguard.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsemaphore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsequentialanimationgroup.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsettings.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsharedmemory.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsignalmapper.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsignaltransition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsocketnotifier.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsortfilterproxymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstack.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstandardpaths.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstatemachine.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstorageinfo.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qstringlistmodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qsystemsemaphore.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtemporarydir.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtemporaryfile.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtextboundaryfinder.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtextcodec.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthread.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthreadpool.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qthreadstorage.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimeline.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimer.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtimezone.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtranslator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtypetraits.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qwaitcondition.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qwineventnotifier.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qxmlstream.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtCore\qtcoreversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsqlglobal.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsql-config.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldatabase.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldriver.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqldriverplugin.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlerror.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlfield.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlindex.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrecord.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlquery.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlquerymodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaldelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qitemdelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemdelegate.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qstyleoption.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractspinbox.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qvalidator.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qslider.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractslider.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qstyle.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qtabbar.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qrubberband.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qlistview.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemview.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractscrollarea.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qcombobox.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaltablemodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqltablemodel.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qsqlresult.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\qtsqlversion.h \
+		..\..\Qt\5.12.5\msvc2017\include\QtSql\QSqlQuery \
 		ui_losing.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtCore\QVariant \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h \
-		..\..\Qt\5.12.5\msvc2017\include\QtGui\qicon.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
 
@@ -6138,6 +6777,8 @@ release\winning.obj: ..\QtPetinator\winning.cpp ..\QtPetinator\winning.h \
 		..\..\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
 
 release\qrc_DB.obj: release\qrc_DB.cpp 
+
+release\qrc_icons.obj: release\qrc_icons.cpp 
 
 release\qrc_resources.obj: release\qrc_resources.cpp 
 
